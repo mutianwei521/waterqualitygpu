@@ -1,0 +1,302 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "mode": "nextQ",
+  "ctol_override": null,
+  "repeat": 5,
+  "results": [
+    {
+      "network": "Net1",
+      "device": "cuda",
+      "nodes": 11,
+      "links": 13,
+      "pipes": 12,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 1897,
+      "n_theta": 36,
+      "dll_quality_run_s": 0.000598113052546978,
+      "fd_gradient_cost_s": 0.022130182944238186,
+      "record_s": 0.17533252947032452,
+      "build_s": 0.216274737380445,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 0.15781430341303349,
+          "forward_backward_s": 0.3960097162052989,
+          "forward_per_sample_s": 0.15781430341303349,
+          "forward_backward_per_sample_s": 0.3960097162052989,
+          "peak_mem_MB": 0.783203125,
+          "graph_forward_backward_s": 0.06882943399250507,
+          "graph_forward_rel_err": 0.0
+        },
+        {
+          "B": 16,
+          "forward_s": 0.16097533609718084,
+          "forward_backward_s": 0.40487204026430845,
+          "forward_per_sample_s": 0.010060958506073803,
+          "forward_backward_per_sample_s": 0.02530450251651928,
+          "peak_mem_MB": 5.275390625,
+          "graph_forward_backward_s": 0.07510087452828884,
+          "graph_forward_rel_err": 5.081334196395058e-17
+        },
+        {
+          "B": 128,
+          "forward_s": 0.1631244206801057,
+          "forward_backward_s": 0.4127950379624963,
+          "forward_per_sample_s": 0.0012744095365633257,
+          "forward_backward_per_sample_s": 0.003224961234082002,
+          "peak_mem_MB": 38.8505859375,
+          "graph_forward_backward_s": 0.08937591500580311,
+          "graph_forward_rel_err": 2.018588504165615e-16
+        },
+        {
+          "B": 1024,
+          "forward_s": 0.1652601072564721,
+          "forward_backward_s": 0.41310578398406506,
+          "forward_per_sample_s": 0.00016138682349264855,
+          "forward_backward_per_sample_s": 0.00040342361717193853,
+          "peak_mem_MB": 308.2919921875,
+          "graph_forward_backward_s": 0.11296784318983555,
+          "graph_forward_rel_err": 2.019022792057761e-16
+        },
+        {
+          "B": 4096,
+          "forward_s": 0.1668821144849062,
+          "forward_backward_s": 0.421768493950367,
+          "forward_per_sample_s": 4.074270373166655e-05,
+          "forward_backward_per_sample_s": 0.00010297082371835131,
+          "peak_mem_MB": 1238.56201171875,
+          "graph_forward_backward_s": 0.1233707470819354,
+          "graph_forward_rel_err": 3.0278942020267054e-16
+        },
+        {
+          "B": 8192,
+          "forward_s": 0.1697812657803297,
+          "forward_backward_s": 0.4285552902147174,
+          "forward_per_sample_s": 2.0725252170450403e-05,
+          "forward_backward_per_sample_s": 5.2313878200038744e-05,
+          "peak_mem_MB": 2492.29931640625,
+          "graph_forward_backward_s": 0.13654098566621542,
+          "graph_forward_rel_err": 2.018600936480915e-16
+        }
+      ]
+    },
+    {
+      "network": "Net2_react",
+      "device": "cuda",
+      "nodes": 36,
+      "links": 40,
+      "pipes": 40,
+      "steps": 660,
+      "versions": 27101,
+      "ops": 16382,
+      "n_theta": 118,
+      "dll_quality_run_s": 0.0024078302085399628,
+      "fd_gradient_cost_s": 0.28653179481625557,
+      "record_s": 1.050241332501173,
+      "build_s": 0.3619349217042327,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 1.4277927530929446,
+          "forward_backward_s": 3.578620591200888,
+          "forward_per_sample_s": 1.4277927530929446,
+          "forward_backward_per_sample_s": 3.578620591200888,
+          "peak_mem_MB": 5.24658203125,
+          "graph_forward_backward_s": 0.5678416443988681,
+          "graph_forward_rel_err": 0.0
+        },
+        {
+          "B": 16,
+          "forward_s": 1.4199252454563975,
+          "forward_backward_s": 3.58784116525203,
+          "forward_per_sample_s": 0.08874532784102485,
+          "forward_backward_per_sample_s": 0.22424007282825187,
+          "peak_mem_MB": 34.4052734375,
+          "graph_forward_backward_s": 0.60195551533252,
+          "graph_forward_rel_err": 9.618068047230047e-17
+        },
+        {
+          "B": 128,
+          "forward_s": 1.4588687755167484,
+          "forward_backward_s": 3.6566421817988157,
+          "forward_per_sample_s": 0.011397412308724597,
+          "forward_backward_per_sample_s": 0.028567517045303248,
+          "peak_mem_MB": 248.939453125,
+          "graph_forward_backward_s": 0.745312619023025,
+          "graph_forward_rel_err": 2.891997928455846e-16
+        },
+        {
+          "B": 1024,
+          "forward_s": 1.4686249140650034,
+          "forward_backward_s": 3.6934382803738117,
+          "forward_per_sample_s": 0.0014342040176416049,
+          "forward_backward_per_sample_s": 0.0036068733206775505,
+          "peak_mem_MB": 1941.14794921875,
+          "graph_forward_backward_s": 0.9832663936540484,
+          "graph_forward_rel_err": 2.883864004493192e-16
+        },
+        {
+          "B": 4096,
+          "forward_s": 1.486665210686624,
+          "forward_backward_s": 3.7313751792535186,
+          "forward_per_sample_s": 0.0003629553737027891,
+          "forward_backward_per_sample_s": 0.0009109802683724411,
+          "peak_mem_MB": 7779.8212890625,
+          "graph_forward_backward_s": 1.0610015168786049,
+          "graph_forward_rel_err": 4.806437616374915e-16
+        },
+        {
+          "B": 8192,
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.70 GiB. GPU 0 has a total capacity of 31.36 GiB of which 1.11 GiB is free. Including non-PyTorch memory, this process has 30.23 GiB memory in use. Of the alloca"
+        }
+      ]
+    },
+    {
+      "network": "Jilin_kw",
+      "device": "cuda",
+      "nodes": 28,
+      "links": 34,
+      "pipes": 34,
+      "steps": 1152,
+      "versions": 39202,
+      "ops": 4632,
+      "n_theta": 96,
+      "dll_quality_run_s": 0.003654148429632187,
+      "fd_gradient_cost_s": 0.35445239767432213,
+      "record_s": 2.4525069193914533,
+      "build_s": 0.10343086160719395,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 0.2740368563681841,
+          "forward_backward_s": 0.671943767927587,
+          "forward_per_sample_s": 0.2740368563681841,
+          "forward_backward_per_sample_s": 0.671943767927587,
+          "peak_mem_MB": 7.6435546875,
+          "graph_forward_backward_s": 0.11549555137753487,
+          "graph_forward_rel_err": 1.783495127476133e-16
+        },
+        {
+          "B": 16,
+          "forward_s": 0.2752915257588029,
+          "forward_backward_s": 0.683933774009347,
+          "forward_per_sample_s": 0.01720572035992518,
+          "forward_backward_per_sample_s": 0.042745860875584185,
+          "peak_mem_MB": 50.13916015625,
+          "graph_forward_backward_s": 0.1453675488010049,
+          "graph_forward_rel_err": 3.239338195952455e-16
+        },
+        {
+          "B": 128,
+          "forward_s": 0.2798371445387602,
+          "forward_backward_s": 0.6897010477259755,
+          "forward_per_sample_s": 0.002186227691709064,
+          "forward_backward_per_sample_s": 0.005388289435359184,
+          "peak_mem_MB": 368.427734375,
+          "graph_forward_backward_s": 0.16435285657644272,
+          "graph_forward_rel_err": 4.0487773751554016e-16
+        },
+        {
+          "B": 1024,
+          "forward_s": 0.2869810154661536,
+          "forward_backward_s": 0.7112291641533375,
+          "forward_per_sample_s": 0.00028025489791616565,
+          "forward_backward_per_sample_s": 0.0006945597306184936,
+          "peak_mem_MB": 2893.90966796875,
+          "graph_forward_backward_s": 0.20156665332615376,
+          "graph_forward_rel_err": 4.844621219937135e-16
+        },
+        {
+          "B": 4096,
+          "forward_s": 0.3049552943557501,
+          "forward_backward_s": 0.7537489254027605,
+          "forward_per_sample_s": 7.44519761610718e-05,
+          "forward_backward_per_sample_s": 0.00018402073374090833,
+          "peak_mem_MB": 11592.080078125,
+          "graph_forward_backward_s": 0.3001813320443034,
+          "graph_forward_rel_err": 4.844722117221517e-16
+        },
+        {
+          "B": 8192,
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.46 GiB. GPU 0 has a total capacity of 31.36 GiB of which 1.94 GiB is free. Including non-PyTorch memory, this process has 29.41 GiB memory in use. Of the alloca"
+        }
+      ]
+    },
+    {
+      "network": "Net3_CHEM_kw_mixed_tanks",
+      "device": "cuda",
+      "nodes": 97,
+      "links": 119,
+      "pipes": 117,
+      "steps": 290,
+      "versions": 34662,
+      "ops": 10000,
+      "n_theta": 334,
+      "dll_quality_run_s": 0.002537268213927746,
+      "fd_gradient_cost_s": 0.8499848516657948,
+      "record_s": 0.9317027265205979,
+      "build_s": 0.21135354693979025,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 0.8883135532960296,
+          "forward_backward_s": 2.2326321098953485,
+          "forward_per_sample_s": 0.8883135532960296,
+          "forward_backward_per_sample_s": 2.2326321098953485,
+          "peak_mem_MB": 6.71533203125,
+          "graph_forward_backward_s": 0.40876033902168274,
+          "graph_forward_rel_err": 2.195093777395975e-16
+        },
+        {
+          "B": 16,
+          "forward_s": 0.8933700677007437,
+          "forward_backward_s": 2.2808041013777256,
+          "forward_per_sample_s": 0.05583562923129648,
+          "forward_backward_per_sample_s": 0.14255025633610785,
+          "peak_mem_MB": 43.55029296875,
+          "graph_forward_backward_s": 0.44963222462683916,
+          "graph_forward_rel_err": 5.099911091114358e-16
+        },
+        {
+          "B": 128,
+          "forward_s": 0.9100832659751177,
+          "forward_backward_s": 2.314665239304304,
+          "forward_per_sample_s": 0.007110025515430607,
+          "forward_backward_per_sample_s": 0.018083322182064876,
+          "peak_mem_MB": 321.06005859375,
+          "graph_forward_backward_s": 0.5488506872206926,
+          "graph_forward_rel_err": 5.047174579643048e-16
+        },
+        {
+          "B": 1024,
+          "forward_s": 0.9238301320001483,
+          "forward_backward_s": 2.3605275377631187,
+          "forward_per_sample_s": 0.0009021778632813948,
+          "forward_backward_per_sample_s": 0.0023052026735967956,
+          "peak_mem_MB": 2523.7275390625,
+          "graph_forward_backward_s": 0.6598369013518095,
+          "graph_forward_rel_err": 8.074498317578303e-16
+        },
+        {
+          "B": 4096,
+          "forward_s": 0.9383281003683805,
+          "forward_backward_s": 2.39181952457875,
+          "forward_per_sample_s": 0.00022908400887899916,
+          "forward_backward_per_sample_s": 0.0005839403136178589,
+          "peak_mem_MB": 10125.9736328125,
+          "graph_forward_backward_s": 0.7627476826310158,
+          "graph_forward_rel_err": 8.07462402046946e-16
+        },
+        {
+          "B": 8192,
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.13 GiB. GPU 0 has a total capacity of 31.36 GiB of which 137.06 MiB is free. Including non-PyTorch memory, this process has 31.21 GiB memory in use. Of the allo"
+        }
+      ]
+    }
+  ]
+}

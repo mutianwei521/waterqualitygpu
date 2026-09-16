@@ -1,0 +1,279 @@
+=== job 1587178 on wqd10nah09g1  Sun Sep 13 06:41:11 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+name, driver_version, memory.total [MiB], compute_cap
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB, 12.0
+CPU(s):                               128
+Model name:                           INTEL(R) XEON(R) GOLD 6530
+Thread(s) per core:                   2
+               total        used        free      shared  buff/cache   available
+Mem:            1007          34          15           0         957         966
+python 3.10.21 torch 2.8.0+cu128 cuda 12.8 scipy 1.15.3
+device NVIDIA GeForce RTX 5090 capability 12.0 mem_GB 31.4
+
+=== G2 exactness, fused engine (flatten)  Sun Sep 13 06:41:20 PM CST 2026
+Net1                             fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=1.1e-07 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '2.4e-13'} grad|adjoint=5.0e-16 fwd|adjoint=1.4e-15 (adjoint fwd+bwd 0.39s) lvl=6 ops=1897 fused_ops=291 fused_terms=14478 t(rec/build/fwd/fwd+bwd)=0.18/0.90/0.28/0.07s
+Net2                             fwd|rep=4.0e-15 fwd|dll=4.0e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '1.7e-01', 'kw_all_pipes': '3.3e-02', 'tank_kb_all': '3.3e-09', 'src_all': '2.6e-02', 'c0_all_nodes': '2.5e-12'} [Reactflag off] grad|adjoint=1.3e-15 fwd|adjoint=2.5e-15 (adjoint fwd+bwd 3.78s) lvl=40 ops=17543 fused_ops=661 fused_terms=207140 t(rec/build/fwd/fwd+bwd)=0.65/5.54/0.02/0.06s
+Net3                             fwd|rep=1.8e-15 fwd|dll=1.8e-15 AD|torchFD=7.5e-08 AD|dllFD={} grad|adjoint=1.0e-15 fwd|adjoint=1.1e-15 (adjoint fwd+bwd 1.53s) lvl=70 ops=14751 fused_ops=291 fused_terms=654928 t(rec/build/fwd/fwd+bwd)=0.69/4.85/0.01/0.02s
+Jilin                            fwd|rep=5.5e-15 fwd|dll=5.5e-15 AD|torchFD=1.3e-06 AD|dllFD={'kb_all_pipes': '2.7e-01', 'kw_all_pipes': '1.3e-03', 'c0_all_nodes': '2.6e-12'} grad|adjoint=1.8e-15 fwd|adjoint=7.1e-16 (adjoint fwd+bwd 1.07s) lvl=12 ops=5407 fused_ops=1153 fused_terms=156345 t(rec/build/fwd/fwd+bwd)=0.90/1.99/0.04/0.10s
+Net1_MIX2                        fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=2.2e-07 AD|dllFD={'kb_all_pipes': '1.3e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'c0_all_nodes': '3.0e-12'} grad|adjoint=2.4e-15 fwd|adjoint=1.8e-15 (adjoint fwd+bwd 0.41s) lvl=6 ops=1966 fused_ops=291 fused_terms=16031 t(rec/build/fwd/fwd+bwd)=0.17/0.67/0.01/0.03s
+Net1_FIFO                        fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=1.0e-07 AD|dllFD={'kb_all_pipes': '1.1e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.3e-10', 'c0_all_nodes': '4.4e-13'} grad|adjoint=4.6e-16 fwd|adjoint=5.6e-16 (adjoint fwd+bwd 0.28s) lvl=6 ops=1417 fused_ops=291 fused_terms=13547 t(rec/build/fwd/fwd+bwd)=0.17/0.50/0.01/0.03s
+Net1_LIFO                        fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=5.1e-08 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '9.0e-10', 'c0_all_nodes': '7.6e-14'} grad|adjoint=8.0e-16 fwd|adjoint=5.6e-16 (adjoint fwd+bwd 0.28s) lvl=6 ops=1435 fused_ops=291 fused_terms=13652 t(rec/build/fwd/fwd+bwd)=0.13/0.50/0.01/0.03s
+Net1_MIX1_overflow               fwd|rep=4.9e-15 fwd|dll=4.9e-15 AD|torchFD=1.7e-06 AD|dllFD={'kb_all_pipes': '7.5e-11', 'kw_all_pipes': '1.8e-09', 'tank_kb_all': '6.8e-10', 'c0_all_nodes': '9.1e-14'} grad|adjoint=1.9e-15 fwd|adjoint=2.1e-15 (adjoint fwd+bwd 0.35s) lvl=6 ops=1799 fused_ops=290 fused_terms=15044 t(rec/build/fwd/fwd+bwd)=0.18/0.62/0.01/0.03s
+Net1_FIFO_overflow               fwd|rep=6.3e-15 fwd|dll=6.3e-15 AD|torchFD=1.9e-08 AD|dllFD={'kb_all_pipes': '7.4e-11', 'kw_all_pipes': '1.9e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.6e-14'} grad|adjoint=3.3e-16 fwd|adjoint=3.3e-16 (adjoint fwd+bwd 0.28s) lvl=6 ops=1540 fused_ops=290 fused_terms=13301 t(rec/build/fwd/fwd+bwd)=0.15/0.53/0.01/0.03s
+Net1_LIFO_overflow               fwd|rep=3.1e-15 fwd|dll=3.1e-15 AD|torchFD=3.6e-07 AD|dllFD={'kb_all_pipes': '7.0e-11', 'kw_all_pipes': '1.7e-09', 'tank_kb_all': '8.3e-11', 'c0_all_nodes': '1.0e-12'} grad|adjoint=4.0e-16 fwd|adjoint=3.3e-16 (adjoint fwd+bwd 0.29s) lvl=6 ops=1575 fused_ops=290 fused_terms=13367 t(rec/build/fwd/fwd+bwd)=0.15/0.55/0.01/0.03s
+Net1_src_mass                    fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=6.7e-08 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '7.8e-10', 'src_all': '3.5e-11', 'c0_all_nodes': '2.4e-12'} grad|adjoint=1.7e-15 fwd|adjoint=8.3e-16 (adjoint fwd+bwd 0.41s) lvl=6 ops=2104 fused_ops=291 fused_terms=15487 t(rec/build/fwd/fwd+bwd)=0.19/0.71/0.01/0.03s
+Net1_src_setpoint                fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=8.3e-08 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'src_all': '6.6e-13', 'c0_all_nodes': '4.5e-13'} grad|adjoint=6.3e-16 fwd|adjoint=5.9e-16 (adjoint fwd+bwd 0.45s) lvl=6 ops=2082 fused_ops=625 fused_terms=14877 t(rec/build/fwd/fwd+bwd)=0.17/0.69/0.04/0.07s
+Net1_src_flowpaced               fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=5.5e-08 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'src_all': '2.1e-12', 'c0_all_nodes': '8.1e-13'} grad|adjoint=1.3e-15 fwd|adjoint=7.4e-16 (adjoint fwd+bwd 0.40s) lvl=6 ops=2082 fused_ops=291 fused_terms=15538 t(rec/build/fwd/fwd+bwd)=0.17/0.70/0.01/0.03s
+Net1_src_concen_reservoir_pat    fwd|rep=9.9e-15 fwd|dll=9.9e-15 AD|torchFD=3.1e-07 AD|dllFD={'kb_all_pipes': '1.1e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'src_all': '2.9e-13', 'c0_all_nodes': '2.3e-12'} grad|adjoint=7.3e-16 fwd|adjoint=5.8e-16 (adjoint fwd+bwd 0.39s) lvl=6 ops=1916 fused_ops=291 fused_terms=15351 t(rec/build/fwd/fwd+bwd)=0.17/0.65/0.01/0.03s
+Net1_src_concen_junction_inflow  fwd|rep=2.7e-15 fwd|dll=2.7e-15 AD|torchFD=3.3e-07 AD|dllFD={'kb_all_pipes': '4.9e-02', 'kw_all_pipes': '2.5e-02', 'tank_kb_all': '6.0e-10', 'src_all': '2.4e-12', 'c0_all_nodes': '4.8e-03'} grad|adjoint=1.2e-15 fwd|adjoint=5.6e-16 (adjoint fwd+bwd 0.42s) lvl=8 ops=1941 fused_ops=292 fused_terms=15576 t(rec/build/fwd/fwd+bwd)=0.20/0.66/0.01/0.03s
+Net1_src_mass_tank               fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=1.1e-07 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.0e-10', 'src_all': '2.4e-12', 'c0_all_nodes': '1.0e-12'} grad|adjoint=1.1e-15 fwd|adjoint=1.6e-15 (adjoint fwd+bwd 0.40s) lvl=6 ops=2003 fused_ops=291 fused_terms=15325 t(rec/build/fwd/fwd+bwd)=0.15/0.69/0.01/0.03s
+Net1_ctol0                       fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=3.0e-07 AD|dllFD={'kb_all_pipes': '1.5e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.1e-12'} grad|adjoint=3.3e-16 fwd|adjoint=1.1e-15 (adjoint fwd+bwd 0.27s) lvl=4 ops=1695 fused_ops=291 fused_terms=15610 t(rec/build/fwd/fwd+bwd)=0.25/0.58/0.01/0.03s
+Net2_MIX2                        fwd|rep=4.2e-15 fwd|dll=4.2e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '2.0e-01', 'kw_all_pipes': '3.9e-02', 'tank_kb_all': '3.2e-09', 'src_all': '2.9e-02', 'c0_all_nodes': '2.1e-12'} [Reactflag off] grad|adjoint=2.8e-15 fwd|adjoint=2.2e-15 (adjoint fwd+bwd 3.56s) lvl=40 ops=16743 fused_ops=661 fused_terms=195948 t(rec/build/fwd/fwd+bwd)=0.64/5.26/0.02/0.06s
+Net2_LIFO                        fwd|rep=4.5e-15 fwd|dll=4.5e-15 AD|torchFD=1.3e-04 AD|dllFD={'kb_all_pipes': '8.8e-01', 'kw_all_pipes': '5.8e-01', 'tank_kb_all': '1.1e+00', 'src_all': '7.3e-01', 'c0_all_nodes': '1.5e+00'} [Reactflag off] grad|adjoint=5.8e-16 fwd|adjoint=2.6e-15 (adjoint fwd+bwd 2.94s) lvl=40 ops=13591 fused_ops=661 fused_terms=185795 t(rec/build/fwd/fwd+bwd)=0.57/4.37/0.02/0.06s
+Net3_CHEM_mixed_tanks            fwd|rep=1.2e-14 fwd|dll=1.2e-14 AD|torchFD=9.1e-06 AD|dllFD={'kb_all_pipes': '2.0e-01', 'kw_all_pipes': '7.8e-02', 'tank_kb_all': '7.0e-10', 'c0_all_nodes': '4.0e-02'} grad|adjoint=8.9e-16 fwd|adjoint=2.2e-15 (adjoint fwd+bwd 3.17s) lvl=65 ops=14468 fused_ops=291 fused_terms=760693 t(rec/build/fwd/fwd+bwd)=0.79/4.77/0.01/0.03s
+Net3_AGE_mixed_tanks             fwd|rep=4.6e-15 fwd|dll=4.6e-15 AD|torchFD=4.5e-07 AD|dllFD={'c0_all_nodes': '2.4e-12'} grad|adjoint=4.0e-16 fwd|adjoint=8.9e-16 (adjoint fwd+bwd 0.95s) lvl=65 ops=6802 fused_ops=291 fused_terms=339992 t(rec/build/fwd/fwd+bwd)=0.86/2.28/0.02/0.03s
+Net3_TRACE_River_mixed_tanks     fwd|rep=3.1e-15 fwd|dll=3.1e-15 AD|torchFD=8.7e-08 AD|dllFD={} grad|adjoint=2.3e-15 fwd|adjoint=1.7e-15 (adjoint fwd+bwd 1.42s) lvl=72 ops=13610 fused_ops=291 fused_terms=625651 t(rec/build/fwd/fwd+bwd)=0.62/4.46/0.01/0.02s
+Net2_react                       fwd|rep=7.7e-15 fwd|dll=7.7e-15 AD|torchFD=9.7e-08 AD|dllFD={'kb_all_pipes': '1.2e-09', 'kw_all_pipes': '2.4e-08', 'tank_kb_all': '2.9e-09', 'src_all': '7.0e-12', 'c0_all_nodes': '2.6e-12'} grad|adjoint=1.0e-15 fwd|adjoint=1.6e-15 (adjoint fwd+bwd 3.49s) lvl=40 ops=16382 fused_ops=661 fused_terms=186676 t(rec/build/fwd/fwd+bwd)=0.87/5.22/0.02/0.06s
+Jilin_kw                         fwd|rep=1.0e-14 fwd|dll=1.0e-14 AD|torchFD=3.2e-07 AD|dllFD={'kb_all_pipes': '2.3e-11', 'kw_all_pipes': '1.3e-08', 'c0_all_nodes': '9.0e-13'} grad|adjoint=1.8e-15 fwd|adjoint=7.1e-16 (adjoint fwd+bwd 0.66s) lvl=12 ops=4632 fused_ops=1153 fused_terms=172210 t(rec/build/fwd/fwd+bwd)=1.11/1.72/0.04/0.10s
+Net3_CHEM_kw_mixed_tanks         fwd|rep=8.5e-15 fwd|dll=8.5e-15 AD|torchFD=3.9e-07 AD|dllFD={'kb_all_pipes': '1.3e-02', 'kw_all_pipes': '1.4e-02', 'tank_kb_all': '5.4e-02', 'c0_all_nodes': '4.8e-03'} grad|adjoint=5.9e-16 fwd|adjoint=1.8e-15 (adjoint fwd+bwd 2.19s) lvl=61 ops=10000 fused_ops=291 fused_terms=439946 t(rec/build/fwd/fwd+bwd)=0.82/3.30/0.01/0.03s
+report: /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g2_fused.json
+=== exit=0 elapsed=235s
+
+=== G2 exactness, fused engine (kind-merge only)  Sun Sep 13 06:45:15 PM CST 2026
+Net1                             fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=9.8e-08 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '2.4e-13'} grad|adjoint=6.5e-16 fwd|adjoint=1.2e-15 (adjoint fwd+bwd 0.39s) lvl=6 ops=1897 fused_ops=1248 fused_terms=11356 t(rec/build/fwd/fwd+bwd)=0.17/0.22/0.24/0.13s
+Net2                             fwd|rep=4.2e-15 fwd|dll=4.2e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '1.7e-01', 'kw_all_pipes': '3.3e-02', 'tank_kb_all': '3.3e-09', 'src_all': '2.6e-02', 'c0_all_nodes': '2.5e-12'} [Reactflag off] grad|adjoint=5.1e-16 fwd|adjoint=0.0e+00 (adjoint fwd+bwd 3.79s) lvl=40 ops=17543 fused_ops=12650 fused_terms=81062 t(rec/build/fwd/fwd+bwd)=0.66/0.52/0.36/1.02s
+Net3                             fwd|rep=1.6e-15 fwd|dll=1.6e-15 AD|torchFD=2.0e-07 AD|dllFD={} grad|adjoint=0.0e+00 fwd|adjoint=1.4e-16 (adjoint fwd+bwd 1.54s) lvl=70 ops=14751 fused_ops=10642 fused_terms=103444 t(rec/build/fwd/fwd+bwd)=0.66/0.43/0.30/0.69s
+Jilin                            fwd|rep=5.9e-15 fwd|dll=5.9e-15 AD|torchFD=1.3e-06 AD|dllFD={'kb_all_pipes': '2.7e-01', 'kw_all_pipes': '1.3e-03', 'c0_all_nodes': '2.6e-12'} grad|adjoint=1.7e-15 fwd|adjoint=7.1e-16 (adjoint fwd+bwd 1.08s) lvl=12 ops=5407 fused_ops=4253 fused_terms=117481 t(rec/build/fwd/fwd+bwd)=0.90/0.19/0.13/0.35s
+Net1_MIX2                        fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=2.2e-07 AD|dllFD={'kb_all_pipes': '1.3e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'c0_all_nodes': '3.0e-12'} grad|adjoint=3.0e-15 fwd|adjoint=2.0e-15 (adjoint fwd+bwd 0.41s) lvl=6 ops=1966 fused_ops=1248 fused_terms=11811 t(rec/build/fwd/fwd+bwd)=0.14/0.05/0.04/0.10s
+Net1_FIFO                        fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=1.0e-07 AD|dllFD={'kb_all_pipes': '1.1e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.3e-10', 'c0_all_nodes': '4.4e-13'} grad|adjoint=5.1e-16 fwd|adjoint=1.2e-15 (adjoint fwd+bwd 0.28s) lvl=6 ops=1417 fused_ops=1056 fused_terms=10880 t(rec/build/fwd/fwd+bwd)=0.14/0.04/0.03/0.09s
+Net1_LIFO                        fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=1.9e-08 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '9.0e-10', 'c0_all_nodes': '7.6e-14'} grad|adjoint=1.1e-15 fwd|adjoint=1.2e-15 (adjoint fwd+bwd 0.28s) lvl=6 ops=1435 fused_ops=1067 fused_terms=10908 t(rec/build/fwd/fwd+bwd)=0.13/0.04/0.03/0.09s
+Net1_MIX1_overflow               fwd|rep=4.3e-15 fwd|dll=4.3e-15 AD|torchFD=6.7e-07 AD|dllFD={'kb_all_pipes': '7.5e-11', 'kw_all_pipes': '1.8e-09', 'tank_kb_all': '6.8e-10', 'c0_all_nodes': '9.1e-14'} grad|adjoint=2.3e-15 fwd|adjoint=2.0e-15 (adjoint fwd+bwd 0.36s) lvl=6 ops=1799 fused_ops=1161 fused_terms=11395 t(rec/build/fwd/fwd+bwd)=0.17/0.04/0.03/0.10s
+Net1_FIFO_overflow               fwd|rep=6.3e-15 fwd|dll=6.3e-15 AD|torchFD=1.9e-08 AD|dllFD={'kb_all_pipes': '7.4e-11', 'kw_all_pipes': '1.9e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.6e-14'} grad|adjoint=1.6e-16 fwd|adjoint=3.3e-16 (adjoint fwd+bwd 0.28s) lvl=6 ops=1540 fused_ops=934 fused_terms=10746 t(rec/build/fwd/fwd+bwd)=0.14/0.04/0.03/0.08s
+Net1_LIFO_overflow               fwd|rep=3.1e-15 fwd|dll=3.1e-15 AD|torchFD=3.6e-07 AD|dllFD={'kb_all_pipes': '7.0e-11', 'kw_all_pipes': '1.7e-09', 'tank_kb_all': '8.3e-11', 'c0_all_nodes': '1.0e-12'} grad|adjoint=8.3e-16 fwd|adjoint=3.3e-16 (adjoint fwd+bwd 0.29s) lvl=6 ops=1575 fused_ops=962 fused_terms=10746 t(rec/build/fwd/fwd+bwd)=0.14/0.04/0.03/0.08s
+Net1_src_mass                    fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=1.4e-07 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '7.8e-10', 'src_all': '3.5e-11', 'c0_all_nodes': '2.4e-12'} grad|adjoint=7.4e-16 fwd|adjoint=5.2e-16 (adjoint fwd+bwd 0.41s) lvl=6 ops=2104 fused_ops=1325 fused_terms=11672 t(rec/build/fwd/fwd+bwd)=0.19/0.05/0.04/0.11s
+Net1_src_setpoint                fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=1.3e-07 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'src_all': '6.6e-13', 'c0_all_nodes': '4.5e-13'} grad|adjoint=1.1e-15 fwd|adjoint=1.3e-15 (adjoint fwd+bwd 0.43s) lvl=6 ops=2082 fused_ops=1325 fused_terms=11488 t(rec/build/fwd/fwd+bwd)=0.20/0.06/0.05/0.13s
+Net1_src_flowpaced               fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=1.3e-07 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'src_all': '2.1e-12', 'c0_all_nodes': '8.1e-13'} grad|adjoint=4.0e-16 fwd|adjoint=1.3e-15 (adjoint fwd+bwd 0.40s) lvl=6 ops=2082 fused_ops=1325 fused_terms=11655 t(rec/build/fwd/fwd+bwd)=0.17/0.10/0.04/0.11s
+Net1_src_concen_reservoir_pat    fwd|rep=9.8e-15 fwd|dll=9.8e-15 AD|torchFD=5.0e-07 AD|dllFD={'kb_all_pipes': '1.1e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'src_all': '2.9e-13', 'c0_all_nodes': '2.3e-12'} grad|adjoint=8.5e-16 fwd|adjoint=4.0e-16 (adjoint fwd+bwd 0.39s) lvl=6 ops=1916 fused_ops=1325 fused_terms=11503 t(rec/build/fwd/fwd+bwd)=0.17/0.05/0.04/0.11s
+Net1_src_concen_junction_inflow  fwd|rep=2.8e-15 fwd|dll=2.8e-15 AD|torchFD=2.5e-07 AD|dllFD={'kb_all_pipes': '4.9e-02', 'kw_all_pipes': '2.5e-02', 'tank_kb_all': '6.0e-10', 'src_all': '2.4e-12', 'c0_all_nodes': '4.8e-03'} grad|adjoint=5.0e-16 fwd|adjoint=4.1e-16 (adjoint fwd+bwd 0.42s) lvl=8 ops=1941 fused_ops=1319 fused_terms=11883 t(rec/build/fwd/fwd+bwd)=0.17/0.05/0.04/0.11s
+Net1_src_mass_tank               fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=7.9e-08 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.0e-10', 'src_all': '2.4e-12', 'c0_all_nodes': '1.0e-12'} grad|adjoint=2.6e-15 fwd|adjoint=1.2e-15 (adjoint fwd+bwd 0.41s) lvl=6 ops=2003 fused_ops=1359 fused_terms=11578 t(rec/build/fwd/fwd+bwd)=0.14/0.05/0.04/0.11s
+Net1_ctol0                       fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=3.0e-07 AD|dllFD={'kb_all_pipes': '1.5e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.1e-12'} grad|adjoint=4.3e-16 fwd|adjoint=6.7e-16 (adjoint fwd+bwd 0.27s) lvl=4 ops=1695 fused_ops=1114 fused_terms=11039 t(rec/build/fwd/fwd+bwd)=0.30/0.04/0.03/0.09s
+Net2_MIX2                        fwd|rep=4.2e-15 fwd|dll=4.2e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '2.0e-01', 'kw_all_pipes': '3.9e-02', 'tank_kb_all': '3.2e-09', 'src_all': '2.9e-02', 'c0_all_nodes': '2.1e-12'} [Reactflag off] grad|adjoint=5.2e-16 fwd|adjoint=0.0e+00 (adjoint fwd+bwd 3.62s) lvl=40 ops=16743 fused_ops=11836 fused_terms=81992 t(rec/build/fwd/fwd+bwd)=0.64/0.49/0.34/0.94s
+Net2_LIFO                        fwd|rep=4.2e-15 fwd|dll=4.2e-15 AD|torchFD=1.3e-04 AD|dllFD={'kb_all_pipes': '8.8e-01', 'kw_all_pipes': '5.8e-01', 'tank_kb_all': '1.1e+00', 'src_all': '7.3e-01', 'c0_all_nodes': '1.5e+00'} [Reactflag off] grad|adjoint=3.6e-16 fwd|adjoint=0.0e+00 (adjoint fwd+bwd 2.92s) lvl=40 ops=13591 fused_ops=11290 fused_terms=79998 t(rec/build/fwd/fwd+bwd)=0.62/0.44/0.32/0.91s
+Net3_CHEM_mixed_tanks            fwd|rep=1.1e-14 fwd|dll=1.1e-14 AD|torchFD=9.1e-06 AD|dllFD={'kb_all_pipes': '2.0e-01', 'kw_all_pipes': '7.8e-02', 'tank_kb_all': '7.0e-10', 'c0_all_nodes': '4.0e-02'} grad|adjoint=1.1e-15 fwd|adjoint=2.0e-15 (adjoint fwd+bwd 3.20s) lvl=65 ops=14468 fused_ops=12016 fused_terms=103746 t(rec/build/fwd/fwd+bwd)=0.84/0.46/0.34/0.96s
+Net3_AGE_mixed_tanks             fwd|rep=4.6e-15 fwd|dll=4.6e-15 AD|torchFD=4.5e-07 AD|dllFD={'c0_all_nodes': '2.4e-12'} grad|adjoint=1.6e-18 fwd|adjoint=7.4e-17 (adjoint fwd+bwd 0.96s) lvl=65 ops=6802 fused_ops=4809 fused_terms=102355 t(rec/build/fwd/fwd+bwd)=0.85/0.21/0.28/0.52s
+Net3_TRACE_River_mixed_tanks     fwd|rep=3.1e-15 fwd|dll=3.1e-15 AD|torchFD=1.5e-07 AD|dllFD={} grad|adjoint=0.0e+00 fwd|adjoint=3.6e-17 (adjoint fwd+bwd 1.43s) lvl=72 ops=13610 fused_ops=10822 fused_terms=102774 t(rec/build/fwd/fwd+bwd)=0.67/0.43/0.31/0.70s
+Net2_react                       fwd|rep=8.2e-15 fwd|dll=8.2e-15 AD|torchFD=4.6e-08 AD|dllFD={'kb_all_pipes': '1.2e-09', 'kw_all_pipes': '2.4e-08', 'tank_kb_all': '2.9e-09', 'src_all': '7.0e-12', 'c0_all_nodes': '2.6e-12'} grad|adjoint=1.8e-15 fwd|adjoint=1.9e-15 (adjoint fwd+bwd 3.52s) lvl=40 ops=16382 fused_ops=12143 fused_terms=81328 t(rec/build/fwd/fwd+bwd)=0.88/0.47/0.35/0.97s
+Jilin_kw                         fwd|rep=1.0e-14 fwd|dll=1.0e-14 AD|torchFD=2.5e-07 AD|dllFD={'kb_all_pipes': '2.3e-11', 'kw_all_pipes': '1.3e-08', 'c0_all_nodes': '9.0e-13'} grad|adjoint=2.2e-15 fwd|adjoint=7.1e-16 (adjoint fwd+bwd 0.66s) lvl=12 ops=4632 fused_ops=3480 fused_terms=117324 t(rec/build/fwd/fwd+bwd)=1.13/0.12/0.10/0.28s
+Net3_CHEM_kw_mixed_tanks         fwd|rep=8.1e-15 fwd|dll=8.1e-15 AD|torchFD=3.9e-07 AD|dllFD={'kb_all_pipes': '1.3e-02', 'kw_all_pipes': '1.4e-02', 'tank_kb_all': '5.4e-02', 'c0_all_nodes': '4.8e-03'} grad|adjoint=1.5e-15 fwd|adjoint=1.4e-15 (adjoint fwd+bwd 2.20s) lvl=61 ops=10000 fused_ops=7824 fused_terms=103654 t(rec/build/fwd/fwd+bwd)=0.82/0.31/0.23/0.63s
+report: /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g2_fused_nf.json
+=== exit=0 elapsed=333s
+
+=== time-slot + virtual sources vs DLL  Sun Sep 13 06:50:48 PM CST 2026
+Net1                         cand=[1, 3, 4, 6, 8, 11] vterms=1450 zero|dll=1.5e-14 fwd|dll=1.1e-14 fwd|v1=3.6e-16 grad|v1=2.3e-16 AD|dllFD={'all_strengths': '3.1e-11', 'slot_9': '8.6e-12'} fixed(fwd/grad)=7.2e-17/4.5e-17 graph(fwd/grad)=2.9e-16/9.1e-17 2.8ms
+Net2_react                   cand=[3, 15, 16, 24, 31, 36] vterms=3600 zero|dll=6.1e-15 fwd|dll=8.2e-16 fwd|v1=2.2e-16 grad|v1=1.6e-16 AD|dllFD={'all_strengths': '9.7e-13', 'slot_18': '3.2e-11'} fixed(fwd/grad)=2.7e-17/3.9e-20 graph(fwd/grad)=2.7e-17/1.6e-16 6.9ms
+Jilin_kw                     cand=[2, 12, 14, 20, 25] vterms=5760 zero|dll=1.0e-14 fwd|dll=8.6e-15 fwd|v1=6.0e-16 grad|v1=2.4e-16 AD|dllFD={'all_strengths': '1.4e-11', 'slot_1': '4.2e-11'} fixed(fwd/grad)=2.3e-16/1.2e-16 graph(fwd/grad)=3.0e-16/1.2e-16 11.9ms
+Net3_CHEM_kw_mixed_tanks     cand=[5, 42, 45, 66, 88, 95] vterms=1586 zero|dll=7.5e-15 fwd|dll=1.3e-15 fwd|v1=3.8e-16 grad|v1=7.1e-17 AD|dllFD={'all_strengths': '1.2e-11', 'slot_13': '9.8e-11'} fixed(fwd/grad)=5.7e-17/7.1e-17 graph(fwd/grad)=5.7e-17/3.6e-17 3.8ms
+report: /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/verify_src.json
+=== exit=0 elapsed=36s
+
+=== G3 cost table, three engines, CUDA graph  Sun Sep 13 06:51:24 PM CST 2026
+Net1 [cuda]
+  engine=adjoint build=0.19s
+    B=    1 fwd=0.156s (156.32 ms/sample) fwd+bwd=0.393s (393.30 ms/sample) graph fwd+bwd=0.069s mem=1MB
+    B=   16 fwd=0.159s (9.94 ms/sample) fwd+bwd=0.400s (25.02 ms/sample) graph fwd+bwd=0.075s mem=5MB
+    B=  128 fwd=0.161s (1.25 ms/sample) fwd+bwd=0.405s (3.17 ms/sample) graph fwd+bwd=0.089s mem=39MB
+    B= 1024 fwd=0.163s (0.16 ms/sample) fwd+bwd=0.407s (0.40 ms/sample) graph fwd+bwd=0.113s mem=308MB
+    B= 4096 fwd=0.165s (0.04 ms/sample) fwd+bwd=0.414s (0.10 ms/sample) graph fwd+bwd=0.123s mem=1234MB
+  engine=fused_nf build=0.05s ops=1248 terms=11356
+    B=    1 fwd=0.037s (36.94 ms/sample) fwd+bwd=0.102s (102.28 ms/sample) graph fwd+bwd=0.016s mem=1MB
+    B=   16 fwd=0.037s (2.34 ms/sample) fwd+bwd=0.104s (6.48 ms/sample) graph fwd+bwd=0.018s mem=10MB
+    B=  128 fwd=0.038s (0.29 ms/sample) fwd+bwd=0.105s (0.82 ms/sample) graph fwd+bwd=0.022s mem=82MB
+    B= 1024 fwd=0.038s (0.04 ms/sample) fwd+bwd=0.105s (0.10 ms/sample) graph fwd+bwd=0.028s mem=629MB
+    B= 4096 fwd=0.040s (0.01 ms/sample) fwd+bwd=0.112s (0.03 ms/sample) graph fwd+bwd=0.039s mem=2512MB
+  engine=fused build=0.64s ops=291 terms=14478
+    B=    1 fwd=0.009s (9.38 ms/sample) fwd+bwd=0.026s (25.64 ms/sample) graph fwd+bwd=0.004s mem=2MB
+    B=   16 fwd=0.009s (0.59 ms/sample) fwd+bwd=0.026s (1.62 ms/sample) graph fwd+bwd=0.004s mem=12MB
+    B=  128 fwd=0.010s (0.07 ms/sample) fwd+bwd=0.026s (0.20 ms/sample) graph fwd+bwd=0.005s mem=92MB
+    B= 1024 fwd=0.010s (0.01 ms/sample) fwd+bwd=0.027s (0.03 ms/sample) graph fwd+bwd=0.008s mem=730MB
+    B= 4096 fwd=0.012s (0.00 ms/sample) fwd+bwd=0.034s (0.01 ms/sample) graph fwd+bwd=0.021s mem=2903MB
+  DLL quality run=0.61 ms, N_theta=36, FD gradient=0.022s, record=0.18s ops=1897 versions=3950
+Net2_react [cuda]
+  engine=adjoint build=0.29s
+    B=    1 fwd=1.398s (1398.09 ms/sample) fwd+bwd=3.524s (3524.13 ms/sample) graph fwd+bwd=0.475s mem=5MB
+    B=   16 fwd=1.416s (88.48 ms/sample) fwd+bwd=3.544s (221.50 ms/sample) graph fwd+bwd=0.508s mem=34MB
+    B=  128 fwd=1.430s (11.17 ms/sample) fwd+bwd=3.609s (28.19 ms/sample) graph fwd+bwd=0.745s mem=249MB
+    B= 1024 fwd=1.446s (1.41 ms/sample) fwd+bwd=3.645s (3.56 ms/sample) graph fwd+bwd=0.983s mem=1938MB
+    B= 4096 fwd=1.461s (0.36 ms/sample) fwd+bwd=3.668s (0.90 ms/sample) graph fwd+bwd=1.061s mem=7755MB
+  engine=fused_nf build=0.49s ops=12143 terms=81328
+    B=    1 fwd=0.352s (351.78 ms/sample) fwd+bwd=0.974s (974.05 ms/sample) graph fwd+bwd=0.186s mem=9MB
+    B=   16 fwd=0.354s (22.11 ms/sample) fwd+bwd=0.982s (61.39 ms/sample) graph fwd+bwd=0.193s mem=72MB
+    B=  128 fwd=0.356s (2.78 ms/sample) fwd+bwd=0.993s (7.76 ms/sample) graph fwd+bwd=0.207s mem=544MB
+    B= 1024 fwd=0.361s (0.35 ms/sample) fwd+bwd=1.012s (0.99 ms/sample) graph fwd+bwd=0.249s mem=4284MB
+    B= 4096 fwd=0.811s (0.20 ms/sample) fwd+bwd=2.091s (0.51 ms/sample) graph fwd+bwd=0.620s mem=7782MB
+  engine=fused build=5.16s ops=661 terms=186676
+    B=    1 fwd=0.021s (20.73 ms/sample) fwd+bwd=0.057s (56.82 ms/sample) graph fwd+bwd=0.009s mem=17MB
+    B=   16 fwd=0.021s (1.30 ms/sample) fwd+bwd=0.057s (3.55 ms/sample) graph fwd+bwd=0.012s mem=128MB
+    B=  128 fwd=0.021s (0.16 ms/sample) fwd+bwd=0.058s (0.45 ms/sample) graph fwd+bwd=0.015s mem=958MB
+    B= 1024 fwd=0.029s (0.03 ms/sample) fwd+bwd=0.078s (0.08 ms/sample) graph fwd+bwd=0.047s mem=7580MB
+    B= 4096 fwd=0.076s (0.02 ms/sample) fwd+bwd=0.181s (0.04 ms/sample) graph fwd+bwd=0.157s mem=7787MB
+  DLL quality run=2.43 ms, N_theta=118, FD gradient=0.290s, record=0.91s ops=16382 versions=27101
+Jilin_kw [cuda]
+  engine=adjoint build=0.09s
+    B=    1 fwd=0.272s (271.65 ms/sample) fwd+bwd=0.664s (663.54 ms/sample) graph fwd+bwd=0.115s mem=8MB
+    B=   16 fwd=0.275s (17.19 ms/sample) fwd+bwd=0.673s (42.07 ms/sample) graph fwd+bwd=0.146s mem=50MB
+    B=  128 fwd=0.277s (2.16 ms/sample) fwd+bwd=0.679s (5.30 ms/sample) graph fwd+bwd=0.153s mem=368MB
+    B= 1024 fwd=0.284s (0.28 ms/sample) fwd+bwd=0.696s (0.68 ms/sample) graph fwd+bwd=0.202s mem=2890MB
+    B= 4096 fwd=0.304s (0.07 ms/sample) fwd+bwd=0.746s (0.18 ms/sample) graph fwd+bwd=0.300s mem=11561MB
+  engine=fused_nf build=0.13s ops=3480 terms=117324
+    B=    1 fwd=0.103s (103.03 ms/sample) fwd+bwd=0.285s (285.40 ms/sample) graph fwd+bwd=0.047s mem=13MB
+    B=   16 fwd=0.104s (6.52 ms/sample) fwd+bwd=0.287s (17.95 ms/sample) graph fwd+bwd=0.057s mem=105MB
+    B=  128 fwd=0.104s (0.82 ms/sample) fwd+bwd=0.290s (2.27 ms/sample) graph fwd+bwd=0.064s mem=787MB
+    B= 1024 fwd=0.112s (0.11 ms/sample) fwd+bwd=0.311s (0.30 ms/sample) graph fwd+bwd=0.094s mem=6238MB
+    B= 4096 fwd=0.259s (0.06 ms/sample) fwd+bwd=0.661s (0.16 ms/sample) graph fwd+bwd=0.259s mem=11565MB
+  engine=fused build=1.70s ops=1153 terms=172210
+    B=    1 fwd=0.035s (35.14 ms/sample) fwd+bwd=0.097s (97.24 ms/sample) graph fwd+bwd=0.015s mem=17MB
+    B=   16 fwd=0.036s (2.24 ms/sample) fwd+bwd=0.098s (6.12 ms/sample) graph fwd+bwd=0.020s mem=137MB
+    B=  128 fwd=0.036s (0.28 ms/sample) fwd+bwd=0.100s (0.78 ms/sample) graph fwd+bwd=0.025s mem=1004MB
+    B= 1024 fwd=0.047s (0.05 ms/sample) fwd+bwd=0.124s (0.12 ms/sample) graph fwd+bwd=0.060s mem=7959MB
+    B= 4096 fwd=0.106s (0.03 ms/sample) fwd+bwd=0.268s (0.07 ms/sample) graph fwd+bwd=0.195s mem=11568MB
+  DLL quality run=3.69 ms, N_theta=96, FD gradient=0.358s, record=1.11s ops=4632 versions=39202
+Net3_CHEM_kw_mixed_tanks [cuda]
+  engine=adjoint build=0.20s
+    B=    1 fwd=0.872s (872.47 ms/sample) fwd+bwd=2.188s (2188.06 ms/sample) graph fwd+bwd=0.375s mem=7MB
+    B=   16 fwd=0.888s (55.49 ms/sample) fwd+bwd=2.237s (139.82 ms/sample) graph fwd+bwd=0.416s mem=44MB
+    B=  128 fwd=0.903s (7.05 ms/sample) fwd+bwd=2.265s (17.70 ms/sample) graph fwd+bwd=0.550s mem=321MB
+    B= 1024 fwd=0.914s (0.89 ms/sample) fwd+bwd=2.296s (2.24 ms/sample) graph fwd+bwd=0.660s mem=2519MB
+    B= 4096 fwd=0.921s (0.22 ms/sample) fwd+bwd=2.313s (0.56 ms/sample) graph fwd+bwd=0.762s mem=10088MB
+  engine=fused_nf build=0.29s ops=7824 terms=103654
+    B=    1 fwd=0.227s (226.97 ms/sample) fwd+bwd=0.630s (629.58 ms/sample) graph fwd+bwd=0.125s mem=11MB
+    B=   16 fwd=0.230s (14.36 ms/sample) fwd+bwd=0.638s (39.88 ms/sample) graph fwd+bwd=0.134s mem=92MB
+    B=  128 fwd=0.232s (1.81 ms/sample) fwd+bwd=0.644s (5.03 ms/sample) graph fwd+bwd=0.146s mem=697MB
+    B= 1024 fwd=0.237s (0.23 ms/sample) fwd+bwd=0.662s (0.65 ms/sample) graph fwd+bwd=0.179s mem=5500MB
+    B= 4096 fwd=0.533s (0.13 ms/sample) fwd+bwd=1.374s (0.34 ms/sample) graph fwd+bwd=0.450s mem=10138MB
+  engine=fused build=3.31s ops=291 terms=439946
+    B=    1 fwd=0.010s (9.57 ms/sample) fwd+bwd=0.026s (26.12 ms/sample) graph fwd+bwd=0.005s mem=37MB
+    B=   16 fwd=0.010s (0.60 ms/sample) fwd+bwd=0.026s (1.63 ms/sample) graph fwd+bwd=0.007s mem=272MB
+    B=  128 fwd=0.010s (0.08 ms/sample) fwd+bwd=0.029s (0.22 ms/sample) graph fwd+bwd=0.013s mem=2024MB
+    B= 1024 fwd=0.035s (0.03 ms/sample) fwd+bwd=0.086s (0.08 ms/sample) graph fwd+bwd=0.077s mem=2553MB
+    B= 4096 fwd=0.155s (0.04 ms/sample) fwd+bwd=0.374s (0.09 ms/sample) graph fwd+bwd=0.364s mem=10172MB
+  DLL quality run=2.65 ms, N_theta=334, FD gradient=0.887s, record=0.82s ops=10000 versions=34662
+report: /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g3_bench_v2_cuda.json
+=== exit=0 elapsed=598s
+
+=== G4 fused Fairfield free Kb (fd, adj, adjg x3)  Sun Sep 13 07:01:22 PM CST 2026
+[Fairfield] nodes=112 links=126 pipes=126 tanks=1 obs=140 sites=15 dropped=1 qstep=360s dur=24h groups={'<=6in': 11, '8in': 57, '10-12in': 51, '>=16in': 7} record=1.5s build=1.58s versions=30607 ops=4233 graph=1.2s
+  consistency: loss rel diff 1.4e-15, grad vs DLL FD 6.5e-10; timing {'dll_ctol0_s': 0.008416019193828107, 'dll_ctol0.01_s': 0.004567479714751244, 'fd_grad_equiv_s': 0.05049611516296864, 'adjoint_grad_B1_s': 0.02772268932312727, 'adjoint_grad_B1_graph_s': 0.004770833998918533}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.2178 sse=6.64379 n_eval=210 wall=2.4s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=1.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=0.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.2178 sse=6.64379 n_eval=210 wall=2.5s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=1.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=0.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.2178 sse=6.64379 n_eval=210 wall=2.5s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=1.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=0.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.2185 sse=6.68471 n_eval=660 wall=3.3s theta=[0.0, -0.0928, -0.1618, -0.6246, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.2301 sse=7.41009 n_eval=348 wall=1.7s theta=[-1.1699, -0.0013, -0.0082, -0.0651, 0.0]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g4_fused_Fairfield_cuda.json
+=== exit=0 elapsed=42s
+
+=== G4 fused Fairfield Kb fixed (fd, adj, adjg x3)  Sun Sep 13 07:02:04 PM CST 2026
+[Fairfield] nodes=112 links=126 pipes=126 tanks=1 obs=140 sites=15 dropped=1 qstep=360s dur=24h groups={'<=6in': 11, '8in': 57, '10-12in': 51, '>=16in': 7} record=1.5s build=1.62s versions=30607 ops=4233 graph=1.2s
+  consistency: loss rel diff 1.9e-15, grad vs DLL FD 5.1e-10; timing {'dll_ctol0_s': 0.008400521427392959, 'dll_ctol0.01_s': 0.004539783485233784, 'fd_grad_equiv_s': 0.0420026071369648, 'adjoint_grad_B1_s': 0.027613851055502892, 'adjoint_grad_B1_graph_s': 0.00470174141228199}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.2280 sse=7.27758 n_eval=100 wall=1.1s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=0.7s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=0.1s theta=[-5.0, 0.0, -0.0336, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.2280 sse=7.27758 n_eval=100 wall=1.1s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=0.7s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=0.1s theta=[-5.0, 0.0, -0.0336, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.2280 sse=7.27758 n_eval=100 wall=1.1s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=0.7s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=0.1s theta=[-5.0, 0.0, -0.0336, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.2296 sse=7.38268 n_eval=265 wall=1.3s theta=[-0.0019, 0.0, -0.0723, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.2296 sse=7.38338 n_eval=180 wall=0.9s theta=[-0.0014, -0.0001, -0.0634, 0.0]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g4_fused_Fairfield_fixkb_cuda.json
+=== exit=0 elapsed=19s
+
+=== G4 fused Bellingham free Kb (fd, adj, adjg x3)  Sun Sep 13 07:02:23 PM CST 2026
+[Bellingham] nodes=123 links=169 pipes=168 tanks=2 obs=120 sites=12 dropped=0 qstep=360s dur=35h groups={'<=6in': 52, '8in': 62, '10-12in': 50, '>=16in': 4} record=2.3s build=2.71s versions=60020 ops=6903 graph=1.2s
+  consistency: loss rel diff 1.1e-15, grad vs DLL FD 4.8e-10; timing {'dll_ctol0_s': 0.01251833364367485, 'dll_ctol0.01_s': 0.006969114020466805, 'fd_grad_equiv_s': 0.07511000186204911, 'adjoint_grad_B1_s': 0.03847721237689257, 'adjoint_grad_B1_graph_s': 0.0071617279201745985}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1323 sse=2.10085 n_eval=324 wall=4.7s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1323 sse=2.10085 n_eval=36 wall=1.7s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1323 sse=2.10085 n_eval=31 wall=0.2s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1323 sse=2.10085 n_eval=324 wall=4.6s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1323 sse=2.10085 n_eval=36 wall=1.6s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1323 sse=2.10085 n_eval=28 wall=0.2s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1323 sse=2.10085 n_eval=324 wall=4.6s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1323 sse=2.10085 n_eval=33 wall=1.5s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1323 sse=2.10085 n_eval=26 wall=0.2s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1323 sse=2.10094 n_eval=1020 wall=9.0s theta=[0.0, -0.1784, -0.0016, -5.0, -5.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.1377 sse=2.27573 n_eval=762 wall=7.3s theta=[0.0, -0.2536, -0.4884, -5.0, -1.5542]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g4_fused_Bellingham_cuda.json
+=== exit=0 elapsed=48s
+
+=== G4 fused Bellingham Kb fixed (fd, adj, adjg x3)  Sun Sep 13 07:03:11 PM CST 2026
+[Bellingham] nodes=123 links=169 pipes=168 tanks=2 obs=120 sites=12 dropped=0 qstep=360s dur=35h groups={'<=6in': 52, '8in': 62, '10-12in': 50, '>=16in': 4} record=2.2s build=2.69s versions=60020 ops=6903 graph=1.2s
+  consistency: loss rel diff 1.4e-15, grad vs DLL FD 1.1e-09; timing {'dll_ctol0_s': 0.01253478080034256, 'dll_ctol0.01_s': 0.007009952887892723, 'fd_grad_equiv_s': 0.0626739040017128, 'adjoint_grad_B1_s': 0.038407976180315016, 'adjoint_grad_B1_graph_s': 0.007157536223530769}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1419 sse=2.41618 n_eval=230 wall=3.6s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=2.1s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=0.3s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1419 sse=2.41618 n_eval=230 wall=3.6s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=2.1s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=0.3s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1419 sse=2.41618 n_eval=230 wall=3.6s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=2.1s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=0.3s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1419 sse=2.41773 n_eval=680 wall=5.8s theta=[-0.0161, 0.0, -4.4697, -5.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.1572 sse=2.96423 n_eval=355 wall=3.1s theta=[-0.316, -0.0002, -1.6992, -0.4053]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g4_fused_Bellingham_fixkb_cuda.json
+=== exit=0 elapsed=40s
+
+=== G4 fused NorthPenn free Kb (fd, adj, adjg x3)  Sun Sep 13 07:03:52 PM CST 2026
+[NorthPenn] nodes=339 links=399 pipes=399 tanks=2 obs=42 sites=6 dropped=0 qstep=360s dur=36h groups={'<=6in': 68, '8in': 139, '10-12in': 123, '>=16in': 69} record=8.6s build=1.90s versions=144761 ops=4163 graph=1.3s
+  consistency: loss rel diff 1.5e-15, grad vs DLL FD 7.7e-10; timing {'dll_ctol0_s': 0.051527655497193334, 'dll_ctol0.01_s': 0.01736182551831007, 'fd_grad_equiv_s': 0.30916593298316, 'adjoint_grad_B1_s': 0.040032494254410265, 'adjoint_grad_B1_graph_s': 0.00796720739454031}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1823 sse=1.39511 n_eval=228 wall=13.0s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=2.0s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=0.3s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1823 sse=1.39511 n_eval=228 wall=13.0s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=1.9s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=0.3s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1823 sse=1.39511 n_eval=228 wall=13.0s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=1.8s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=0.3s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1830 sse=1.40593 n_eval=1248 wall=29.8s theta=[-0.1237, -0.503, -2.3396, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.1839 sse=1.41974 n_eval=414 wall=9.4s theta=[-0.1777, -0.0206, -1.9173, 0.0, 0.0]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g4_fused_NorthPenn_cuda.json
+=== exit=0 elapsed=105s
+
+=== G4 fused NorthPenn Kb fixed (fd, adj, adjg x3)  Sun Sep 13 07:05:37 PM CST 2026
+[NorthPenn] nodes=339 links=399 pipes=399 tanks=2 obs=42 sites=6 dropped=0 qstep=360s dur=36h groups={'<=6in': 68, '8in': 139, '10-12in': 123, '>=16in': 69} record=8.6s build=1.86s versions=144761 ops=4163 graph=1.3s
+  consistency: loss rel diff 1.8e-15, grad vs DLL FD 1.1e-09; timing {'dll_ctol0_s': 0.05166384056210518, 'dll_ctol0.01_s': 0.01752788033336401, 'fd_grad_equiv_s': 0.2583192028105259, 'adjoint_grad_B1_s': 0.04041264932602644, 'adjoint_grad_B1_graph_s': 0.007921792939305306}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1858 sse=1.45033 n_eval=165 wall=9.7s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=1.6s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=0.3s theta=[-5.0, -0.9391, 0.0, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1858 sse=1.45033 n_eval=165 wall=9.5s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=1.6s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=0.3s theta=[-5.0, -0.9391, 0.0, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1858 sse=1.45033 n_eval=165 wall=9.5s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=1.6s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=0.3s theta=[-5.0, -0.9391, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1868 sse=1.46573 n_eval=635 wall=15.0s theta=[-0.1476, -1.1329, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.2041 sse=1.75032 n_eval=570 wall=11.8s theta=[-0.0186, -0.0901, -0.1707, -0.0076]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178/g4_fused_NorthPenn_fixkb_cuda.json
+=== exit=0 elapsed=82s
+
+=== results in /data/home/scxi690/wdn_quantum/results/diffwq_v2_1587178
+total 375
+drwxrwxr-x 2 scxi690 scxi690  4096 Sep 13 19:06 .
+drwxrwxr-x 7 scxi690 scxi690  4096 Sep 13 18:41 ..
+-rw-rw-r-- 1 scxi690 scxi690 60797 Sep 13 18:45 g2_fused.json
+-rw-rw-r-- 1 scxi690 scxi690 60835 Sep 13 18:50 g2_fused_nf.json
+-rw-rw-r-- 1 scxi690 scxi690 33802 Sep 13 19:01 g3_bench_v2_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 39748 Sep 13 19:03 g4_fused_Bellingham_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 35446 Sep 13 19:03 g4_fused_Bellingham_fixkb_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 38685 Sep 13 19:02 g4_fused_Fairfield_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 30234 Sep 13 19:02 g4_fused_Fairfield_fixkb_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 37250 Sep 13 19:05 g4_fused_NorthPenn_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 30843 Sep 13 19:06 g4_fused_NorthPenn_fixkb_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690  4882 Sep 13 18:51 verify_src.json
+=== done Sun Sep 13 07:06:59 PM CST 2026

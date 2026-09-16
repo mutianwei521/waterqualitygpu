@@ -1,0 +1,48 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "mode": "nextQ",
+  "ctol_override": null,
+  "repeat": 5,
+  "results": [
+    {
+      "network": "Net3_CHEM_kw_mixed_tanks",
+      "device": "cuda",
+      "nodes": 97,
+      "links": 119,
+      "pipes": 117,
+      "steps": 290,
+      "versions": 34662,
+      "ops": 10000,
+      "n_theta": 334,
+      "dll_quality_run_s": 0.0024506086483597755,
+      "fd_gradient_cost_s": 0.8209538972005248,
+      "record_s": 0.8537787809036672,
+      "build_s": 0.38498100312426686,
+      "batches": [
+        {
+          "B": 6144,
+          "forward_s": 0.9268579618074,
+          "forward_backward_s": 2.3474818421527743,
+          "forward_per_sample_s": 0.00015085578805458985,
+          "forward_backward_per_sample_s": 0.0003820771227462198,
+          "peak_mem_MB": 15066.20703125,
+          "graph_forward_backward_s": 0.8273013578727841,
+          "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.67 GiB. GPU 0 has a total capacity of 31.36 GiB of which 599.06 MiB is free. Including non-PyTorch memory, this process has 30.76 GiB memory in use. Of the allo"
+        },
+        {
+          "B": 8192,
+          "forward_s": 1.0841314089484513,
+          "forward_backward_s": 2.664120849221945,
+          "forward_per_sample_s": 0.00013234025988140274,
+          "forward_backward_per_sample_s": 0.0003252100646022882,
+          "peak_mem_MB": 20083.384765625,
+          "graph_error": "AcceleratorError: CUDA error: out of memory\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\n"
+        }
+      ]
+    }
+  ]
+}

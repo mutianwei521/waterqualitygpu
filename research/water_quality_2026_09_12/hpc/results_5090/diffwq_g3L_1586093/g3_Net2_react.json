@@ -1,0 +1,50 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "mode": "nextQ",
+  "ctol_override": null,
+  "repeat": 5,
+  "results": [
+    {
+      "network": "Net2_react",
+      "device": "cuda",
+      "nodes": 36,
+      "links": 40,
+      "pipes": 40,
+      "steps": 660,
+      "versions": 27101,
+      "ops": 16382,
+      "n_theta": 118,
+      "dll_quality_run_s": 0.0023834058083593845,
+      "fd_gradient_cost_s": 0.28362529119476676,
+      "record_s": 0.9225183171220124,
+      "build_s": 0.5508219203911722,
+      "batches": [
+        {
+          "B": 6144,
+          "forward_s": 1.4840172450058162,
+          "forward_backward_s": 3.6917001269757748,
+          "forward_per_sample_s": 0.0002415392651376654,
+          "forward_backward_per_sample_s": 0.0006008626508749634,
+          "peak_mem_MB": 11583.08740234375,
+          "graph_forward_backward_s": 1.1166674960404634,
+          "graph_forward_rel_err": 3.8449554586599553e-16,
+          "graph_peak_mem_MB": 11687.80615234375
+        },
+        {
+          "B": 8192,
+          "forward_s": 1.487577510997653,
+          "forward_backward_s": 3.728426360990852,
+          "forward_per_sample_s": 0.0001815890516354557,
+          "forward_backward_per_sample_s": 0.00045513017101939113,
+          "peak_mem_MB": 15638.43115234375,
+          "graph_forward_backward_s": 1.176052255090326,
+          "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.65 GiB. GPU 0 has a total capacity of 31.36 GiB of which 229.06 MiB is free. Including non-PyTorch memory, this process has 31.12 GiB memory in use. Of the allo"
+        }
+      ]
+    }
+  ]
+}

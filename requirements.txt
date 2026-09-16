@@ -1,0 +1,13 @@
+# Core: the differentiable engine (diffwq)
+numpy>=1.24
+scipy>=1.10
+# PyTorch must be a CUDA build for the GPU results; the published runs used 2.8.0+cu128.
+# Install it from the official index for your CUDA version, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.4
+
+# Tables and figures (paper/build_tables.py, paper/figures/*.py)
+matplotlib>=3.8
+pillow>=10.0
+pymupdf>=1.24
+pypdf>=4.0

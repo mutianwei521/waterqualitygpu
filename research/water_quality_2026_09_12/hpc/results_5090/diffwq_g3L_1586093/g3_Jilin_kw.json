@@ -1,0 +1,48 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "mode": "nextQ",
+  "ctol_override": null,
+  "repeat": 5,
+  "results": [
+    {
+      "network": "Jilin_kw",
+      "device": "cuda",
+      "nodes": 28,
+      "links": 34,
+      "pipes": 34,
+      "steps": 1152,
+      "versions": 39202,
+      "ops": 4632,
+      "n_theta": 96,
+      "dll_quality_run_s": 0.0036499900743365288,
+      "fd_gradient_cost_s": 0.3540490372106433,
+      "record_s": 1.182714284863323,
+      "build_s": 0.2313732779584825,
+      "batches": [
+        {
+          "B": 6144,
+          "forward_s": 0.31933358078822494,
+          "forward_backward_s": 0.7777223167940974,
+          "forward_per_sample_s": 5.197486666475015e-05,
+          "forward_backward_per_sample_s": 0.00012658240833237264,
+          "peak_mem_MB": 17264.3134765625,
+          "graph_forward_backward_s": 0.3945712991990149,
+          "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.85 GiB. GPU 0 has a total capacity of 31.36 GiB of which 349.06 MiB is free. Including non-PyTorch memory, this process has 31.01 GiB memory in use. Of the allo"
+        },
+        {
+          "B": 8192,
+          "forward_s": 0.3733465690165758,
+          "forward_backward_s": 0.8972878870554268,
+          "forward_per_sample_s": 4.557453235065623e-05,
+          "forward_backward_per_sample_s": 0.00010953221277532066,
+          "peak_mem_MB": 23014.5322265625,
+          "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 0 has a total capacity of 31.36 GiB of which 815.06 MiB is free. Including non-PyTorch memory, this process has 30.55 GiB memory in use. Of the allo"
+        }
+      ]
+    }
+  ]
+}

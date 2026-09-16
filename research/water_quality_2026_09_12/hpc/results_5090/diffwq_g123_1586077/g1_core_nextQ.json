@@ -1,0 +1,182 @@
+{
+  "engine_version": 20306,
+  "library": "/data/home/scxi690/wdn_quantum/EPANET-dev/build/lib/libepanet2.so",
+  "platform": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+  "mode": "nextQ",
+  "qstep_override": null,
+  "ctol_override": null,
+  "results": [
+    {
+      "network": "Net1",
+      "path": "/data/run01/scxi690/wdn_quantum/EPANET-dev/example-networks/Net1.inp",
+      "qualflag": 1,
+      "mode": "nextQ",
+      "nodes": 11,
+      "links": 13,
+      "tanks": 1,
+      "mix_models": [
+        0
+      ],
+      "reactflag": 1,
+      "bulkorder": 1.0,
+      "wallorder": 1.0,
+      "qstep": 300,
+      "ctol_user": 0.01,
+      "duration": 86400,
+      "hydraulic_periods": 27,
+      "output_times": 27,
+      "max_abs_diff": 0.0,
+      "max_ref": 1.0000000000000002,
+      "max_rel_diff": 0.0,
+      "worst_time": 0,
+      "worst_node": "",
+      "mass_balance_engine": 0.9999999819516711,
+      "mass_balance_replicator": 0.9999999819516711,
+      "mass_balance_diff": 0.0,
+      "segments_created": 1587,
+      "seconds_engine": 0.02950860746204853,
+      "seconds_python": 0.09077839273959398,
+      "source_types": [],
+      "tank_final_volume_at_vmax": [
+        false
+      ],
+      "branch_hits": {
+        "mix1": 290,
+        "noflowqual": 123,
+        "outflow_merge": 2073,
+        "outflow_newseg": 1574
+      },
+      "climit_user": 0.0,
+      "tankorder": 1.0
+    },
+    {
+      "network": "Net2",
+      "path": "/data/run01/scxi690/wdn_quantum/EPANET-dev/example-networks/Net2.inp",
+      "qualflag": 1,
+      "mode": "nextQ",
+      "nodes": 36,
+      "links": 40,
+      "tanks": 1,
+      "mix_models": [
+        0
+      ],
+      "reactflag": 0,
+      "bulkorder": 1.0,
+      "wallorder": 1.0,
+      "qstep": 300,
+      "ctol_user": 0.01,
+      "duration": 198000,
+      "hydraulic_periods": 56,
+      "output_times": 56,
+      "max_abs_diff": 0.0,
+      "max_ref": 1.0500000000000003,
+      "max_rel_diff": 0.0,
+      "worst_time": 0,
+      "worst_node": "",
+      "mass_balance_engine": 0.9999999914817473,
+      "mass_balance_replicator": 0.9999999914817473,
+      "mass_balance_diff": 0.0,
+      "segments_created": 2909,
+      "seconds_engine": 0.0011711139231920242,
+      "seconds_python": 0.15633427444845438,
+      "source_types": [
+        0
+      ],
+      "tank_final_volume_at_vmax": [
+        false
+      ],
+      "branch_hits": {
+        "('source', 0, True, True)": 396,
+        "junction_negative_demand": 396,
+        "mix1": 660,
+        "outflow_merge": 23532,
+        "outflow_newseg": 2868,
+        "source_concen_junction_inflow": 396,
+        "source_stagnant_skip": 264
+      },
+      "climit_user": 0.0,
+      "tankorder": 1.0
+    },
+    {
+      "network": "Net3",
+      "path": "/data/run01/scxi690/wdn_quantum/EPANET-dev/example-networks/Net3.inp",
+      "qualflag": 3,
+      "mode": "nextQ",
+      "nodes": 97,
+      "links": 119,
+      "tanks": 3,
+      "mix_models": [
+        0
+      ],
+      "reactflag": 0,
+      "bulkorder": 1.0,
+      "wallorder": 1.0,
+      "qstep": 300,
+      "ctol_user": 0.01,
+      "duration": 86400,
+      "hydraulic_periods": 27,
+      "output_times": 27,
+      "max_abs_diff": 0.0,
+      "max_ref": 100.00000000000004,
+      "max_rel_diff": 0.0,
+      "worst_time": 0,
+      "worst_node": "",
+      "mass_balance_engine": 0.999999998610601,
+      "mass_balance_replicator": 0.999999998610601,
+      "mass_balance_diff": 0.0,
+      "segments_created": 10992,
+      "seconds_engine": 0.0013947384431958199,
+      "seconds_python": 0.1922994190827012,
+      "source_types": [],
+      "tank_final_volume_at_vmax": [
+        false,
+        false,
+        false
+      ],
+      "branch_hits": {
+        "mix1": 870,
+        "outflow_merge": 23227,
+        "outflow_newseg": 10872
+      },
+      "climit_user": 0.0,
+      "tankorder": 1.0
+    },
+    {
+      "network": "Jilin",
+      "path": "/data/run01/scxi690/wdn_quantum/networks/asce-tf-wdst/Jilin including water quality/Jilin including water quality.inp",
+      "qualflag": 1,
+      "mode": "nextQ",
+      "nodes": 28,
+      "links": 34,
+      "tanks": 0,
+      "mix_models": [],
+      "reactflag": 1,
+      "bulkorder": 1.0,
+      "wallorder": 1.0,
+      "qstep": 300,
+      "ctol_user": 0.01,
+      "duration": 345600,
+      "hydraulic_periods": 97,
+      "output_times": 97,
+      "max_abs_diff": 0.0,
+      "max_ref": 2.5,
+      "max_rel_diff": 0.0,
+      "worst_time": 0,
+      "worst_node": "",
+      "mass_balance_engine": 1.0000000106766904,
+      "mass_balance_replicator": 1.0000000106766904,
+      "mass_balance_diff": 0.0,
+      "segments_created": 18680,
+      "seconds_engine": 0.0031430544331669807,
+      "seconds_python": 0.459820588119328,
+      "source_types": [],
+      "tank_final_volume_at_vmax": [],
+      "branch_hits": {
+        "outflow_merge": 20522,
+        "outflow_newseg": 18646
+      },
+      "climit_user": 0.0,
+      "tankorder": 1.0
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "mode": "stepQ",
+  "ctol_override": null,
+  "repeat": 3,
+  "engines": [
+    "fused_gather",
+    "fused_spmm",
+    "fused"
+  ],
+  "shared_theta": true,
+  "jac_rows": true,
+  "results": [
+    {
+      "network": "LTown_kw",
+      "device": "cuda",
+      "nodes": 785,
+      "links": 909,
+      "pipes": 905,
+      "steps": 580,
+      "versions": 528365,
+      "ops": 43551,
+      "n_theta": 2596,
+      "shared_theta": true,
+      "dll_quality_run_s": 0.11033437494188547,
+      "fd_gradient_cost_s": 286.53837172407657,
+      "record_s": 19.272844593971968,
+      "engines": {
+        "fused_gather": {
+          "build_s": 18.996337912976742,
+          "ops": 581,
+          "terms": 4822038,
+          "max_op_terms": 30799,
+          "spmm_min_batch": 0,
+          "spmm_min_work": 4194304,
+          "batches": [
+            {
+              "B": 1,
+              "forward_s": 0.024023261852562428,
+              "forward_backward_s": 0.05249882768839598,
+              "forward_per_sample_s": 0.024023261852562428,
+              "forward_backward_per_sample_s": 0.05249882768839598,
+              "peak_mem_MB": 294.6044921875,
+              "graph_forward_backward_s": 0.01359856128692627,
+              "graph_forward_rel_err": 1.4096889727720904e-15,
+              "graph_peak_mem_MB": 309.65380859375,
+              "jac_rows": {
+                "n_rows": 4,
+                "chunk": 1,
+                "seconds": 0.152218003757298,
+                "rows_per_s": 26.278100495771497
+              }
+            },
+            {
+              "B": 16,
+              "forward_s": 0.02324617560952902,
+              "forward_backward_s": 0.0536964125931263,
+              "forward_per_sample_s": 0.0014528859755955637,
+              "forward_backward_per_sample_s": 0.0033560257870703936,
+              "peak_mem_MB": 519.7646484375,
+              "graph_forward_backward_s": 0.016777713783085346,
+              "graph_forward_rel_err": 1.918041403235871e-15,
+              "graph_peak_mem_MB": 707.7587890625,
+              "jac_rows": {
+                "n_rows": 64,
+                "chunk": 16,
+                "seconds": 0.16046552546322346,
+                "rows_per_s": 398.83956267396474
+              }
+            },
+            {
+              "B": 64,
+              "forward_s": 0.02430982794612646,
+              "forward_backward_s": 0.05382314883172512,
+              "forward_per_sample_s": 0.00037984106165822595,
+              "forward_backward_per_sample_s": 0.000840986700495705,
+              "peak_mem_MB": 1268.10693359375,
+              "graph_forward_backward_s": 0.022884502075612545,
+              "graph_forward_rel_err": 2.1206855799374214e-15,
+              "graph_peak_mem_MB": 2039.3466796875,
+              "jac_rows": {
+                "n_rows": 256,
+                "chunk": 64,
+                "seconds": 0.263009000569582,
+                "rows_per_s": 973.350719730492
+              }
+            },
+            {
+              "B": 256,
+              "forward_s": 0.028646651655435562,
+              "forward_backward_s": 0.06064585689455271,
+              "forward_per_sample_s": 0.00011190098302904516,
+              "forward_backward_per_sample_s": 0.00023689787849434651,
+              "peak_mem_MB": 4307.79736328125,
+              "graph_forward_backward_s": 0.052093515172600746,
+              "graph_forward_rel_err": 2.1211342035532956e-15,
+              "graph_peak_mem_MB": 7355.0546875,
+              "jac_rows": {
+                "n_rows": 1024,
+                "chunk": 256,
+                "seconds": 0.26221102476119995,
+                "rows_per_s": 3905.2515085228556
+              }
+            },
+            {
+              "B": 1024,
+              "forward_s": 0.1251243194565177,
+              "forward_backward_s": 0.25670108292251825,
+              "forward_per_sample_s": 0.00012219171821925556,
+              "forward_backward_per_sample_s": 0.00025068465129152173,
+              "peak_mem_MB": 16362.625,
+              "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 3.46 GiB. GPU 0 has a total capacity of 31.36 GiB of which 2.52 GiB is free. Including non-PyTorch memory, this process has 28.83 GiB memory in use. Of the alloca",
+              "jac_rows": {
+                "n_rows": 4096,
+                "chunk": 1024,
+                "seconds": 0.8286881968379021,
+                "rows_per_s": 4942.751707613871
+              }
+            }
+          ]
+        },
+        "fused_spmm": {
+          "build_s": 18.675449891015887,
+          "ops": 581,
+          "terms": 4822038,
+          "max_op_terms": 30799,
+          "spmm_min_batch": 1,
+          "spmm_min_work": 0,
+          "batches": [
+            {
+              "B": 1,
+              "forward_s": 0.03034209832549095,
+              "forward_backward_s": 0.07249252684414387,
+              "forward_per_sample_s": 0.03034209832549095,
+              "forward_backward_per_sample_s": 0.07249252684414387,
+              "peak_mem_MB": 5196.86181640625,
+              "graph_forward_backward_s": 0.014607580378651619,
+              "graph_forward_rel_err": 2.168752265803216e-16,
+              "graph_peak_mem_MB": 5211.31640625,
+              "jac_rows": {
+                "n_rows": 4,
+                "chunk": 1,
+                "seconds": 0.28093674778938293,
+                "rows_per_s": 14.23808039167159
+              },
+              "vs_first_engine": {
+                "out_rel_err": 2.277189879093377e-15,
+                "grad_rel_err": 1.1317845774825876e-14,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 16,
+              "forward_s": 0.030252452939748764,
+              "forward_backward_s": 0.07352049369364977,
+              "forward_per_sample_s": 0.0018907783087342978,
+              "forward_backward_per_sample_s": 0.0045950308558531106,
+              "peak_mem_MB": 5498.90185546875,
+              "graph_forward_backward_s": 0.024267282336950302,
+              "graph_forward_rel_err": 5.047477376936503e-16,
+              "graph_peak_mem_MB": 5678.76513671875,
+              "jac_rows": {
+                "n_rows": 64,
+                "chunk": 16,
+                "seconds": 0.28916424233466387,
+                "rows_per_s": 221.32750399314477
+              },
+              "vs_first_engine": {
+                "out_rel_err": 1.918041403235871e-15,
+                "grad_rel_err": 1.074267654673134e-14,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 64,
+              "forward_s": 0.03117189835757017,
+              "forward_backward_s": 0.07337820343673229,
+              "forward_per_sample_s": 0.00048706091183703393,
+              "forward_backward_per_sample_s": 0.001146534428698942,
+              "peak_mem_MB": 6240.50048828125,
+              "graph_forward_backward_s": 0.026399611495435238,
+              "graph_forward_rel_err": 5.049251380803384e-16,
+              "graph_peak_mem_MB": 6932.20849609375,
+              "jac_rows": {
+                "n_rows": 256,
+                "chunk": 64,
+                "seconds": 0.260541464202106,
+                "rows_per_s": 982.569130729291
+              },
+              "vs_first_engine": {
+                "out_rel_err": 2.4236406627856244e-15,
+                "grad_rel_err": 5.2745870002791536e-15,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 256,
+              "forward_s": 0.03459353279322386,
+              "forward_backward_s": 0.07177358213812113,
+              "forward_per_sample_s": 0.0001351309874735307,
+              "forward_backward_per_sample_s": 0.00028036555522703566,
+              "peak_mem_MB": 9189.76171875,
+              "graph_forward_backward_s": 0.041153598576784134,
+              "graph_forward_rel_err": 5.0503195322697515e-16,
+              "graph_peak_mem_MB": 11944.423828125,
+              "jac_rows": {
+                "n_rows": 1024,
+                "chunk": 256,
+                "seconds": 0.2579640317708254,
+                "rows_per_s": 3969.5456493319157
+              },
+              "vs_first_engine": {
+                "out_rel_err": 2.4241533754894806e-15,
+                "grad_rel_err": 1.6366076904327126e-14,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 1024,
+              "forward_s": 0.05229751579463482,
+              "forward_backward_s": 0.12107147555798292,
+              "forward_per_sample_s": 5.1071792768198065e-05,
+              "forward_backward_per_sample_s": 0.0001182338628495927,
+              "peak_mem_MB": 20970.94091796875,
+              "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 3.46 GiB. GPU 0 has a total capacity of 31.36 GiB of which 3.24 GiB is free. Including non-PyTorch memory, this process has 28.11 GiB memory in use. Of the alloca",
+              "jac_rows": {
+                "n_rows": 4096,
+                "chunk": 1024,
+                "seconds": 0.29727656580507755,
+                "rows_per_s": 13778.415358463615
+              },
+              "vs_first_engine": {
+                "out_rel_err": 2.9270951667725088e-15,
+                "grad_rel_err": 1.9729837361288995e-14,
+                "jac_rel_err": 2.523943583768985e-16
+              }
+            }
+          ],
+          "spmm_struct_MB": 112.53861999511719
+        },
+        "fused": {
+          "build_s": 18.69353683013469,
+          "ops": 581,
+          "terms": 4822038,
+          "max_op_terms": 30799,
+          "spmm_min_batch": 16,
+          "spmm_min_work": 4194304,
+          "batches": [
+            {
+              "B": 1,
+              "forward_s": 0.023432496935129166,
+              "forward_backward_s": 0.05340171605348587,
+              "forward_per_sample_s": 0.023432496935129166,
+              "forward_backward_per_sample_s": 0.05340171605348587,
+              "peak_mem_MB": 5060.40966796875,
+              "graph_forward_backward_s": 0.013649234548211098,
+              "graph_forward_rel_err": 1.192813746191769e-15,
+              "graph_peak_mem_MB": 5074.8642578125,
+              "jac_rows": {
+                "n_rows": 4,
+                "chunk": 1,
+                "seconds": 0.15411962755024433,
+                "rows_per_s": 25.95386495270348
+              },
+              "vs_first_engine": {
+                "out_rel_err": 1.192813746191769e-15,
+                "grad_rel_err": 3.9027054395951473e-16,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 16,
+              "forward_s": 0.023918243125081062,
+              "forward_backward_s": 0.05423964001238346,
+              "forward_per_sample_s": 0.0014948901953175664,
+              "forward_backward_per_sample_s": 0.0033899775007739663,
+              "peak_mem_MB": 5285.93115234375,
+              "graph_forward_backward_s": 0.016829931177198887,
+              "graph_forward_rel_err": 2.0189909507746014e-15,
+              "graph_peak_mem_MB": 5471.380859375,
+              "jac_rows": {
+                "n_rows": 64,
+                "chunk": 16,
+                "seconds": 0.16237462777644396,
+                "rows_per_s": 394.15024918865197
+              },
+              "vs_first_engine": {
+                "out_rel_err": 1.8675666294665063e-15,
+                "grad_rel_err": 3.9064278351750323e-16,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 64,
+              "forward_s": 0.02439809124916792,
+              "forward_backward_s": 0.054104012437164783,
+              "forward_per_sample_s": 0.00038122017576824874,
+              "forward_backward_per_sample_s": 0.0008453751943306997,
+              "peak_mem_MB": 6031.701171875,
+              "graph_forward_backward_s": 0.022932786494493484,
+              "graph_forward_rel_err": 2.4741331765936584e-15,
+              "graph_peak_mem_MB": 6746.74853515625,
+              "jac_rows": {
+                "n_rows": 256,
+                "chunk": 64,
+                "seconds": 0.26352957636117935,
+                "rows_per_s": 971.427964689399
+              },
+              "vs_first_engine": {
+                "out_rel_err": 2.3226556351695567e-15,
+                "grad_rel_err": 5.860652222532419e-16,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 256,
+              "forward_s": 0.02898318227380514,
+              "forward_backward_s": 0.06104385294020176,
+              "forward_per_sample_s": 0.00011321555575705133,
+              "forward_backward_per_sample_s": 0.00023845255054766312,
+              "peak_mem_MB": 9154.02685546875,
+              "graph_forward_backward_s": 0.05158887151628733,
+              "graph_forward_rel_err": 2.3231469848440856e-15,
+              "graph_peak_mem_MB": 11916.07421875,
+              "jac_rows": {
+                "n_rows": 1024,
+                "chunk": 256,
+                "seconds": 0.2721008248627186,
+                "rows_per_s": 3763.310899614629
+              },
+              "vs_first_engine": {
+                "out_rel_err": 2.373650180166783e-15,
+                "grad_rel_err": 9.741712443051875e-16,
+                "jac_rel_err": 0.0
+              }
+            },
+            {
+              "B": 1024,
+              "forward_s": 0.053242956288158894,
+              "forward_backward_s": 0.1228283978998661,
+              "forward_per_sample_s": 5.199507450015517e-05,
+              "forward_backward_per_sample_s": 0.00011994960732408799,
+              "peak_mem_MB": 20990.0849609375,
+              "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 3.46 GiB. GPU 0 has a total capacity of 31.36 GiB of which 3.25 GiB is free. Including non-PyTorch memory, this process has 28.10 GiB memory in use. Of the alloca",
+              "jac_rows": {
+                "n_rows": 4096,
+                "chunk": 1024,
+                "seconds": 0.299449659883976,
+                "rows_per_s": 13678.4259550905
+              },
+              "vs_first_engine": {
+                "out_rel_err": 2.9270951667725088e-15,
+                "grad_rel_err": 1.9339147512550608e-14,
+                "jac_rel_err": 2.523943583768985e-16
+              }
+            }
+          ],
+          "spmm_struct_MB": 112.53861999511719
+        }
+      }
+    }
+  ]
+}

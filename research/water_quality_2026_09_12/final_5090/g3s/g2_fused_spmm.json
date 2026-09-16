@@ -1,0 +1,2232 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "mode": "nextQ",
+  "qstep_override": null,
+  "ctol_override": null,
+  "h_dll": 0.0001,
+  "engine": "fused_spmm",
+  "results": [
+    {
+      "network": "Net1",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 14478,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 1897,
+      "terms": 11356,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.676436767183986e-14,
+      "forward_rel_vs_dll": 1.676436767183986e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 9.097353288118583e-09,
+          "grad_max_abs": 6.582765347743506
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 9.941834002200652e-09,
+          "grad_max_abs": 8.242176951643241
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 3.4443036104257374e-09,
+          "grad_max_abs": 28.6346038657796
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 3.078860265869956e-08,
+          "grad_max_abs": 126.0340198290635
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 17.073423111740865,
+          "dll_fd": 17.073423114197794,
+          "rel_err": 1.439037073076971e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 32.85659860236191,
+          "dll_fd": 32.856598672879045,
+          "rel_err": 2.1462091189521714e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 28.6346038657796,
+          "dll_fd": 28.63460388894623,
+          "rel_err": 8.090431901848172e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 199.18902029724822,
+          "dll_fd": 199.1890202972968,
+          "rel_err": 2.438523034254797e-13,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 6.465610419997469e-16,
+        "seconds_forward_backward_autograd": 0.3970175627619028,
+        "forward_max_rel_err": 1.221245327087672e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.17493759468197823,
+        "build": 0.8144175261259079,
+        "forward": 0.379561647772789,
+        "forward_backward": 0.14297179505228996
+      }
+    },
+    {
+      "network": "Net2",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": false,
+      "engine": "fused_spmm",
+      "fused_ops": 661,
+      "fused_terms": 207140,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 660,
+      "versions": 27101,
+      "ops": 17543,
+      "terms": 81062,
+      "max_level": 40,
+      "forward_rel_vs_replicator": 4.546627624655402e-15,
+      "forward_rel_vs_dll": 4.546627624655402e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 6.492830785960212e-08,
+          "grad_max_abs": 55.55308140564479
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 0.0001053982309335801,
+          "grad_max_abs": 333.31848843386877
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 2.639911534096537e-09,
+          "grad_max_abs": 592.5863150923315
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 4.8617707775579526e-08,
+          "grad_max_abs": 501.0901133795621
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 3.245840565734176e-10,
+          "grad_max_abs": 403.22579583872067
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 409.69905043475353,
+          "dll_fd": 341.13531812408837,
+          "rel_err": 0.16735145526431786,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "kw_all_pipes": {
+          "autograd": 2217.701297939051,
+          "dll_fd": 2144.3039524592677,
+          "rel_err": 0.0330961367736912,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "tank_kb_all": {
+          "autograd": 592.5863150923315,
+          "dll_fd": 592.5863170591583,
+          "rel_err": 3.319055471252122e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 403.22579583872067,
+          "dll_fd": 414.1519306574537,
+          "rel_err": 0.026381948289817516,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 850.7769195567316,
+          "dll_fd": 850.7769195546189,
+          "rel_err": 2.483325703427982e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 36
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 3.0695771353788897e-15,
+        "seconds_forward_backward_autograd": 3.8201525937765837,
+        "forward_max_rel_err": 2.7491236800241965e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.6549694677814841,
+        "build": 5.569509230554104,
+        "forward": 0.17129604890942574,
+        "forward_backward": 0.0838076937943697
+      }
+    },
+    {
+      "network": "Net3",
+      "mode": "nextQ",
+      "qualflag": 3,
+      "ctol_user": 0.01,
+      "reactflag": false,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 654928,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 35089,
+      "ops": 14751,
+      "terms": 103444,
+      "max_level": 70,
+      "forward_rel_vs_replicator": 1.4210854715201999e-15,
+      "forward_rel_vs_dll": 1.4210854715201999e-15,
+      "fd_torch": {
+        "c0": {
+          "n": 3,
+          "max_rel_err": 1.9336741789341832e-07,
+          "grad_max_abs": 163.08489659144365
+        }
+      },
+      "fd_dll": {},
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 6.971021847990103e-16,
+        "seconds_forward_backward_autograd": 1.5385421002283692,
+        "forward_max_rel_err": 1.2789769243681797e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.6913315253332257,
+        "build": 4.838656125590205,
+        "forward": 0.09951058495789766,
+        "forward_backward": 0.030705666169524193
+      }
+    },
+    {
+      "network": "Jilin",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 1153,
+      "fused_terms": 156345,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 1152,
+      "versions": 39202,
+      "ops": 5407,
+      "terms": 117481,
+      "max_level": 12,
+      "forward_rel_vs_replicator": 5.861977570020826e-15,
+      "forward_rel_vs_dll": 5.861977570020826e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 2.1282761159495268e-07,
+          "grad_max_abs": 185.298481487109
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.291393494797918e-06,
+          "grad_max_abs": 1058.8484656406229
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 2.0941263968386741e-07,
+          "grad_max_abs": 2439.3120187089085
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 474.9404687771677,
+          "dll_fd": 348.7714430048072,
+          "rel_err": 0.26565229553339326,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 34
+        },
+        "kw_all_pipes": {
+          "autograd": 5871.424215516766,
+          "dll_fd": 5878.961480621001,
+          "rel_err": 0.001282074245439542,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 34
+        },
+        "c0_all_nodes": {
+          "autograd": 2500.3978431661567,
+          "dll_fd": 2500.3978431595897,
+          "rel_err": 2.626384641987966e-12,
+          "h": 0.00025,
+          "shift": 0.00025,
+          "n_params": 28
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.717893978762423e-15,
+        "seconds_forward_backward_autograd": 1.0889662047848105,
+        "forward_max_rel_err": 7.105427357601002e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.9131036987528205,
+        "build": 1.9764847410842776,
+        "forward": 0.29154224414378405,
+        "forward_backward": 0.14371001534163952
+      }
+    },
+    {
+      "network": "Net1_MIX2",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 16031,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 4118,
+      "ops": 1966,
+      "terms": 11811,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.676436767183986e-14,
+      "forward_rel_vs_dll": 1.676436767183986e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 6.044747451784588e-08,
+          "grad_max_abs": 6.798254707452093
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 2.2270539574552368e-07,
+          "grad_max_abs": 8.67591745690431
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 1.8281236351556248e-09,
+          "grad_max_abs": 26.797088119007363
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 6.88123345074456e-09,
+          "grad_max_abs": 129.7313715315014
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 17.343106072753937,
+          "dll_fd": 17.343106075031756,
+          "rel_err": 1.313385741051631e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 33.45185606120139,
+          "dll_fd": 33.45185613198964,
+          "rel_err": 2.116123338623197e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 26.797088119007363,
+          "dll_fd": 26.797088140568803,
+          "rel_err": 8.046187899154569e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 198.62475675974818,
+          "dll_fd": 198.62475676035274,
+          "rel_err": 3.0437201845062185e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.6379656429180246e-15,
+        "seconds_forward_backward_autograd": 0.4105616481974721,
+        "forward_max_rel_err": 2.109423746787797e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.14046529028564692,
+        "build": 0.6689691841602325,
+        "forward": 0.07306536566466093,
+        "forward_backward": 0.03790777735412121
+      }
+    },
+    {
+      "network": "Net1_FIFO",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 13547,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3690,
+      "ops": 1417,
+      "terms": 10880,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.676436767183986e-14,
+      "forward_rel_vs_dll": 1.676436767183986e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 4.943687342724411e-08,
+          "grad_max_abs": 6.3458606926633765
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.0261809727148721e-07,
+          "grad_max_abs": 7.763183442115985
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 2.5322775792686795e-09,
+          "grad_max_abs": 30.890035070223206
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 6.132934427496667e-09,
+          "grad_max_abs": 122.00530213787489
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 16.78858530931902,
+          "dll_fd": 16.788585311218185,
+          "rel_err": 1.1312230649156129e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 32.22617412328512,
+          "dll_fd": 32.22617419325502,
+          "rel_err": 2.1712133645313877e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 30.890035070223206,
+          "dll_fd": 30.89003509572308,
+          "rel_err": 8.255048062202041e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 199.88005787118132,
+          "dll_fd": 199.88005787126895,
+          "rel_err": 4.383835541531068e-13,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 5.720452352585638e-16,
+        "seconds_forward_backward_autograd": 0.28066975995898247,
+        "forward_max_rel_err": 5.551115123125782e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.1733251502737403,
+        "build": 0.498203843832016,
+        "forward": 0.07287511881440878,
+        "forward_backward": 0.03789793234318495
+      }
+    },
+    {
+      "network": "Net1_LIFO",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 13652,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3690,
+      "ops": 1435,
+      "terms": 10908,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.676436767183986e-14,
+      "forward_rel_vs_dll": 1.676436767183986e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 1.6915448735341423e-08,
+          "grad_max_abs": 8.093860980591462
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.6533012854457344e-08,
+          "grad_max_abs": 11.036912766606974
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 1.7757422810573599e-09,
+          "grad_max_abs": 17.301461679694306
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 1.2327834437594986e-08,
+          "grad_max_abs": 150.4900167318777
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 18.828746323499857,
+          "dll_fd": 18.828746325851853,
+          "rel_err": 1.2491516379503449e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 36.65192456150804,
+          "dll_fd": 36.65192463671474,
+          "rel_err": 2.051916789638686e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 17.301461679694306,
+          "dll_fd": 17.30146169521163,
+          "rel_err": 8.968792817263142e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 196.01469844756915,
+          "dll_fd": 196.01469844758412,
+          "rel_err": 7.64138658399039e-14,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 4.828406847904298e-16,
+        "seconds_forward_backward_autograd": 0.2831761948764324,
+        "forward_max_rel_err": 5.551115123125782e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.13269875012338161,
+        "build": 0.5054324474185705,
+        "forward": 0.07297745626419783,
+        "forward_backward": 0.03800215478986502
+      }
+    },
+    {
+      "network": "Net1_MIX1_overflow",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 290,
+      "fused_terms": 15044,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 289,
+      "versions": 4059,
+      "ops": 1799,
+      "terms": 11395,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 4.440892098500625e-15,
+      "forward_rel_vs_dll": 4.440892098500625e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 2.1802613088230577e-08,
+          "grad_max_abs": 5.59605328015611
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.7467853007980605e-06,
+          "grad_max_abs": 11.561372626226735
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 5.521159575851152e-09,
+          "grad_max_abs": 7.864332103857986
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 2.468162375229299e-09,
+          "grad_max_abs": 157.3388548938626
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 14.696640279539954,
+          "dll_fd": 14.696640280646989,
+          "rel_err": 7.532568280630859e-11,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 35.21521634313223,
+          "dll_fd": 35.21521640763581,
+          "rel_err": 1.8316962870938132e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 7.864332103857986,
+          "dll_fd": 7.864332109193128,
+          "rel_err": 6.783973555289237e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 209.9553090354598,
+          "dll_fd": 209.95530903547888,
+          "rel_err": 9.083345934623839e-14,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.9199383921611133e-15,
+        "seconds_forward_backward_autograd": 0.3580084452405572,
+        "forward_max_rel_err": 2.109423746787797e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.18515431880950928,
+        "build": 0.6222981158643961,
+        "forward": 0.07332997396588326,
+        "forward_backward": 0.03788712713867426
+      }
+    },
+    {
+      "network": "Net1_FIFO_overflow",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 290,
+      "fused_terms": 13301,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 289,
+      "versions": 3808,
+      "ops": 1540,
+      "terms": 10746,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 6.328271240363391e-15,
+      "forward_rel_vs_dll": 6.328271240363391e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 1.511560114024527e-08,
+          "grad_max_abs": 5.428791294320666
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.9299393763818937e-08,
+          "grad_max_abs": 11.215918411424413
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 2.80934913817247e-09,
+          "grad_max_abs": 9.592116130416613
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 3.935266504774241e-09,
+          "grad_max_abs": 154.27567056087938
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 14.433216877951722,
+          "dll_fd": 14.433216879012889,
+          "rel_err": 7.352256694010505e-11,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 34.63250208938274,
+          "dll_fd": 34.63250215389735,
+          "rel_err": 1.8628341804367872e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 9.592116130416613,
+          "dll_fd": 9.592116138179563,
+          "rel_err": 8.093051921587735e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 210.01140044943827,
+          "dll_fd": 210.01140044944577,
+          "rel_err": 3.5728209390389115e-14,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 2.375672826209496e-16,
+        "seconds_forward_backward_autograd": 0.28290240839123726,
+        "forward_max_rel_err": 3.330669073875469e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.17410281021147966,
+        "build": 0.5385425286367536,
+        "forward": 0.07258902117609978,
+        "forward_backward": 0.03753107413649559
+      }
+    },
+    {
+      "network": "Net1_LIFO_overflow",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 290,
+      "fused_terms": 13367,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 289,
+      "versions": 3808,
+      "ops": 1575,
+      "terms": 10746,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 3.1086244689504375e-15,
+      "forward_rel_vs_dll": 3.1086244689504375e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 2.1802613088230577e-08,
+          "grad_max_abs": 6.448535885770344
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 3.555495029842695e-07,
+          "grad_max_abs": 13.322251120077029
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 3.9300190748694185e-08,
+          "grad_max_abs": 0.2753963281294594
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 3.6302375772328758e-09,
+          "grad_max_abs": 173.46713319145414
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 16.000113425334167,
+          "dll_fd": 16.000113426457574,
+          "rel_err": 7.021244882111486e-11,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 38.11501422442318,
+          "dll_fd": 38.115014290269755,
+          "rel_err": 1.727575843641794e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 0.2753963281294594,
+          "dll_fd": 0.27539632810658077,
+          "rel_err": 8.307533938307222e-11,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 210.06854471387106,
+          "dll_fd": 210.06854471409042,
+          "rel_err": 1.044224653826264e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 4.1320003583760308e-16,
+        "seconds_forward_backward_autograd": 0.29049596562981606,
+        "forward_max_rel_err": 3.330669073875469e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.14311552606523037,
+        "build": 0.5505082607269287,
+        "forward": 0.07262023538351059,
+        "forward_backward": 0.03760967217385769
+      }
+    },
+    {
+      "network": "Net1_src_mass",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 15487,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 2104,
+      "terms": 11672,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.5385701912171583e-14,
+      "forward_rel_vs_dll": 1.5385701912171583e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 1.1641319418952245e-08,
+          "grad_max_abs": 7.052285700911619
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 6.694265519966335e-08,
+          "grad_max_abs": 8.787913955956585
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 3.2609379126730165e-09,
+          "grad_max_abs": 28.840190912860862
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 6.88123345074456e-09,
+          "grad_max_abs": 125.80113199249017
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 4.033121906610831e-09,
+          "grad_max_abs": 0.014217373262184595
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 18.021477365138782,
+          "dll_fd": 18.02147736725601,
+          "rel_err": 1.1748365661668813e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 34.60247307442711,
+          "dll_fd": 34.602473148055424,
+          "rel_err": 2.127833863124368e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 28.840190912860862,
+          "dll_fd": 28.840190935426335,
+          "rel_err": 7.824314719764717e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 0.014217373262184595,
+          "dll_fd": 0.014217373262681576,
+          "rel_err": 3.4955889491703375e-11,
+          "h": 0.05,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 199.15430914769067,
+          "dll_fd": 199.1543091472181,
+          "rel_err": 2.3728723958911495e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 7.391172318244718e-16,
+        "seconds_forward_backward_autograd": 0.40974121168255806,
+        "forward_max_rel_err": 7.228182106389335e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.1887370003387332,
+        "build": 0.7086400408297777,
+        "forward": 0.07288581226021051,
+        "forward_backward": 0.03784171957522631
+      }
+    },
+    {
+      "network": "Net1_src_setpoint",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 625,
+      "fused_terms": 14877,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 2082,
+      "terms": 11655,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.554312234475219e-14,
+      "forward_rel_vs_dll": 1.554312234475219e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 4.9389347313729484e-08,
+          "grad_max_abs": 9.813224524000125
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 3.9068374462664566e-08,
+          "grad_max_abs": 12.206657584031094
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 3.4734741168329986e-09,
+          "grad_max_abs": 29.486726486890348
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 8.74867881693876e-09,
+          "grad_max_abs": 45.31188459061503
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 2.3178199082525018e-10,
+          "grad_max_abs": 97.55908921142324
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 23.60859474961383,
+          "dll_fd": 23.608594753028456,
+          "rel_err": 1.446349026383649e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 45.10470289550279,
+          "dll_fd": 45.10470299052827,
+          "rel_err": 2.1067753685165242e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 29.486726486890348,
+          "dll_fd": 29.486726510441486,
+          "rel_err": 7.987030340717844e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 97.55908921142324,
+          "dll_fd": 97.55908921135868,
+          "rel_err": 6.617519033132112e-13,
+          "h": 0.00015000000000000001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 101.6208775323939,
+          "dll_fd": 101.62087753244009,
+          "rel_err": 4.5448611491927867e-13,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.254492488546402e-15,
+        "seconds_forward_backward_autograd": 0.4381594331935048,
+        "forward_max_rel_err": 5.921189464667501e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.21358541771769524,
+        "build": 0.6848284676671028,
+        "forward": 0.1684444472193718,
+        "forward_backward": 0.0972087262198329
+      }
+    },
+    {
+      "network": "Net1_src_flowpaced",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 15538,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 2082,
+      "terms": 11655,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.5543122344752188e-14,
+      "forward_rel_vs_dll": 1.5543122344752188e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 4.9389347313729484e-08,
+          "grad_max_abs": 9.813224524000121
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.330656394177123e-07,
+          "grad_max_abs": 12.206657584031088
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 3.4734739963478144e-09,
+          "grad_max_abs": 29.48672648689035
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 1.2327834437594986e-08,
+          "grad_max_abs": 125.84344048395454
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 1.5665559725334137e-10,
+          "grad_max_abs": 97.55908921142324
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 23.60859474961382,
+          "dll_fd": 23.608594753028456,
+          "rel_err": 1.446352036061875e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 45.104702895502776,
+          "dll_fd": 45.104702990670376,
+          "rel_err": 2.1099263205965487e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 29.48672648689035,
+          "dll_fd": 29.486726510441486,
+          "rel_err": 7.987029135866e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 97.55908921142324,
+          "dll_fd": 97.55908921121659,
+          "rel_err": 2.118247012542531e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 199.17996674381715,
+          "dll_fd": 199.17996674365668,
+          "rel_err": 8.05648148593449e-13,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.0843666598060715e-15,
+        "seconds_forward_backward_autograd": 0.403349282220006,
+        "forward_max_rel_err": 5.9211894646675e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.1658912245184183,
+        "build": 0.7029753746464849,
+        "forward": 0.07320141606032848,
+        "forward_backward": 0.037991877645254135
+      }
+    },
+    {
+      "network": "Net1_src_concen_reservoir_pat",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 15351,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 1916,
+      "terms": 11503,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 9.8879238130678e-15,
+      "forward_rel_vs_dll": 9.8879238130678e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 4.347852201673491e-08,
+          "grad_max_abs": 9.585076053269919
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.2629517858767812e-07,
+          "grad_max_abs": 12.720545858191148
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 3.050285840942268e-09,
+          "grad_max_abs": 29.3734250745835
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 1.3668178475297438e-08,
+          "grad_max_abs": 45.2943258257523
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 2.405314433920721e-10,
+          "grad_max_abs": 153.91610940590067
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 24.077320445137737,
+          "dll_fd": 24.0773204477307,
+          "rel_err": 1.0769314197384655e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 47.158683624238044,
+          "dll_fd": 47.15868372414889,
+          "rel_err": 2.118609646752386e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 29.3734250745835,
+          "dll_fd": 29.37342509824248,
+          "rel_err": 8.054551663829101e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 153.91610940590067,
+          "dll_fd": 153.91610940594566,
+          "rel_err": 2.9231226154285544e-13,
+          "h": 0.00012,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 74.63401907867006,
+          "dll_fd": 74.63401907884304,
+          "rel_err": 2.317636457587917e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.088549361472715e-15,
+        "seconds_forward_backward_autograd": 0.3915804950520396,
+        "forward_max_rel_err": 4.625929269271486e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.16609994694590569,
+        "build": 0.6559006189927459,
+        "forward": 0.07307601533830166,
+        "forward_backward": 0.037763312458992004
+      }
+    },
+    {
+      "network": "Net1_src_concen_junction_inflow",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 292,
+      "fused_terms": 15576,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 291,
+      "versions": 3958,
+      "ops": 1941,
+      "terms": 11883,
+      "max_level": 8,
+      "forward_rel_vs_replicator": 2.6275276994235134e-15,
+      "forward_rel_vs_dll": 2.6275276994235134e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 4.492118069416621e-08,
+          "grad_max_abs": 6.4012405613758405
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 2.4714047482424204e-07,
+          "grad_max_abs": 7.174756939453059
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 2.1326646160420324e-09,
+          "grad_max_abs": 23.608344782488565
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 3.078860265869956e-08,
+          "grad_max_abs": 119.0666515015134
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 1.5179633616792468e-10,
+          "grad_max_abs": 35.509551561754
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 17.984417195954077,
+          "dll_fd": 18.902772545743574,
+          "rel_err": 0.04858310322293368,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 35.837982936612256,
+          "dll_fd": 36.75634172083164,
+          "rel_err": 0.024985043157842512,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 23.608344782488565,
+          "dll_fd": 23.608344796741676,
+          "rel_err": 6.037318928714058e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 35.509551561754,
+          "dll_fd": 35.50955156166916,
+          "rel_err": 2.3891825978769226e-12,
+          "h": 0.00030000000000000003,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 191.30505336401325,
+          "dll_fd": 190.3865973153529,
+          "rel_err": 0.004801002548075493,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 9.029130279651918e-16,
+        "seconds_forward_backward_autograd": 0.4262740211561322,
+        "forward_max_rel_err": 2.9605945908997333e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.19922331720590591,
+        "build": 0.6629402758553624,
+        "forward": 0.07344386726617813,
+        "forward_backward": 0.03780385758727789
+      }
+    },
+    {
+      "network": "Net1_src_mass_tank",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 15325,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 2003,
+      "terms": 11578,
+      "max_level": 6,
+      "forward_rel_vs_replicator": 1.676436767183986e-14,
+      "forward_rel_vs_dll": 1.676436767183986e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 1.5964384764480213e-08,
+          "grad_max_abs": 6.57155970331632
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 7.926905733871062e-08,
+          "grad_max_abs": 8.21926292259984
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 3.3097191385230818e-09,
+          "grad_max_abs": 28.745526297841828
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 1.6689408056887235e-08,
+          "grad_max_abs": 125.82885715166564
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 6.2032404750982065e-09,
+          "grad_max_abs": 0.0155839834804202
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 17.402271852841874,
+          "dll_fd": 17.40227185536014,
+          "rel_err": 1.447090647221914e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 33.48208565773582,
+          "dll_fd": 33.48208573001443,
+          "rel_err": 2.158724828161029e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 28.745526297841828,
+          "dll_fd": 28.745526320932413,
+          "rel_err": 8.032757927581381e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 0.0155839834804202,
+          "dll_fd": 0.015583983480382813,
+          "rel_err": 2.3990503070813104e-12,
+          "h": 0.02,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 199.18987433050637,
+          "dll_fd": 199.1898743303011,
+          "rel_err": 1.0304820272429956e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.112326933168905e-15,
+        "seconds_forward_backward_autograd": 0.4059404321014881,
+        "forward_max_rel_err": 1.4432899320127031e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.1748890057206154,
+        "build": 0.6800595987588167,
+        "forward": 0.0744951544329524,
+        "forward_backward": 0.03778116870671511
+      }
+    },
+    {
+      "network": "Net1_ctol0",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.0,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 15610,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 1695,
+      "terms": 11039,
+      "max_level": 4,
+      "forward_rel_vs_replicator": 1.498801083243961e-14,
+      "forward_rel_vs_dll": 1.498801083243961e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 2.9026565426446595e-08,
+          "grad_max_abs": 6.566892008563237
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 2.9939603454049544e-07,
+          "grad_max_abs": 8.17501692763826
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 1.9988315546771045e-09,
+          "grad_max_abs": 28.735315765377244
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 1.6517435544768282e-08,
+          "grad_max_abs": 125.87767782691141
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 17.056883814325225,
+          "dll_fd": 17.056883816906065,
+          "rel_err": 1.513078507163878e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "kw_all_pipes": {
+          "autograd": 32.774255131954824,
+          "dll_fd": 32.77425520224142,
+          "rel_err": 2.1445673033650073e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 12
+        },
+        "tank_kb_all": {
+          "autograd": 28.735315765377244,
+          "dll_fd": 28.73531578856614,
+          "rel_err": 8.069824708814789e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 199.2266750176959,
+          "dll_fd": 199.22667501830915,
+          "rel_err": 3.0781782827197636e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 11
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 8.654505819479377e-16,
+        "seconds_forward_backward_autograd": 0.2698789145797491,
+        "forward_max_rel_err": 7.771561172376094e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.25324057415127754,
+        "build": 0.584893362596631,
+        "forward": 0.07300535310059786,
+        "forward_backward": 0.03773614577949047
+      }
+    },
+    {
+      "network": "Net2_MIX2",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": false,
+      "engine": "fused_spmm",
+      "fused_ops": 661,
+      "fused_terms": 195948,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 660,
+      "versions": 27462,
+      "ops": 16743,
+      "terms": 81992,
+      "max_level": 40,
+      "forward_rel_vs_replicator": 4.546627624655402e-15,
+      "forward_rel_vs_dll": 4.546627624655402e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 9.3460414483477e-08,
+          "grad_max_abs": 54.46910055911637
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 0.00010884538712128417,
+          "grad_max_abs": 326.8146033546982
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 2.9428439535313967e-09,
+          "grad_max_abs": 477.90488982049953
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 3.2930945785542476e-08,
+          "grad_max_abs": 388.7877278610741
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 5.70746592741034e-10,
+          "grad_max_abs": 437.1132125476769
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 403.81685450986214,
+          "dll_fd": 324.5419240954561,
+          "rel_err": 0.19631407042340265,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "kw_all_pipes": {
+          "autograd": 2183.139724610726,
+          "dll_fd": 2099.0868469903035,
+          "rel_err": 0.03850091529776444,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "tank_kb_all": {
+          "autograd": 477.90488982049953,
+          "dll_fd": 477.9048913292172,
+          "rel_err": 3.1569412676722212e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 437.1132125476769,
+          "dll_fd": 424.45187495673053,
+          "rel_err": 0.028965808462184946,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 748.4206285350756,
+          "dll_fd": 748.4206285334949,
+          "rel_err": 2.112050004254082e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 36
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 7.826926405611575e-16,
+        "seconds_forward_backward_autograd": 3.630571562796831,
+        "forward_max_rel_err": 1.480297366166875e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.6009896351024508,
+        "build": 5.329785369336605,
+        "forward": 0.1683001760393381,
+        "forward_backward": 0.08349593915045261
+      }
+    },
+    {
+      "network": "Net2_LIFO",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": false,
+      "engine": "fused_spmm",
+      "fused_ops": 661,
+      "fused_terms": 185795,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 660,
+      "versions": 26530,
+      "ops": 13591,
+      "terms": 79998,
+      "max_level": 40,
+      "forward_rel_vs_replicator": 4.1236855200362945e-15,
+      "forward_rel_vs_dll": 4.1236855200362945e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 4.567414400930331e-08,
+          "grad_max_abs": 49.1564188373833
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 0.00013297553290329259,
+          "grad_max_abs": 294.9385130242998
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 2.6701143566201913e-09,
+          "grad_max_abs": 145.3287398574873
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 1.3653537924708716e-08,
+          "grad_max_abs": 117.3435810070198
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 3.6101906974909614e-11,
+          "grad_max_abs": 515.4906162560675
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 373.07878797548386,
+          "dll_fd": 3177.8445841774783,
+          "rel_err": 0.8826000523017875,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "kw_all_pipes": {
+          "autograd": 2010.3660427663367,
+          "dll_fd": 4810.31878958845,
+          "rel_err": 0.5820721805137712,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "tank_kb_all": {
+          "autograd": 145.3287398574873,
+          "dll_fd": -1170.2473086927512,
+          "rel_err": 1.1241863482855003,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 515.4906162560675,
+          "dll_fd": 1886.592378214118,
+          "rel_err": 0.7267609992445533,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 459.17378925414226,
+          "dll_fd": -855.8047933979651,
+          "rel_err": 1.5365403334924042,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 36
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 5.781891785979613e-16,
+        "seconds_forward_backward_autograd": 2.924952487461269,
+        "forward_max_rel_err": 1.1630907877025446e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.5735861491411924,
+        "build": 4.3545556189492345,
+        "forward": 0.16839126404374838,
+        "forward_backward": 0.08352140244096518
+      }
+    },
+    {
+      "network": "Net3_CHEM_mixed_tanks",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 760693,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 34655,
+      "ops": 14468,
+      "terms": 103746,
+      "max_level": 65,
+      "forward_rel_vs_replicator": 1.1435297153639112e-14,
+      "forward_rel_vs_dll": 1.1435297153639112e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 2.719890202437855e-07,
+          "grad_max_abs": 120.96431552277143
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 9.043786899409051e-06,
+          "grad_max_abs": 193.5429048364343
+        },
+        "tank_kb": {
+          "n": 3,
+          "max_rel_err": 6.895726239992444e-09,
+          "grad_max_abs": 63.71556175228124
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 3.024290251002607e-07,
+          "grad_max_abs": 1056.6006303724494
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 404.338929787517,
+          "dll_fd": 502.66598934058493,
+          "rel_err": 0.19561112475912062,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 117
+        },
+        "kw_all_pipes": {
+          "autograd": 1118.3306085341924,
+          "dll_fd": 1213.559827760946,
+          "rel_err": 0.0784709719688517,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 117
+        },
+        "tank_kb_all": {
+          "autograd": 92.5445964902841,
+          "dll_fd": 92.54459655494429,
+          "rel_err": 6.98692167550204e-10,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 3
+        },
+        "c0_all_nodes": {
+          "autograd": 2452.1313113987367,
+          "dll_fd": 2353.8241535334237,
+          "rel_err": 0.04009049491286703,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 97
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 9.398378127491208e-16,
+        "seconds_forward_backward_autograd": 3.1778279803693295,
+        "forward_max_rel_err": 2.1094237467877974e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.7974800746887922,
+        "build": 4.77013486623764,
+        "forward": 0.07944757584482431,
+        "forward_backward": 0.04238695837557316
+      }
+    },
+    {
+      "network": "Net3_AGE_mixed_tanks",
+      "mode": "nextQ",
+      "qualflag": 2,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 339992,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": false,
+      "steps": 290,
+      "versions": 34709,
+      "ops": 6802,
+      "terms": 102355,
+      "max_level": 65,
+      "forward_rel_vs_replicator": 4.7369515717340136e-15,
+      "forward_rel_vs_dll": 4.7369515717340136e-15,
+      "fd_torch": {
+        "c0": {
+          "n": 8,
+          "max_rel_err": 2.0813184553625547e-07,
+          "grad_max_abs": 1129.6312833752459
+        }
+      },
+      "fd_dll": {
+        "c0_all_nodes": {
+          "autograd": 2611.887320205799,
+          "dll_fd": 2611.8873201994575,
+          "rel_err": 2.4279193666027214e-12,
+          "h": 0.0001,
+          "shift": 0.0001,
+          "n_params": 97
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 4.0256263931334854e-16,
+        "seconds_forward_backward_autograd": 0.9527987660840154,
+        "forward_max_rel_err": 8.881784197001276e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.8342166747897863,
+        "build": 2.3107782946899533,
+        "forward": 0.018155839294195175,
+        "forward_backward": 0.034299252554774284
+      }
+    },
+    {
+      "network": "Net3_TRACE_River_mixed_tanks",
+      "mode": "nextQ",
+      "qualflag": 3,
+      "ctol_user": 0.01,
+      "reactflag": false,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 625651,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 34679,
+      "ops": 13610,
+      "terms": 102774,
+      "max_level": 72,
+      "forward_rel_vs_replicator": 3.12638803734444e-15,
+      "forward_rel_vs_dll": 3.12638803734444e-15,
+      "fd_torch": {
+        "c0": {
+          "n": 3,
+          "max_rel_err": 1.6406183337658006e-07,
+          "grad_max_abs": 51.71544814399523
+        }
+      },
+      "fd_dll": {},
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 2.198314851784116e-15,
+        "seconds_forward_backward_autograd": 1.4185529993847013,
+        "forward_max_rel_err": 1.13686837721616e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.6651869947090745,
+        "build": 4.464790526777506,
+        "forward": 0.07835754845291376,
+        "forward_backward": 0.030094810761511326
+      }
+    },
+    {
+      "network": "Net2_react",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 661,
+      "fused_terms": 186676,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 660,
+      "versions": 27101,
+      "ops": 16382,
+      "terms": 81328,
+      "max_level": 40,
+      "forward_rel_vs_replicator": 7.771561172376096e-15,
+      "forward_rel_vs_dll": 7.771561172376096e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 1.295421743684619e-07,
+          "grad_max_abs": 23.922794598846508
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 2.7088672268871746e-08,
+          "grad_max_abs": 21.890060483927837
+        },
+        "tank_kb": {
+          "n": 1,
+          "max_rel_err": 2.202632401701917e-09,
+          "grad_max_abs": 255.12898702765918
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 2.690993704555526e-08,
+          "grad_max_abs": 246.83061670220445
+        },
+        "src": {
+          "n": 1,
+          "max_rel_err": 3.765857090933854e-11,
+          "grad_max_abs": 296.8619073269946
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 200.25742658628246,
+          "dll_fd": 200.25742681809788,
+          "rel_err": 1.1575871311059198e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "kw_all_pipes": {
+          "autograd": 280.7064769405057,
+          "dll_fd": 280.70648365087436,
+          "rel_err": 2.390528561644822e-08,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 40
+        },
+        "tank_kb_all": {
+          "autograd": 255.12898702765918,
+          "dll_fd": 255.12898776526072,
+          "rel_err": 2.8910926407031453e-09,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "src_all": {
+          "autograd": 296.8619073269946,
+          "dll_fd": 296.86190732491013,
+          "rel_err": 7.021608762116461e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 1
+        },
+        "c0_all_nodes": {
+          "autograd": 500.1143024221128,
+          "dll_fd": 500.1143024207977,
+          "rel_err": 2.629657525078421e-12,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 36
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.8423458036208956e-15,
+        "seconds_forward_backward_autograd": 3.535279174335301,
+        "forward_max_rel_err": 1.3745618400120984e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.9015161506831646,
+        "build": 5.210373742505908,
+        "forward": 0.16835414059460163,
+        "forward_backward": 0.08347678557038307
+      }
+    },
+    {
+      "network": "Jilin_kw",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 1153,
+      "fused_terms": 172210,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 1152,
+      "versions": 39202,
+      "ops": 4632,
+      "terms": 117324,
+      "max_level": 12,
+      "forward_rel_vs_replicator": 1.0125233984581428e-14,
+      "forward_rel_vs_dll": 1.0125233984581428e-14,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 3.2466773051390334e-07,
+          "grad_max_abs": 168.69144394966
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.0706881429044316e-08,
+          "grad_max_abs": 878.2841101803156
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 2.4645285875729084e-07,
+          "grad_max_abs": 2231.1434576387974
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 424.6446005293046,
+          "dll_fd": 424.64460053906805,
+          "rel_err": 2.2991992859765873e-11,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 34
+        },
+        "kw_all_pipes": {
+          "autograd": 4628.527652765206,
+          "dll_fd": 4628.527712534378,
+          "rel_err": 1.2913214758352257e-08,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 34
+        },
+        "c0_all_nodes": {
+          "autograd": 2288.964727123809,
+          "dll_fd": 2288.964727125858,
+          "rel_err": 8.952045170514061e-13,
+          "h": 0.00025,
+          "shift": 0.00025,
+          "n_params": 28
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.1649778558381076e-15,
+        "seconds_forward_backward_autograd": 0.6753370733931661,
+        "forward_max_rel_err": 7.105427357601002e-16
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 1.13432995416224,
+        "build": 1.730042920447886,
+        "forward": 0.290640608407557,
+        "forward_backward": 0.14411200676113367
+      }
+    },
+    {
+      "network": "Net3_CHEM_kw_mixed_tanks",
+      "mode": "nextQ",
+      "qualflag": 1,
+      "ctol_user": 0.01,
+      "reactflag": true,
+      "engine": "fused_spmm",
+      "fused_ops": 291,
+      "fused_terms": 439946,
+      "flatten": true,
+      "spmm_min_batch": 1,
+      "spmm_min_work": 0,
+      "spmm_used": true,
+      "steps": 290,
+      "versions": 34662,
+      "ops": 10000,
+      "terms": 103654,
+      "max_level": 61,
+      "forward_rel_vs_replicator": 8.104628079763643e-15,
+      "forward_rel_vs_dll": 8.104628079763643e-15,
+      "fd_torch": {
+        "kb": {
+          "n": 8,
+          "max_rel_err": 3.892397485233286e-07,
+          "grad_max_abs": 111.77942626785085
+        },
+        "kw": {
+          "n": 8,
+          "max_rel_err": 1.5871817321673805e-07,
+          "grad_max_abs": 172.66565631344446
+        },
+        "tank_kb": {
+          "n": 3,
+          "max_rel_err": 7.126081894495442e-09,
+          "grad_max_abs": 53.12141017881845
+        },
+        "c0": {
+          "n": 8,
+          "max_rel_err": 1.3514128727162016e-07,
+          "grad_max_abs": 965.0175455391885
+        }
+      },
+      "fd_dll": {
+        "kb_all_pipes": {
+          "autograd": 356.2343946942683,
+          "dll_fd": 360.8635588057041,
+          "rel_err": 0.012828017677252404,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 117
+        },
+        "kw_all_pipes": {
+          "autograd": 757.4508788010045,
+          "dll_fd": 767.9602439156952,
+          "rel_err": 0.013684777562319212,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 117
+        },
+        "tank_kb_all": {
+          "autograd": 81.31834098067189,
+          "dll_fd": 85.95713186650755,
+          "rel_err": 0.05396632932145477,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 3
+        },
+        "c0_all_nodes": {
+          "autograd": 2253.649237275496,
+          "dll_fd": 2242.8668068914703,
+          "rel_err": 0.004784431492569316,
+          "h": 0.0001,
+          "shift": 0.0,
+          "n_params": 97
+        }
+      },
+      "adjoint_vs_autograd": {
+        "reference": "adjoint",
+        "max_rel_err": 1.1522382056780613e-15,
+        "seconds_forward_backward_autograd": 2.1865476593375206,
+        "forward_max_rel_err": 1.7763568394002505e-15
+      },
+      "device": "cuda",
+      "seconds": {
+        "record": 0.8602490099146962,
+        "build": 3.3071951819583774,
+        "forward": 0.07799654733389616,
+        "forward_backward": 0.03845764230936766
+      }
+    }
+  ]
+}

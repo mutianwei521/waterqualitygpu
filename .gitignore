@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# EPANET source checkout and third-party network data: fetched by the user, see the READMEs
+/EPANET-dev/*
+!/EPANET-dev/README.md
+/networks/*
+!/networks/README.md
+
+# local EPANET build and engine scratch files
+build_epanet/
+*.dll
+*.so
+*.hyd
+*.rpt
+*.bin
+
+# figure and QA output
+research/water_quality_2026_09_12/paper/figures/out/
+research/water_quality_2026_09_12/paper/figures/revisions/

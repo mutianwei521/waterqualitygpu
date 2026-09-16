@@ -1,0 +1,72 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "mode": "nextQ",
+  "ctol_override": null,
+  "repeat": 5,
+  "results": [
+    {
+      "network": "Net1",
+      "device": "cuda",
+      "nodes": 11,
+      "links": 13,
+      "pipes": 12,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 1897,
+      "n_theta": 36,
+      "dll_quality_run_s": 0.0005892030894756317,
+      "fd_gradient_cost_s": 0.021800514310598373,
+      "record_s": 0.18683712370693684,
+      "build_s": 0.3021199773065746,
+      "batches": [
+        {
+          "B": 8192,
+          "forward_s": 0.1670373622328043,
+          "forward_backward_s": 0.41976364934816957,
+          "forward_per_sample_s": 2.039030300693412e-05,
+          "forward_backward_per_sample_s": 5.124067985207148e-05,
+          "peak_mem_MB": 2450.41552734375,
+          "graph_forward_backward_s": 0.13538983603939414,
+          "graph_forward_rel_err": 2.018595800453065e-16,
+          "graph_peak_mem_MB": 2474.10400390625
+        },
+        {
+          "B": 16384,
+          "forward_s": 0.17250964883714914,
+          "forward_backward_s": 0.43232380598783493,
+          "forward_per_sample_s": 1.0529153371408029e-05,
+          "forward_backward_per_sample_s": 2.638695104906219e-05,
+          "peak_mem_MB": 4936.10302734375,
+          "graph_forward_backward_s": 0.17828559782356024,
+          "graph_forward_rel_err": 2.0185951721883072e-16,
+          "graph_peak_mem_MB": 4984.22900390625
+        },
+        {
+          "B": 32768,
+          "forward_s": 0.18299169978126884,
+          "forward_backward_s": 0.4585117930546403,
+          "forward_per_sample_s": 5.584463494301417e-06,
+          "forward_backward_per_sample_s": 1.3992669465778818e-05,
+          "peak_mem_MB": 9866.22802734375,
+          "graph_forward_backward_s": 0.27133890613913536,
+          "graph_forward_rel_err": 2.5232534906807103e-16,
+          "graph_peak_mem_MB": 9961.47900390625
+        },
+        {
+          "B": 65536,
+          "forward_s": 0.22597840381786227,
+          "forward_backward_s": 0.6015445762313902,
+          "forward_per_sample_s": 3.448156796537205e-06,
+          "forward_backward_per_sample_s": 9.178841800405735e-06,
+          "peak_mem_MB": 19735.97802734375,
+          "graph_forward_backward_s": 0.5045218151062727,
+          "graph_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 1.99 GiB. GPU 0 has a total capacity of 31.36 GiB of which 469.06 MiB is free. Including non-PyTorch memory, this process has 30.89 GiB memory in use. Of the allo"
+        }
+      ]
+    }
+  ]
+}

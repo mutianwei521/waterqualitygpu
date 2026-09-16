@@ -1,0 +1,1627 @@
+{
+  "engine_version": 20306,
+  "dll_path": "D:\\WDN\\quantum\\research\\water_quality_2026_09_12\\build_epanet\\bin\\RelWithDebInfo\\epanet2.dll",
+  "dll_sha256": "05ef4a8dc0301e3e12536f5ad5767424d7dbd3d7b3a3fa61c4ebac52b9112afd",
+  "python": "3.13.9",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "protocol": "Synthetic single source R (1 mg/L), J (initial 0 mg/L), one 100 or 1000 m pipe, diameter 100 mm, constant demand 1 L/s, head 100 m; only OPEN vs CV changes within each pair. No wall reactions. Bulk zero or -10/day. All Q steps sampled using EN_runQ/EN_stepQ. Geometry and hydraulics independently queried through API. Five hours, dt10s and long-pipe dt1s confirmation. No engine modification.",
+  "repeat_cv_reactive_dt10_identical_full_trajectory": true,
+  "comparisons": [
+    {
+      "pipe": "L100_OPEN_k0_dt10",
+      "cvpipe": "L100_CV_k0_dt10",
+      "flow_difference_L_s": 0.0,
+      "headloss_difference_m": 0.0,
+      "junction_final_chlorine_difference_mg_L": -4.440892098500626e-16
+    },
+    {
+      "pipe": "L100_OPEN_k10_dt10",
+      "cvpipe": "L100_CV_k10_dt10",
+      "flow_difference_L_s": 0.0,
+      "headloss_difference_m": 0.0,
+      "junction_final_chlorine_difference_mg_L": 0.08694167873333891
+    },
+    {
+      "pipe": "L1000_OPEN_k0_dt10",
+      "cvpipe": "L1000_CV_k0_dt10",
+      "flow_difference_L_s": 0.0,
+      "headloss_difference_m": 0.0,
+      "junction_final_chlorine_difference_mg_L": 1.587618925213974e-14
+    },
+    {
+      "pipe": "L1000_OPEN_k10_dt10",
+      "cvpipe": "L1000_CV_k10_dt10",
+      "flow_difference_L_s": 0.0,
+      "headloss_difference_m": 0.0,
+      "junction_final_chlorine_difference_mg_L": 0.5972973060900164
+    },
+    {
+      "pipe": "L1000_OPEN_k0_dt1",
+      "cvpipe": "L1000_CV_k0_dt1",
+      "flow_difference_L_s": 0.0,
+      "headloss_difference_m": 0.0,
+      "junction_final_chlorine_difference_mg_L": -1.1368683772161603e-13
+    },
+    {
+      "pipe": "L1000_OPEN_k10_dt1",
+      "cvpipe": "L1000_CV_k10_dt1",
+      "flow_difference_L_s": 0.0,
+      "headloss_difference_m": 0.0,
+      "junction_final_chlorine_difference_mg_L": 0.5971065028643097
+    }
+  ],
+  "cases": [
+    {
+      "id": "L100_OPEN_k0_dt10",
+      "pipe_status_input": "OPEN",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 1,
+        "length_m": 100.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": 0.0,
+        "flow_L_per_s": 1.0000000000003988,
+        "velocity_m_per_s": 0.12732326467648486,
+        "headloss_m": 0.026792171036838865,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 0.7853981633974484,
+      "analytic_advection_travel_time_s": 785.3981633971351,
+      "analytic_first_order_steady_chlorine_mg_L": 1.0,
+      "first_positive_time_s": 790,
+      "first_above_0p01_time_s": 790,
+      "first_above_half_analytic_steady_time_s": 800,
+      "end_junction_chlorine_mg_L": 1.0000000000000004,
+      "end_link_mean_mg_L": 1.0000000000000007,
+      "mass_balance_ratio": 0.9999999999999931,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 17214.6,
+        "Mass Reacted": 0.0,
+        "Final Mass": 785.402
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.0,
+          0.9999999674744904
+        ],
+        [
+          10,
+          0.0,
+          0.012732328704066266,
+          0.9999999674744904
+        ],
+        [
+          60,
+          0.0,
+          0.0763939722243976,
+          0.9999999674744904
+        ],
+        [
+          600,
+          0.0,
+          0.7639397222439764,
+          0.9999999674744904
+        ],
+        [
+          780,
+          0.0,
+          0.9931216389171695,
+          0.9999999674744904
+        ],
+        [
+          790,
+          0.4597719519576611,
+          1.0000000000000007,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0000000000000004,
+          1.0000000000000007,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0000000000000004,
+          1.0000000000000007,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0000000000000004,
+          1.0000000000000007,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0000000000000004,
+          1.0000000000000007,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0000000000000004,
+          1.0000000000000007,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0000000000000004,
+          1.0000000000000007,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0000000000000004,
+          1.0000000000000007,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L100_OPEN_k0_dt10.csv",
+      "csv_sha256": "4bbb871d1f850ac7ae59d6918ade40ab00e7ae5cbaca8c945bb965c4de5090ee",
+      "input_sha256": "aade2f0d2fd92573b6d91dd4fce936571b74e96a1913d60b4610b6d743dd4813",
+      "elapsed_seconds_including_hydraulics_and_python": 0.05140759999630973,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L100_CV_k0_dt10",
+      "pipe_status_input": "CV",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 0,
+        "length_m": 100.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": 0.0,
+        "flow_L_per_s": 1.0000000000003988,
+        "velocity_m_per_s": 0.12732326467648486,
+        "headloss_m": 0.026792171036838865,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 0.7853981633974484,
+      "analytic_advection_travel_time_s": 785.3981633971351,
+      "analytic_first_order_steady_chlorine_mg_L": 1.0,
+      "first_positive_time_s": 10,
+      "first_above_0p01_time_s": 10,
+      "first_above_half_analytic_steady_time_s": 10,
+      "end_junction_chlorine_mg_L": 1.0,
+      "end_link_mean_mg_L": 1.0,
+      "mass_balance_ratio": 1.0,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 18000.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 0.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.5,
+          0.9999999674744904
+        ],
+        [
+          10,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          60,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          780,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          790,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L100_CV_k0_dt10.csv",
+      "csv_sha256": "23873fd707e4a463d93e77c7c3a0a4e0966b1527d3ac740b93170067f482580c",
+      "input_sha256": "bc4ae7ff0ff353e7aeab1b788d272d8adecb727e022c2fa959c3f4f2ef34e786",
+      "elapsed_seconds_including_hydraulics_and_python": 0.04770479997387156,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L100_OPEN_k10_dt10",
+      "pipe_status_input": "OPEN",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 1,
+        "length_m": 100.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": -10.0,
+        "flow_L_per_s": 1.0000000000003988,
+        "velocity_m_per_s": 0.12732326467648486,
+        "headloss_m": 0.026792171036838865,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 0.7853981633974484,
+      "analytic_advection_travel_time_s": 785.3981633971351,
+      "analytic_first_order_steady_chlorine_mg_L": 0.9131066749240432,
+      "first_positive_time_s": 790,
+      "first_above_0p01_time_s": 790,
+      "first_above_half_analytic_steady_time_s": 800,
+      "end_junction_chlorine_mg_L": 0.9130583212666611,
+      "end_link_mean_mg_L": 0.9564221074027999,
+      "mass_balance_ratio": 1.0000000000000426,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 15717.9,
+        "Mass Reacted": 1530.89,
+        "Final Mass": 751.176
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.0,
+          0.9999999674744904
+        ],
+        [
+          10,
+          0.0,
+          0.012732328704066266,
+          0.9999999674744904
+        ],
+        [
+          60,
+          0.0,
+          0.07617326567757662,
+          0.9999999674744904
+        ],
+        [
+          600,
+          0.0,
+          0.7384302898978145,
+          0.9999999674744904
+        ],
+        [
+          780,
+          0.0,
+          0.9501378332493987,
+          0.9999999674744904
+        ],
+        [
+          790,
+          0.42006125577767406,
+          0.9564221074027999,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          0.9130583212666611,
+          0.9564221074027999,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          0.9130583212666611,
+          0.9564221074027999,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          0.9130583212666611,
+          0.9564221074027999,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          0.9130583212666611,
+          0.9564221074027999,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          0.9130583212666611,
+          0.9564221074027999,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          0.9130583212666611,
+          0.9564221074027999,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          0.9130583212666611,
+          0.9564221074027999,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L100_OPEN_k10_dt10.csv",
+      "csv_sha256": "5b20adcc381a05e5f4191c04192a43ccf7990d657d8d568086e9527c6fb6bbec",
+      "input_sha256": "30220c7ed56f29164dcf68c0936aace15d1d332810de368f1b4bb21ee5c23da4",
+      "elapsed_seconds_including_hydraulics_and_python": 0.054485200031194836,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L100_CV_k10_dt10",
+      "pipe_status_input": "CV",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 0,
+        "length_m": 100.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": -10.0,
+        "flow_L_per_s": 1.0000000000003988,
+        "velocity_m_per_s": 0.12732326467648486,
+        "headloss_m": 0.026792171036838865,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 0.7853981633974484,
+      "analytic_advection_travel_time_s": 785.3981633971351,
+      "analytic_first_order_steady_chlorine_mg_L": 0.9131066749240432,
+      "first_positive_time_s": 10,
+      "first_above_0p01_time_s": 10,
+      "first_above_half_analytic_steady_time_s": 10,
+      "end_junction_chlorine_mg_L": 1.0,
+      "end_link_mean_mg_L": 1.0,
+      "mass_balance_ratio": 1.0,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 18000.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 0.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.5,
+          0.9999999674744904
+        ],
+        [
+          10,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          60,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          780,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          790,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L100_CV_k10_dt10.csv",
+      "csv_sha256": "23873fd707e4a463d93e77c7c3a0a4e0966b1527d3ac740b93170067f482580c",
+      "input_sha256": "29ccaefcf2e07d69c3ea30ee5bd21fccf49d9f8fef6dc1ccd790b7c1f3f73e42",
+      "elapsed_seconds_including_hydraulics_and_python": 0.04226409998955205,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_OPEN_k0_dt10",
+      "pipe_status_input": "OPEN",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 1,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": 0.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 1.0,
+      "first_positive_time_s": 7860,
+      "first_above_0p01_time_s": 7860,
+      "first_above_half_analytic_steady_time_s": 7860,
+      "end_junction_chlorine_mg_L": 0.9999999999999841,
+      "end_link_mean_mg_L": 0.999999999999984,
+      "mass_balance_ratio": 0.999999999999984,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 10146.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 7854.02
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.0,
+          0.9999999674744904
+        ],
+        [
+          10,
+          0.0,
+          0.0012732328704066266,
+          0.9999999674744904
+        ],
+        [
+          60,
+          0.0,
+          0.007639397222439761,
+          0.9999999674744904
+        ],
+        [
+          600,
+          0.0,
+          0.07639397222439763,
+          0.9999999674744904
+        ],
+        [
+          780,
+          0.0,
+          0.09931216389171695,
+          0.9999999674744904
+        ],
+        [
+          790,
+          0.0,
+          0.10058539676212358,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          0.0,
+          0.45836383334638153,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          0.0,
+          0.9167276666927571,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          0.0,
+          0.999487803269186,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          0.5977195195765777,
+          0.999999999999984,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          0.9999999999999841,
+          0.999999999999984,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          0.9999999999999841,
+          0.999999999999984,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          0.9999999999999841,
+          0.999999999999984,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_OPEN_k0_dt10.csv",
+      "csv_sha256": "08c0b5cb9aaffba183262b530eacf68af3bbc9efed8bebd33714930fb06e9f88",
+      "input_sha256": "0a9c8e6008eb4aefc22fc579f73862a905d8905fa1915a6f8bce82b0380a8549",
+      "elapsed_seconds_including_hydraulics_and_python": 0.04010859999107197,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_CV_k0_dt10",
+      "pipe_status_input": "CV",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 0,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": 0.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 1.0,
+      "first_positive_time_s": 10,
+      "first_above_0p01_time_s": 10,
+      "first_above_half_analytic_steady_time_s": 10,
+      "end_junction_chlorine_mg_L": 1.0,
+      "end_link_mean_mg_L": 1.0,
+      "mass_balance_ratio": 1.0,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 18000.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 0.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.5,
+          0.9999999674744904
+        ],
+        [
+          10,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          60,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          780,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          790,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_CV_k0_dt10.csv",
+      "csv_sha256": "23873fd707e4a463d93e77c7c3a0a4e0966b1527d3ac740b93170067f482580c",
+      "input_sha256": "45b5685cfdc6bff6cb8704b37d35d477fa5bfe520cf92c47e7a757a1775d1be9",
+      "elapsed_seconds_including_hydraulics_and_python": 0.04256819997681305,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_OPEN_k10_dt10",
+      "pipe_status_input": "OPEN",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 1,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": -10.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 0.40291661380493526,
+      "first_positive_time_s": 7860,
+      "first_above_0p01_time_s": 7860,
+      "first_above_half_analytic_steady_time_s": 7860,
+      "end_junction_chlorine_mg_L": 0.40270269390998353,
+      "end_link_mean_mg_L": 0.6570707588805348,
+      "mass_balance_ratio": 0.9999999999999769,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 4085.81,
+        "Mass Reacted": 8753.54,
+        "Final Mass": 5160.65
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.0,
+          0.9999999674744904
+        ],
+        [
+          10,
+          0.0,
+          0.0012732328704066266,
+          0.9999999674744904
+        ],
+        [
+          60,
+          0.0,
+          0.007617326567757662,
+          0.9999999674744904
+        ],
+        [
+          600,
+          0.0,
+          0.07384302898978143,
+          0.9999999674744904
+        ],
+        [
+          780,
+          0.0,
+          0.09501378332493987,
+          0.9999999674744904
+        ],
+        [
+          790,
+          0.0,
+          0.0961770465387204,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          0.0,
+          0.37503523240046793,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          0.0,
+          0.622214040757819,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          0.0,
+          0.6568643997959438,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          0.2408153849591686,
+          0.6570707588805348,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          0.40270269390998353,
+          0.6570707588805348,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          0.40270269390998353,
+          0.6570707588805348,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          0.40270269390998353,
+          0.6570707588805348,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_OPEN_k10_dt10.csv",
+      "csv_sha256": "b5b3192d5f0db9f8c0d42fbed42c3656ee4d406f2afe42df21a38a6ebae8b954",
+      "input_sha256": "5e577e62b1262f5e69cab30b08caf3e21dccbdd83644ca80e5a3d7d189fc0a91",
+      "elapsed_seconds_including_hydraulics_and_python": 0.0706730000092648,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_CV_k10_dt10",
+      "pipe_status_input": "CV",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 0,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": -10.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 0.40291661380493526,
+      "first_positive_time_s": 10,
+      "first_above_0p01_time_s": 10,
+      "first_above_half_analytic_steady_time_s": 10,
+      "end_junction_chlorine_mg_L": 1.0,
+      "end_link_mean_mg_L": 1.0,
+      "mass_balance_ratio": 1.0,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 18000.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 0.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.5,
+          0.9999999674744904
+        ],
+        [
+          10,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          60,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          780,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          790,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_CV_k10_dt10.csv",
+      "csv_sha256": "23873fd707e4a463d93e77c7c3a0a4e0966b1527d3ac740b93170067f482580c",
+      "input_sha256": "114034348487d68392610f90ad7c5c8d0afd7e0a35d0a9aad6b08a8ea5d6c35f",
+      "elapsed_seconds_including_hydraulics_and_python": 0.04169490002095699,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_OPEN_k0_dt1",
+      "pipe_status_input": "OPEN",
+      "quality_step_s": 1,
+      "hydraulic": {
+        "link_type_enum": 1,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": 0.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 1.0,
+      "first_positive_time_s": 7855,
+      "first_above_0p01_time_s": 7855,
+      "first_above_half_analytic_steady_time_s": 7855,
+      "end_junction_chlorine_mg_L": 1.0000000000001137,
+      "end_link_mean_mg_L": 1.0000000000001137,
+      "mass_balance_ratio": 1.0000000000001625,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 10146.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 7854.02
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.0,
+          0.9999999674744904
+        ],
+        [
+          1,
+          0.0,
+          0.00012732328704066268,
+          0.9999999674744904
+        ],
+        [
+          60,
+          0.0,
+          0.007639397222439749,
+          0.9999999674744904
+        ],
+        [
+          600,
+          0.0,
+          0.0763939722243976,
+          0.9999999674744904
+        ],
+        [
+          780,
+          0.0,
+          0.09931216389171794,
+          0.9999999674744904
+        ],
+        [
+          790,
+          0.0,
+          0.10058539676212462,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          0.0,
+          0.45836383334641084,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          0.0,
+          0.9167276666928701,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          0.0,
+          0.9994878032693156,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0000000000001137,
+          1.0000000000001137,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0000000000001137,
+          1.0000000000001137,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0000000000001137,
+          1.0000000000001137,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0000000000001137,
+          1.0000000000001137,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_OPEN_k0_dt1.csv",
+      "csv_sha256": "b7c2abd7a52f9b4cf9a113a5fa8e09c79a92d0d0d82161e413ada3a442d90320",
+      "input_sha256": "8031fec1acad8528d05f524cc602a41a3af96589897e19de4ecd4a492c24543a",
+      "elapsed_seconds_including_hydraulics_and_python": 0.13836400001309812,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_CV_k0_dt1",
+      "pipe_status_input": "CV",
+      "quality_step_s": 1,
+      "hydraulic": {
+        "link_type_enum": 0,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": 0.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 1.0,
+      "first_positive_time_s": 1,
+      "first_above_0p01_time_s": 1,
+      "first_above_half_analytic_steady_time_s": 1,
+      "end_junction_chlorine_mg_L": 1.0,
+      "end_link_mean_mg_L": 1.0,
+      "mass_balance_ratio": 1.0,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 18000.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 0.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.5,
+          0.9999999674744904
+        ],
+        [
+          1,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          60,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          780,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          790,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_CV_k0_dt1.csv",
+      "csv_sha256": "dd67259791d7143ef1d0a78eaf29dc6adffd20b2011873d36e281058775d7d23",
+      "input_sha256": "2941e535bd397a12eebb15d8542e935e62a9e4df1788460827657177941ba670",
+      "elapsed_seconds_including_hydraulics_and_python": 0.11040029994910583,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_OPEN_k10_dt1",
+      "pipe_status_input": "OPEN",
+      "quality_step_s": 1,
+      "hydraulic": {
+        "link_type_enum": 1,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": -10.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 0.40291661380493526,
+      "first_positive_time_s": 7855,
+      "first_above_0p01_time_s": 7855,
+      "first_above_half_analytic_steady_time_s": 7855,
+      "end_junction_chlorine_mg_L": 0.40289349713569034,
+      "end_link_mean_mg_L": 0.6568608613654526,
+      "mass_balance_ratio": 0.9999999999957322,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 4087.75,
+        "Mass Reacted": 8753.25,
+        "Final Mass": 5159.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.0,
+          0.9999999674744904
+        ],
+        [
+          1,
+          0.0,
+          0.00012732328704066268,
+          0.9999999674744904
+        ],
+        [
+          60,
+          0.0,
+          0.007613371902305472,
+          0.9999999674744904
+        ],
+        [
+          600,
+          0.0,
+          0.07380587908548315,
+          0.9999999674744904
+        ],
+        [
+          780,
+          0.0,
+          0.09496648449819897,
+          0.9999999674744904
+        ],
+        [
+          790,
+          0.0,
+          0.09612919674818896,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          0.0,
+          0.37487773832376925,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          0.0,
+          0.622006415324399,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          0.0,
+          0.6566544407024113,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          0.40289349713569034,
+          0.6568608613654526,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          0.40289349713569034,
+          0.6568608613654526,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          0.40289349713569034,
+          0.6568608613654526,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          0.40289349713569034,
+          0.6568608613654526,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_OPEN_k10_dt1.csv",
+      "csv_sha256": "798331afcdacba3da7b479542952b9308634e3ac78f3252954005de7db7071a5",
+      "input_sha256": "2dc42d2c5264b79c3933ad0b46f8ba08fade4b5eb7a044b26d69647d252ea5b2",
+      "elapsed_seconds_including_hydraulics_and_python": 0.9092188999638893,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_CV_k10_dt1",
+      "pipe_status_input": "CV",
+      "quality_step_s": 1,
+      "hydraulic": {
+        "link_type_enum": 0,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": -10.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 0.40291661380493526,
+      "first_positive_time_s": 1,
+      "first_above_0p01_time_s": 1,
+      "first_above_half_analytic_steady_time_s": 1,
+      "end_junction_chlorine_mg_L": 1.0,
+      "end_link_mean_mg_L": 1.0,
+      "mass_balance_ratio": 1.0,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 18000.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 0.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.5,
+          0.9999999674744904
+        ],
+        [
+          1,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          60,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          780,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          790,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_CV_k10_dt1.csv",
+      "csv_sha256": "dd67259791d7143ef1d0a78eaf29dc6adffd20b2011873d36e281058775d7d23",
+      "input_sha256": "2846eaf93153a6f68cfd9ac2b281a21375efaa73b38724fbcce414c6b6e447dc",
+      "elapsed_seconds_including_hydraulics_and_python": 0.1232622999814339,
+      "all_api_return_codes_zero": true
+    },
+    {
+      "id": "L1000_CV_k10_dt10_repeat",
+      "pipe_status_input": "CV",
+      "quality_step_s": 10,
+      "hydraulic": {
+        "link_type_enum": 0,
+        "length_m": 1000.0,
+        "diameter_mm": 100.0,
+        "bulk_coefficient_per_day": -10.0,
+        "flow_L_per_s": 0.999999999999945,
+        "velocity_m_per_s": 0.12732326467642704,
+        "headloss_m": 0.2679217103681634,
+        "open_status": 1.0,
+        "junction_demand_L_per_s": 1.0
+      },
+      "geometric_volume_m3": 7.853981633974484,
+      "analytic_advection_travel_time_s": 7853.981633974916,
+      "analytic_first_order_steady_chlorine_mg_L": 0.40291661380493526,
+      "first_positive_time_s": 10,
+      "first_above_0p01_time_s": 10,
+      "first_above_half_analytic_steady_time_s": 10,
+      "end_junction_chlorine_mg_L": 1.0,
+      "end_link_mean_mg_L": 1.0,
+      "mass_balance_ratio": 1.0,
+      "reported_mass_balance_mg_rounded_by_report": {
+        "Initial Mass": 0.0,
+        "Mass Inflow": 18000.0,
+        "Mass Outflow": 18000.0,
+        "Mass Reacted": 0.0,
+        "Final Mass": 0.0
+      },
+      "flow_min_L_s": 0.9999999674744904,
+      "flow_max_L_s": 0.9999999674744904,
+      "samples_time_node_link_flow": [
+        [
+          0,
+          0.0,
+          0.5,
+          0.9999999674744904
+        ],
+        [
+          10,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          60,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          780,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          790,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          3600,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7200,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7850,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          7860,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          10800,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          14400,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ],
+        [
+          18000,
+          1.0,
+          1.0,
+          0.9999999674744904
+        ]
+      ],
+      "full_trajectory_csv": "L1000_CV_k10_dt10_repeat.csv",
+      "csv_sha256": "23873fd707e4a463d93e77c7c3a0a4e0966b1527d3ac740b93170067f482580c",
+      "input_sha256": "114034348487d68392610f90ad7c5c8d0afd7e0a35d0a9aad6b08a8ea5d6c35f",
+      "elapsed_seconds_including_hydraulics_and_python": 0.0388018999947235,
+      "all_api_return_codes_zero": true
+    }
+  ],
+  "diagnostic_checks": {
+    "all_pairs_same_flow_and_headloss_to_1e_10": true,
+    "long_cv_api_geometry_remains_1000m_100mm": true,
+    "long_pipe_arrival_close_to_geometric_travel_time": true,
+    "long_cv_arrival_at_first_1_second_step": true,
+    "long_cv_reactive_final_concentration_equals_source": true,
+    "long_cv_reported_final_and_reacted_mass_zero": true,
+    "repeat_cv_full_trajectory_identical": true
+  },
+  "ordinary_pipe_euler_error_context": [
+    {
+      "dt_s": 10,
+      "observed_pipe_difference_from_geometric_analytic": 0.0002139198949517307,
+      "fixed_exposure_euler_absolute_error_bound": 0.00021214664296874647,
+      "one_timestep_exposure_uncertainty_absolute_bound": 0.0004666086494501398,
+      "interpretation": "Fixed-exposure Euler bound is for y'= -alpha*y at equal elapsed time, excluding discrete parcel arrival/mixing and EPANET rounded unit constants. The separate timestep exposure bound illustrates that timing error is distinct. Neither is claimed as a theorem for the complete engine."
+    },
+    {
+      "dt_s": 1,
+      "observed_pipe_difference_from_geometric_analytic": 2.3116669244926946e-05,
+      "fixed_exposure_euler_absolute_error_bound": 2.1197586696279592e-05,
+      "one_timestep_exposure_uncertainty_absolute_bound": 4.663656616182843e-05,
+      "interpretation": "Fixed-exposure Euler bound is for y'= -alpha*y at equal elapsed time, excluding discrete parcel arrival/mixing and EPANET rounded unit constants. The separate timestep exposure bound illustrates that timing error is distinct. Neither is claimed as a theorem for the complete engine."
+    }
+  ]
+}

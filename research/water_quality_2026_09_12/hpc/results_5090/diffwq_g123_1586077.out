@@ -1,0 +1,277 @@
+=== job 1586077 on wqd10nah09g1  Sun Sep 13 06:01:47 AM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+name, driver_version, memory.total [MiB], compute_cap
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB, 12.0
+python 3.10.21 torch 2.8.0+cu128 cuda 12.8
+cuda.is_available True arch_list ['sm_70', 'sm_75', 'sm_80', 'sm_86', 'sm_90', 'sm_100', 'sm_120']
+device NVIDIA GeForce RTX 5090 capability 12.0 mem_GB 31.4
+
+=== G1 core nextQ (gcc/M_PI build of libepanet2)  Sun Sep 13 06:03:58 AM CST 2026
+Net1                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1587 engine=0.030s python=0.09s
+Net2                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2909 engine=0.001s python=0.16s
+Net3                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=10992 engine=0.001s python=0.19s
+Jilin                            rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=18680 engine=0.003s python=0.46s
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g1_core_nextQ.json
+=== exit=0 elapsed=5s
+
+=== G1 variants nextQ  Sun Sep 13 06:04:04 AM CST 2026
+Net1_MIX2                        rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1593 engine=0.002s python=0.09s
+                                 hits={'mix2_drain_from_stagnant': 123, 'mix2_fill_to_stagnant': 167, 'noflowqual': 123} vmax_at_end=[False]
+Net1_FIFO                        rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1620 engine=0.001s python=0.10s
+                                 hits={'fifo': 290, 'fifo_inflow_merge': 137, 'fifo_inflow_newseg': 30, 'noflowqual': 123} vmax_at_end=[False]
+Net1_LIFO                        rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1567 engine=0.001s python=0.09s
+                                 hits={'lifo_drain': 123, 'lifo_inflow_merge': 137, 'lifo_inflow_newseg': 30, 'noflowqual': 123} vmax_at_end=[False]
+Net1_MIX1_overflow               rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1901 engine=0.001s python=0.09s
+                                 hits={'mix1_overflow': 282} vmax_at_end=[True]
+Net1_MIX2_overflow               rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1902 engine=0.001s python=0.09s
+                                 hits={'mix2_fill_to_stagnant': 289, 'mix2_overflow': 282} vmax_at_end=[True]
+Net1_FIFO_overflow               rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1939 engine=0.001s python=0.10s
+                                 hits={'fifo': 289, 'fifo_inflow_merge': 251, 'fifo_inflow_newseg': 38, 'fifo_overflow_staleV': 289} vmax_at_end=[True]
+Net1_LIFO_overflow               rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1939 engine=0.001s python=0.10s
+                                 hits={'lifo_inflow_merge': 251, 'lifo_inflow_newseg': 38, 'lifo_overflow_staleV': 289} vmax_at_end=[True]
+Net1_order2                      rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1578 engine=0.001s python=0.09s
+                                 hits={'noflowqual': 123} vmax_at_end=[False]
+Net1_order1p5                    rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1574 engine=0.001s python=0.10s
+                                 hits={'noflowqual': 123} vmax_at_end=[False]
+Net1_michaelis_menten            rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1738 engine=0.001s python=0.11s
+                                 hits={'noflowqual': 123, 'react_clamp0': 46} vmax_at_end=[False]
+Net1_growth_climit               rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1715 engine=0.001s python=0.11s
+                                 hits={'noflowqual': 123} vmax_at_end=[False]
+Net1_wall_order0                 rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=405 engine=0.000s python=0.04s
+                                 hits={'noflowqual': 123} vmax_at_end=[False]
+Net1_src_mass                    rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1996 engine=0.001s python=0.10s
+                                 hits={"('source', 1, True, False)": 167, 'noflowqual': 123, 'source_stagnant_skip': 123} vmax_at_end=[False]
+Net1_src_setpoint                rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2150 engine=0.001s python=0.12s
+                                 hits={"('source', 2, True, False)": 167, 'noflowqual': 123, 'source_stagnant_skip': 123} vmax_at_end=[False]
+Net1_src_flowpaced               rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2150 engine=0.001s python=0.12s
+                                 hits={"('source', 3, True, False)": 167, 'noflowqual': 123, 'source_stagnant_skip': 123} vmax_at_end=[False]
+Net1_src_concen_reservoir_pat    rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2179 engine=0.001s python=0.12s
+                                 hits={"('source', 0, False, True)": 167, 'noflowqual': 123, 'source_stagnant_skip': 123} vmax_at_end=[False]
+Net1_src_concen_junction_inflow  rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1916 engine=0.001s python=0.12s
+                                 hits={"('source', 0, True, False)": 291, 'junction_negative_demand': 291, 'noflowqual': 129, 'source_concen_junction_inflow': 291} vmax_at_end=[False]
+Net1_src_mass_tank               rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1652 engine=0.001s python=0.09s
+                                 hits={"('source', 1, False, False)": 123, 'noflowqual': 123, 'source_stagnant_skip': 167} vmax_at_end=[False]
+Net1_ctol0                       rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=3660 engine=0.001s python=0.21s
+                                 hits={'noflowqual': 123} vmax_at_end=[False]
+Net1_LIFO_ctol0_fine             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=18981 engine=0.019s python=4.99s
+                                 hits={'lifo_drain': 610, 'lifo_inflow_newseg': 832, 'noflowqual': 610} vmax_at_end=[False]
+Net2_MIX2                        rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=3408 engine=0.001s python=0.16s
+                                 hits={"('source', 0, True, True)": 396, 'junction_negative_demand': 396, 'mix2_drain_from_stagnant': 300, 'mix2_fill_to_stagnant': 360, 'source_concen_junction_inflow': 396, 'source_stagnant_skip': 264} vmax_at_end=[False]
+Net2_FIFO                        rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=3027 engine=0.001s python=0.16s
+                                 hits={"('source', 0, True, True)": 396, 'fifo': 660, 'fifo_inflow_merge': 276, 'fifo_inflow_newseg': 84, 'junction_negative_demand': 396, 'source_concen_junction_inflow': 396, 'source_stagnant_skip': 264} vmax_at_end=[False]
+Net2_LIFO                        rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=4301 engine=0.001s python=0.16s
+                                 hits={"('source', 0, True, True)": 396, 'junction_negative_demand': 396, 'lifo_drain': 300, 'lifo_inflow_merge': 271, 'lifo_inflow_newseg': 89, 'source_concen_junction_inflow': 396, 'source_stagnant_skip': 264} vmax_at_end=[False]
+Net2_ctol0_fine                  rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=132041 engine=0.008s python=0.99s
+                                 hits={"('source', 0, True, True)": 1980, 'junction_negative_demand': 1980, 'source_concen_junction_inflow': 1980, 'source_stagnant_skip': 1320} vmax_at_end=[False]
+Net3_CHEM_mixed_tanks            rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=3178 engine=0.002s python=0.33s
+                                 hits={'fifo': 290, 'fifo_inflow_merge': 136, 'fifo_inflow_newseg': 9, 'lifo_drain': 160, 'lifo_inflow_merge': 115, 'lifo_inflow_newseg': 15, 'mix2_drain_from_stagnant': 133, 'mix2_fill_to_stagnant': 124, 'mix2_mixzone_only': 33, 'noflowqual': 326} vmax_at_end=[False, False, False]
+Net3_AGE_mixed_tanks             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=26909 engine=0.003s python=0.43s
+                                 hits={'fifo': 290, 'fifo_inflow_merge': 136, 'fifo_inflow_newseg': 9, 'lifo_drain': 160, 'lifo_inflow_merge': 61, 'lifo_inflow_newseg': 69, 'mix2_drain_from_stagnant': 133, 'mix2_fill_to_stagnant': 124, 'mix2_mixzone_only': 33, 'noflowqual': 326} vmax_at_end=[False, False, False]
+Net3_TRACE_River_mixed_tanks     rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=12712 engine=0.002s python=0.20s
+                                 hits={'fifo': 290, 'fifo_inflow_merge': 110, 'fifo_inflow_newseg': 35, 'lifo_drain': 160, 'lifo_inflow_merge': 117, 'lifo_inflow_newseg': 13, 'mix2_drain_from_stagnant': 133, 'mix2_fill_to_stagnant': 124, 'mix2_mixzone_only': 33} vmax_at_end=[False, False, False]
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g1_variants_nextQ.json
+=== exit=0 elapsed=25s
+
+=== G1 core stepQ  Sun Sep 13 06:04:29 AM CST 2026
+Net1                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1590 engine=0.007s python=0.10s
+Net2                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2909 engine=0.005s python=0.18s
+Net3                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=10983 engine=0.004s python=0.22s
+Jilin                            rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=18680 engine=0.009s python=0.49s
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g1_core_stepQ.json
+=== exit=0 elapsed=4s
+
+=== G2 cuda adjoint vs autograd vs central differences  Sun Sep 13 06:04:34 AM CST 2026
+Net1                             fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=2.0e-07 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '2.4e-13'} adj|AD=1.1e-15 (AD fwd+bwd 1.70s) lvl=6 ops=1897 t(rec/build/fwd/fwd+bwd)=0.18/0.27/5.29/0.87s
+Net2                             fwd|rep=4.2e-15 fwd|dll=4.2e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '1.7e-01', 'kw_all_pipes': '3.3e-02', 'tank_kb_all': '3.3e-09', 'src_all': '2.6e-02', 'c0_all_nodes': '2.5e-12'} [Reactflag off] adj|AD=1.9e-16 (AD fwd+bwd 7.98s) lvl=40 ops=17543 t(rec/build/fwd/fwd+bwd)=0.66/0.37/1.51/3.78s
+Net3                             fwd|rep=1.6e-15 fwd|dll=1.6e-15 AD|torchFD=2.0e-07 AD|dllFD={} adj|AD=0.0e+00 (AD fwd+bwd 3.32s) lvl=70 ops=14751 t(rec/build/fwd/fwd+bwd)=0.73/0.26/0.71/1.55s
+Jilin                            fwd|rep=5.7e-15 fwd|dll=5.7e-15 AD|torchFD=1.3e-06 AD|dllFD={'kb_all_pipes': '2.7e-01', 'kw_all_pipes': '1.3e-03', 'c0_all_nodes': '2.6e-12'} adj|AD=4.6e-16 (AD fwd+bwd 2.22s) lvl=12 ops=5407 t(rec/build/fwd/fwd+bwd)=0.92/0.07/0.44/1.08s
+Net1_MIX2                        fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=3.1e-07 AD|dllFD={'kb_all_pipes': '1.3e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'c0_all_nodes': '3.0e-12'} adj|AD=6.1e-16 (AD fwd+bwd 0.82s) lvl=6 ops=1966 t(rec/build/fwd/fwd+bwd)=0.14/0.07/0.16/0.41s
+Net1_FIFO                        fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=1.0e-07 AD|dllFD={'kb_all_pipes': '1.1e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.3e-10', 'c0_all_nodes': '4.4e-13'} adj|AD=6.9e-16 (AD fwd+bwd 0.56s) lvl=6 ops=1417 t(rec/build/fwd/fwd+bwd)=0.14/0.02/0.11/0.28s
+Net1_LIFO                        fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=5.1e-08 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '9.0e-10', 'c0_all_nodes': '7.6e-14'} adj|AD=8.0e-16 (AD fwd+bwd 0.60s) lvl=6 ops=1435 t(rec/build/fwd/fwd+bwd)=0.13/0.02/0.11/0.28s
+Net1_MIX1_overflow               fwd|rep=5.9e-15 fwd|dll=5.9e-15 AD|torchFD=6.7e-07 AD|dllFD={'kb_all_pipes': '7.5e-11', 'kw_all_pipes': '1.8e-09', 'tank_kb_all': '6.8e-10', 'c0_all_nodes': '9.1e-14'} adj|AD=2.3e-16 (AD fwd+bwd 0.75s) lvl=6 ops=1799 t(rec/build/fwd/fwd+bwd)=0.14/0.02/0.14/0.36s
+Net1_FIFO_overflow               fwd|rep=6.3e-15 fwd|dll=6.3e-15 AD|torchFD=2.2e-08 AD|dllFD={'kb_all_pipes': '7.4e-11', 'kw_all_pipes': '1.9e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.6e-14'} adj|AD=1.6e-16 (AD fwd+bwd 0.56s) lvl=6 ops=1540 t(rec/build/fwd/fwd+bwd)=0.15/0.02/0.12/0.28s
+Net1_LIFO_overflow               fwd|rep=3.1e-15 fwd|dll=3.1e-15 AD|torchFD=3.6e-07 AD|dllFD={'kb_all_pipes': '7.0e-11', 'kw_all_pipes': '1.7e-09', 'tank_kb_all': '8.3e-11', 'c0_all_nodes': '1.0e-12'} adj|AD=4.1e-16 (AD fwd+bwd 0.57s) lvl=6 ops=1575 t(rec/build/fwd/fwd+bwd)=0.19/0.02/0.12/0.29s
+Net1_src_mass                    fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=1.4e-07 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '7.8e-10', 'src_all': '3.5e-11', 'c0_all_nodes': '2.4e-12'} adj|AD=2.0e-16 (AD fwd+bwd 0.82s) lvl=6 ops=2104 t(rec/build/fwd/fwd+bwd)=0.19/0.03/0.17/0.41s
+Net1_src_setpoint                fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=4.9e-08 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'src_all': '6.6e-13', 'c0_all_nodes': '4.6e-13'} adj|AD=2.2e-16 (AD fwd+bwd 0.83s) lvl=6 ops=2082 t(rec/build/fwd/fwd+bwd)=0.20/0.03/0.17/0.41s
+Net1_src_flowpaced               fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=4.9e-08 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'src_all': '2.1e-12', 'c0_all_nodes': '8.1e-13'} adj|AD=2.2e-16 (AD fwd+bwd 0.85s) lvl=6 ops=2082 t(rec/build/fwd/fwd+bwd)=0.20/0.03/0.16/0.40s
+Net1_src_concen_reservoir_pat    fwd|rep=9.7e-15 fwd|dll=9.7e-15 AD|torchFD=5.0e-07 AD|dllFD={'kb_all_pipes': '1.1e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'src_all': '2.9e-13', 'c0_all_nodes': '2.3e-12'} adj|AD=5.6e-16 (AD fwd+bwd 0.83s) lvl=6 ops=1916 t(rec/build/fwd/fwd+bwd)=0.17/0.03/0.16/0.39s
+Net1_src_concen_junction_inflow  fwd|rep=2.4e-15 fwd|dll=2.4e-15 AD|torchFD=3.3e-07 AD|dllFD={'kb_all_pipes': '4.9e-02', 'kw_all_pipes': '2.5e-02', 'tank_kb_all': '6.0e-10', 'src_all': '2.4e-12', 'c0_all_nodes': '4.8e-03'} adj|AD=5.0e-16 (AD fwd+bwd 0.87s) lvl=8 ops=1941 t(rec/build/fwd/fwd+bwd)=0.17/0.03/0.17/0.43s
+Net1_src_mass_tank               fwd|rep=1.7e-14 fwd|dll=1.7e-14 AD|torchFD=2.7e-07 AD|dllFD={'kb_all_pipes': '1.4e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.0e-10', 'src_all': '2.4e-12', 'c0_all_nodes': '1.0e-12'} adj|AD=5.9e-16 (AD fwd+bwd 0.82s) lvl=6 ops=2003 t(rec/build/fwd/fwd+bwd)=0.15/0.03/0.16/0.41s
+Net1_ctol0                       fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=2.9e-08 AD|dllFD={'kb_all_pipes': '1.5e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.1e-12'} adj|AD=4.1e-16 (AD fwd+bwd 0.57s) lvl=4 ops=1695 t(rec/build/fwd/fwd+bwd)=0.25/0.02/0.11/0.27s
+Net2_MIX2                        fwd|rep=4.2e-15 fwd|dll=4.2e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '2.0e-01', 'kw_all_pipes': '3.9e-02', 'tank_kb_all': '3.2e-09', 'src_all': '2.9e-02', 'c0_all_nodes': '2.1e-12'} [Reactflag off] adj|AD=5.9e-16 (AD fwd+bwd 7.46s) lvl=40 ops=16743 t(rec/build/fwd/fwd+bwd)=0.61/0.36/1.44/3.62s
+Net2_LIFO                        fwd|rep=4.2e-15 fwd|dll=4.2e-15 AD|torchFD=1.3e-04 AD|dllFD={'kb_all_pipes': '8.8e-01', 'kw_all_pipes': '5.8e-01', 'tank_kb_all': '1.1e+00', 'src_all': '7.3e-01', 'c0_all_nodes': '1.5e+00'} [Reactflag off] adj|AD=1.4e-16 (AD fwd+bwd 6.10s) lvl=40 ops=13591 t(rec/build/fwd/fwd+bwd)=0.59/0.30/1.17/2.93s
+Net3_CHEM_mixed_tanks            fwd|rep=1.1e-14 fwd|dll=1.1e-14 AD|torchFD=9.1e-06 AD|dllFD={'kb_all_pipes': '2.0e-01', 'kw_all_pipes': '7.8e-02', 'tank_kb_all': '7.0e-10', 'c0_all_nodes': '4.0e-02'} adj|AD=7.0e-16 (AD fwd+bwd 6.62s) lvl=65 ops=14468 t(rec/build/fwd/fwd+bwd)=0.79/0.27/1.27/3.20s
+Net3_AGE_mixed_tanks             fwd|rep=4.6e-15 fwd|dll=4.6e-15 AD|torchFD=4.5e-07 AD|dllFD={'c0_all_nodes': '2.4e-12'} adj|AD=7.9e-19 (AD fwd+bwd 1.66s) lvl=65 ops=6802 t(rec/build/fwd/fwd+bwd)=0.85/0.13/0.50/0.96s
+Net3_TRACE_River_mixed_tanks     fwd|rep=3.1e-15 fwd|dll=3.1e-15 AD|torchFD=1.5e-07 AD|dllFD={} adj|AD=0.0e+00 (AD fwd+bwd 3.08s) lvl=72 ops=13610 t(rec/build/fwd/fwd+bwd)=0.70/0.25/0.66/1.43s
+Net2_react                       fwd|rep=8.0e-15 fwd|dll=8.0e-15 AD|torchFD=9.4e-08 AD|dllFD={'kb_all_pipes': '1.2e-09', 'kw_all_pipes': '2.4e-08', 'tank_kb_all': '2.9e-09', 'src_all': '7.0e-12', 'c0_all_nodes': '2.6e-12'} adj|AD=5.7e-16 (AD fwd+bwd 7.32s) lvl=40 ops=16382 t(rec/build/fwd/fwd+bwd)=0.88/0.33/1.42/3.51s
+Jilin_kw                         fwd|rep=1.0e-14 fwd|dll=1.0e-14 AD|torchFD=2.6e-07 AD|dllFD={'kb_all_pipes': '2.3e-11', 'kw_all_pipes': '1.3e-08', 'c0_all_nodes': '9.0e-13'} adj|AD=1.4e-15 (AD fwd+bwd 1.33s) lvl=12 ops=4632 t(rec/build/fwd/fwd+bwd)=1.16/0.05/0.27/0.66s
+Net3_CHEM_kw_mixed_tanks         fwd|rep=8.2e-15 fwd|dll=8.2e-15 AD|torchFD=1.3e-07 AD|dllFD={'kb_all_pipes': '1.3e-02', 'kw_all_pipes': '1.4e-02', 'tank_kb_all': '5.4e-02', 'c0_all_nodes': '4.8e-03'} adj|AD=3.3e-16 (AD fwd+bwd 4.62s) lvl=61 ops=10000 t(rec/build/fwd/fwd+bwd)=0.81/0.20/0.87/2.20s
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g2_nextQ_ctolinp_cuda_both.json
+=== exit=0 elapsed=796s
+
+=== G2 cuda Ctol=0 (mode M1)  Sun Sep 13 06:17:50 AM CST 2026
+Net1                             fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=2.9e-08 AD|dllFD={'kb_all_pipes': '1.5e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.1e-12'} lvl=4 ops=1695 t(rec/build/fwd/fwd+bwd)=0.29/0.21/0.31/0.30s
+Net2                             fwd|rep=1.5e-15 fwd|dll=1.5e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '1.2e-03', 'kw_all_pipes': '2.1e-03', 'tank_kb_all': '3.3e-09', 'src_all': '1.7e-11', 'c0_all_nodes': '3.0e-12'} [Reactflag off] lvl=7 ops=5763 t(rec/build/fwd/fwd+bwd)=0.56/0.07/0.37/0.89s
+Net3                             fwd|rep=5.7e-16 fwd|dll=5.7e-16 AD|torchFD=2.5e-07 AD|dllFD={} lvl=9 ops=4136 t(rec/build/fwd/fwd+bwd)=0.63/0.05/0.17/0.36s
+Jilin                            fwd|rep=5.9e-15 fwd|dll=5.9e-15 AD|torchFD=1.3e-06 AD|dllFD={'kb_all_pipes': '2.6e-11', 'kw_all_pipes': '6.0e-05', 'c0_all_nodes': '2.3e-12'} lvl=3 ops=4418 t(rec/build/fwd/fwd+bwd)=1.10/0.08/0.23/0.57s
+Net1_MIX2                        fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=8.3e-08 AD|dllFD={'kb_all_pipes': '1.1e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '7.7e-10', 'c0_all_nodes': '1.0e-12'} lvl=4 ops=1741 t(rec/build/fwd/fwd+bwd)=0.26/0.02/0.12/0.30s
+Net1_FIFO                        fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=7.1e-08 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.2e-10', 'c0_all_nodes': '4.2e-13'} lvl=3 ops=1280 t(rec/build/fwd/fwd+bwd)=0.33/0.01/0.08/0.20s
+Net1_LIFO                        fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=2.5e-08 AD|dllFD={'kb_all_pipes': '1.3e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '9.1e-10', 'c0_all_nodes': '1.4e-13'} lvl=3 ops=1326 t(rec/build/fwd/fwd+bwd)=0.27/0.01/0.09/0.21s
+Net1_MIX1_overflow               fwd|rep=6.8e-15 fwd|dll=6.8e-15 AD|torchFD=1.2e-07 AD|dllFD={'kb_all_pipes': '7.0e-11', 'kw_all_pipes': '1.8e-09', 'tank_kb_all': '7.0e-10', 'c0_all_nodes': '2.2e-13'} lvl=3 ops=1664 t(rec/build/fwd/fwd+bwd)=0.27/0.02/0.11/0.28s
+Net1_FIFO_overflow               fwd|rep=6.3e-15 fwd|dll=6.3e-15 AD|torchFD=1.8e-08 AD|dllFD={'kb_all_pipes': '7.3e-11', 'kw_all_pipes': '1.9e-09', 'tank_kb_all': '7.9e-10', 'c0_all_nodes': '3.5e-13'} lvl=2 ops=1448 t(rec/build/fwd/fwd+bwd)=0.26/0.02/0.10/0.24s
+Net1_LIFO_overflow               fwd|rep=3.0e-15 fwd|dll=3.0e-15 AD|torchFD=1.3e-07 AD|dllFD={'kb_all_pipes': '6.5e-11', 'kw_all_pipes': '1.7e-09', 'c0_all_nodes': '6.4e-13'} lvl=3 ops=1664 t(rec/build/fwd/fwd+bwd)=0.31/0.02/0.11/0.28s
+Net1_src_mass                    fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=1.1e-07 AD|dllFD={'kb_all_pipes': '1.0e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.0e-10', 'src_all': '5.3e-11', 'c0_all_nodes': '2.2e-13'} lvl=4 ops=1908 t(rec/build/fwd/fwd+bwd)=0.26/0.05/0.12/0.29s
+Net1_src_setpoint                fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=2.0e-07 AD|dllFD={'kb_all_pipes': '1.3e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '7.8e-10', 'src_all': '2.8e-12', 'c0_all_nodes': '3.4e-12'} lvl=4 ops=1908 t(rec/build/fwd/fwd+bwd)=0.26/0.02/0.13/0.30s
+Net1_src_flowpaced               fwd|rep=1.6e-14 fwd|dll=1.6e-14 AD|torchFD=2.0e-07 AD|dllFD={'kb_all_pipes': '1.3e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '7.7e-10', 'src_all': '5.5e-12', 'c0_all_nodes': '2.2e-13'} lvl=4 ops=1908 t(rec/build/fwd/fwd+bwd)=0.31/0.02/0.12/0.29s
+Net1_src_concen_reservoir_pat    fwd|rep=9.7e-15 fwd|dll=9.7e-15 AD|torchFD=8.4e-08 AD|dllFD={'kb_all_pipes': '1.2e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '7.8e-10', 'src_all': '2.5e-12', 'c0_all_nodes': '2.2e-12'} lvl=4 ops=1816 t(rec/build/fwd/fwd+bwd)=0.26/0.02/0.12/0.29s
+Net1_src_concen_junction_inflow  fwd|rep=2.6e-15 fwd|dll=2.6e-15 AD|torchFD=5.4e-07 AD|dllFD={'kb_all_pipes': '8.8e-11', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '5.9e-10', 'src_all': '3.7e-13', 'c0_all_nodes': '8.9e-14'} lvl=4 ops=1838 t(rec/build/fwd/fwd+bwd)=0.29/0.02/0.13/0.32s
+Net1_src_mass_tank               fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=8.4e-08 AD|dllFD={'kb_all_pipes': '1.5e-10', 'kw_all_pipes': '2.2e-09', 'tank_kb_all': '8.1e-10', 'src_all': '6.5e-12', 'c0_all_nodes': '2.4e-12'} lvl=5 ops=1818 t(rec/build/fwd/fwd+bwd)=0.31/0.02/0.12/0.29s
+Net1_ctol0                       fwd|rep=1.5e-14 fwd|dll=1.5e-14 AD|torchFD=2.9e-08 AD|dllFD={'kb_all_pipes': '1.5e-10', 'kw_all_pipes': '2.1e-09', 'tank_kb_all': '8.1e-10', 'c0_all_nodes': '3.1e-12'} lvl=4 ops=1695 t(rec/build/fwd/fwd+bwd)=0.26/0.02/0.11/0.27s
+Net2_MIX2                        fwd|rep=3.4e-15 fwd|dll=3.4e-15 AD|torchFD=1.1e-04 AD|dllFD={'kb_all_pipes': '1.2e-03', 'kw_all_pipes': '2.1e-03', 'tank_kb_all': '3.2e-09', 'src_all': '1.7e-12', 'c0_all_nodes': '2.9e-12'} [Reactflag off] lvl=7 ops=5763 t(rec/build/fwd/fwd+bwd)=0.54/0.10/0.39/0.95s
+Net2_LIFO                        fwd|rep=8.5e-16 fwd|dll=8.5e-16 AD|torchFD=1.3e-04 AD|dllFD={'kb_all_pipes': '1.3e-03', 'kw_all_pipes': '2.1e-03', 'tank_kb_all': '1.4e-09', 'src_all': '3.8e-13', 'c0_all_nodes': '8.4e-13'} [Reactflag off] lvl=7 ops=4959 t(rec/build/fwd/fwd+bwd)=0.56/0.05/0.30/0.72s
+Net3_CHEM_mixed_tanks            fwd|rep=1.2e-14 fwd|dll=1.2e-14 AD|torchFD=9.4e-06 AD|dllFD={'kb_all_pipes': '2.4e-10', 'kw_all_pipes': '1.1e-03', 'tank_kb_all': '6.2e-10', 'c0_all_nodes': '6.7e-13'} lvl=9 ops=4136 t(rec/build/fwd/fwd+bwd)=1.45/0.08/0.26/0.65s
+Net3_AGE_mixed_tanks             fwd|rep=3.7e-15 fwd|dll=3.7e-15 AD|torchFD=4.9e-07 AD|dllFD={'c0_all_nodes': '1.1e-12'} lvl=9 ops=4136 t(rec/build/fwd/fwd+bwd)=0.96/0.04/0.25/0.49s
+Net3_TRACE_River_mixed_tanks     fwd|rep=5.7e-16 fwd|dll=5.7e-16 AD|torchFD=1.9e-07 AD|dllFD={} lvl=9 ops=3251 t(rec/build/fwd/fwd+bwd)=0.63/0.04/0.14/0.30s
+Net2_react                       fwd|rep=6.1e-15 fwd|dll=6.1e-15 AD|torchFD=1.3e-07 AD|dllFD={'kb_all_pipes': '1.2e-09', 'kw_all_pipes': '2.4e-08', 'tank_kb_all': '2.9e-09', 'src_all': '7.9e-12', 'c0_all_nodes': '2.3e-12'} lvl=7 ops=5763 t(rec/build/fwd/fwd+bwd)=2.87/0.10/0.36/0.88s
+Jilin_kw                         fwd|rep=1.0e-14 fwd|dll=1.0e-14 AD|torchFD=3.5e-07 AD|dllFD={'kb_all_pipes': '1.3e-11', 'kw_all_pipes': '1.3e-08', 'c0_all_nodes': '6.4e-13'} lvl=3 ops=4418 t(rec/build/fwd/fwd+bwd)=1.18/0.04/0.23/0.56s
+Net3_CHEM_kw_mixed_tanks         fwd|rep=7.7e-15 fwd|dll=7.7e-15 AD|torchFD=9.9e-07 AD|dllFD={'kb_all_pipes': '2.2e-10', 'kw_all_pipes': '6.2e-09', 'tank_kb_all': '6.5e-10', 'c0_all_nodes': '4.6e-14'} lvl=9 ops=4136 t(rec/build/fwd/fwd+bwd)=1.53/0.09/0.26/0.65s
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g2_nextQ_ctol0_cuda.json
+=== exit=0 elapsed=338s
+
+=== G3 cuda batch sweep + CUDA graphs  Sun Sep 13 06:23:28 AM CST 2026
+Net1 [cuda]
+  B=    1 fwd=0.158s (157.81 ms/sample) fwd+bwd=0.396s (396.01 ms/sample) graph fwd+bwd=0.069s mem=1MB
+  B=   16 fwd=0.161s (10.06 ms/sample) fwd+bwd=0.405s (25.30 ms/sample) graph fwd+bwd=0.075s mem=5MB
+  B=  128 fwd=0.163s (1.27 ms/sample) fwd+bwd=0.413s (3.22 ms/sample) graph fwd+bwd=0.089s mem=39MB
+  B= 1024 fwd=0.165s (0.16 ms/sample) fwd+bwd=0.413s (0.40 ms/sample) graph fwd+bwd=0.113s mem=308MB
+  B= 4096 fwd=0.167s (0.04 ms/sample) fwd+bwd=0.422s (0.10 ms/sample) graph fwd+bwd=0.123s mem=1239MB
+  B= 8192 fwd=0.170s (0.02 ms/sample) fwd+bwd=0.429s (0.05 ms/sample) graph fwd+bwd=0.137s mem=2492MB
+  DLL quality run=0.60 ms, N_theta=36, FD gradient=0.022s, record=0.18s build=0.22s ops=1897 versions=3950
+Net2_react [cuda]
+  B=    1 fwd=1.428s (1427.79 ms/sample) fwd+bwd=3.579s (3578.62 ms/sample) graph fwd+bwd=0.568s mem=5MB
+  B=   16 fwd=1.420s (88.75 ms/sample) fwd+bwd=3.588s (224.24 ms/sample) graph fwd+bwd=0.602s mem=34MB
+  B=  128 fwd=1.459s (11.40 ms/sample) fwd+bwd=3.657s (28.57 ms/sample) graph fwd+bwd=0.745s mem=249MB
+  B= 1024 fwd=1.469s (1.43 ms/sample) fwd+bwd=3.693s (3.61 ms/sample) graph fwd+bwd=0.983s mem=1941MB
+  B= 4096 fwd=1.487s (0.36 ms/sample) fwd+bwd=3.731s (0.91 ms/sample) graph fwd+bwd=1.061s mem=7780MB
+  B= 8192 OutOfMemoryError: CUDA out of memory. Tried to allocate 1.70 GiB. GPU 0 has a total capacity of 31.36 GiB of which 1.11 GiB is free. Including non-PyTorch memory, this process has 30.23 GiB memory in use. Of the alloca
+  DLL quality run=2.41 ms, N_theta=118, FD gradient=0.287s, record=1.05s build=0.36s ops=16382 versions=27101
+Jilin_kw [cuda]
+  B=    1 fwd=0.274s (274.04 ms/sample) fwd+bwd=0.672s (671.94 ms/sample) graph fwd+bwd=0.115s mem=8MB
+  B=   16 fwd=0.275s (17.21 ms/sample) fwd+bwd=0.684s (42.75 ms/sample) graph fwd+bwd=0.145s mem=50MB
+  B=  128 fwd=0.280s (2.19 ms/sample) fwd+bwd=0.690s (5.39 ms/sample) graph fwd+bwd=0.164s mem=368MB
+  B= 1024 fwd=0.287s (0.28 ms/sample) fwd+bwd=0.711s (0.69 ms/sample) graph fwd+bwd=0.202s mem=2894MB
+  B= 4096 fwd=0.305s (0.07 ms/sample) fwd+bwd=0.754s (0.18 ms/sample) graph fwd+bwd=0.300s mem=11592MB
+  B= 8192 OutOfMemoryError: CUDA out of memory. Tried to allocate 2.46 GiB. GPU 0 has a total capacity of 31.36 GiB of which 1.94 GiB is free. Including non-PyTorch memory, this process has 29.41 GiB memory in use. Of the alloca
+  DLL quality run=3.65 ms, N_theta=96, FD gradient=0.354s, record=2.45s build=0.10s ops=4632 versions=39202
+Net3_CHEM_kw_mixed_tanks [cuda]
+  B=    1 fwd=0.888s (888.31 ms/sample) fwd+bwd=2.233s (2232.63 ms/sample) graph fwd+bwd=0.409s mem=7MB
+  B=   16 fwd=0.893s (55.84 ms/sample) fwd+bwd=2.281s (142.55 ms/sample) graph fwd+bwd=0.450s mem=44MB
+  B=  128 fwd=0.910s (7.11 ms/sample) fwd+bwd=2.315s (18.08 ms/sample) graph fwd+bwd=0.549s mem=321MB
+  B= 1024 fwd=0.924s (0.90 ms/sample) fwd+bwd=2.361s (2.31 ms/sample) graph fwd+bwd=0.660s mem=2524MB
+  B= 4096 fwd=0.938s (0.23 ms/sample) fwd+bwd=2.392s (0.58 ms/sample) graph fwd+bwd=0.763s mem=10126MB
+  B= 8192 OutOfMemoryError: CUDA out of memory. Tried to allocate 2.13 GiB. GPU 0 has a total capacity of 31.36 GiB of which 137.06 MiB is free. Including non-PyTorch memory, this process has 31.21 GiB memory in use. Of the allo
+  DLL quality run=2.54 ms, N_theta=334, FD gradient=0.850s, record=0.93s build=0.21s ops=10000 versions=34662
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g3_bench_cuda.json
+=== exit=0 elapsed=587s
+
+=== G3 cpu reference (8 threads)  Sun Sep 13 06:33:16 AM CST 2026
+Net1 [cpu]
+  B=    1 fwd=0.065s (64.57 ms/sample) fwd+bwd=0.164s (164.37 ms/sample)
+  B=   16 fwd=0.070s (4.35 ms/sample) fwd+bwd=0.180s (11.25 ms/sample)
+  B=  128 fwd=0.118s (0.92 ms/sample) fwd+bwd=0.306s (2.39 ms/sample)
+  B= 1024 fwd=0.302s (0.29 ms/sample) fwd+bwd=0.921s (0.90 ms/sample)
+  DLL quality run=0.61 ms, N_theta=36, FD gradient=0.022s, record=0.17s build=0.03s ops=1897 versions=3950
+Net2_react [cpu]
+  B=    1 fwd=0.567s (567.08 ms/sample) fwd+bwd=1.468s (1468.23 ms/sample)
+  B=   16 fwd=0.602s (37.62 ms/sample) fwd+bwd=1.566s (97.90 ms/sample)
+  B=  128 fwd=1.076s (8.41 ms/sample) fwd+bwd=2.859s (22.33 ms/sample)
+  B= 1024 fwd=2.898s (2.83 ms/sample) fwd+bwd=7.989s (7.80 ms/sample)
+  DLL quality run=2.42 ms, N_theta=118, FD gradient=0.288s, record=0.90s build=0.41s ops=16382 versions=27101
+Jilin_kw [cpu]
+  B=    1 fwd=0.112s (111.98 ms/sample) fwd+bwd=0.285s (284.69 ms/sample)
+  B=   16 fwd=0.136s (8.49 ms/sample) fwd+bwd=0.353s (22.04 ms/sample)
+  B=  128 fwd=0.400s (3.13 ms/sample) fwd+bwd=1.131s (8.84 ms/sample)
+  B= 1024 fwd=1.766s (1.73 ms/sample) fwd+bwd=4.417s (4.31 ms/sample)
+  DLL quality run=3.68 ms, N_theta=96, FD gradient=0.357s, record=1.12s build=0.08s ops=4632 versions=39202
+Net3_CHEM_kw_mixed_tanks [cpu]
+  B=    1 fwd=0.358s (357.50 ms/sample) fwd+bwd=0.926s (925.84 ms/sample)
+  B=   16 fwd=0.393s (24.58 ms/sample) fwd+bwd=1.028s (64.27 ms/sample)
+  B=  128 fwd=0.841s (6.57 ms/sample) fwd+bwd=2.243s (17.53 ms/sample)
+  B= 1024 fwd=2.875s (2.81 ms/sample) fwd+bwd=7.877s (7.69 ms/sample)
+  DLL quality run=2.58 ms, N_theta=334, FD gradient=0.866s, record=0.84s build=0.20s ops=10000 versions=34662
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g3_bench_cpu.json
+=== exit=0 elapsed=198s
+
+=== G1 corpus nextQ (56 networks, ~10 min in Python)  Sun Sep 13 06:36:35 AM CST 2026
+Anytown                          rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=328 engine=0.006s python=0.05s
+BWSN_Network_1                   rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=6655 engine=0.006s python=1.04s
+FFCL-1                           rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=9454 engine=0.002s python=0.41s
+foss_poly_1                      rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=58 engine=0.000s python=0.00s
+Jilin including water quality    rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=18680 engine=0.003s python=0.47s
+Modified New York Tunnels including water quality rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=3878 engine=0.005s python=0.92s
+Net2                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2909 engine=0.001s python=0.16s
+Net3                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=10992 engine=0.001s python=0.20s
+New York Tunnels including water quality rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=25898 engine=0.011s python=2.62s
+NPCL-1                           rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=21823 engine=0.011s python=1.73s
+ky1                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=986 engine=0.000s python=0.00s
+ky10                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1055 engine=0.000s python=0.00s
+ky11                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=872 engine=0.000s python=0.00s
+ky12                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2430 engine=0.001s python=0.00s
+ky13                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=945 engine=0.000s python=0.00s
+ky14                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=546 engine=0.000s python=0.00s
+ky15                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=670 engine=0.000s python=0.00s
+ky2                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1127 engine=0.000s python=0.01s
+ky3                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=369 engine=0.000s python=0.00s
+ky4                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1160 engine=0.000s python=0.00s
+ky5                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=499 engine=0.000s python=0.00s
+ky6                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=647 engine=0.000s python=0.00s
+ky7                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=606 engine=0.000s python=0.00s
+ky8                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1619 engine=0.000s python=0.00s
+ky9                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1283 engine=0.000s python=0.00s
+Net1                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1587 engine=0.001s python=0.09s
+Net3_trace                       rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=195594 engine=0.020s python=3.05s
+batch-nh2cl                      rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2 engine=0.001s python=0.01s
+net2-cl2                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=6519 engine=0.003s python=0.50s
+net3-bio                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=58072 engine=0.017s python=2.95s
+Net3-NH2CL                       rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=58072 engine=0.017s python=2.91s
+example1                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1587 engine=0.001s python=0.09s
+example2                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2909 engine=0.001s python=0.16s
+example3                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=10992 engine=0.001s python=0.20s
+sampletown                       rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1689 engine=0.001s python=0.06s
+batch-nh2cl                      rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2 engine=0.001s python=0.01s
+net2-cl2                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=6519 engine=0.003s python=0.50s
+net3-bio                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=58072 engine=0.018s python=2.98s
+Net3-NH2CL                       rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=58072 engine=0.018s python=2.93s
+10_Guidolin                      rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=969540 engine=0.172s python=15.25s
+11_Wang                          rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=900463 engine=0.165s python=14.96s
+12_Kandiah                       rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=919886 engine=0.145s python=12.69s
+14_Tolson                        rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=882341 engine=0.164s python=14.74s
+1_Wu                             rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=807432 engine=0.111s python=11.25s
+3_Stokes                         rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1052759 engine=0.402s python=29.26s
+5_Saldarriaga                    rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=816395 engine=0.103s python=10.86s
+6_Bent                           rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=901868 engine=0.155s python=13.55s
+7_Matos                          rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1343007 engine=0.384s python=24.38s
+8_Yoo                            rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1239723 engine=0.558s python=36.32s
+9_Iglesias-Rey                   rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=1023185 engine=0.233s python=17.20s
+d-town                           rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=877496 engine=0.128s python=11.95s
+FOS                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=58 engine=0.000s python=0.00s
+MOD                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=317 engine=0.000s python=0.00s
+PES                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=99 engine=0.000s python=0.00s
+NYT                              rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=2863 engine=0.004s python=0.84s
+PacificCity                      rel=0.00e+00 abs=0.00e+00 mb|d|=0.0e+00 segs=14847341 engine=4.251s python=461.29s
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077/g1_corpus_nextQ.json
+=== exit=0 elapsed=769s
+
+=== results in /data/home/scxi690/wdn_quantum/results/diffwq_g123_1586077
+total 241
+drwxrwxr-x 2 scxi690 scxi690  4096 Sep 13 06:49 .
+drwxrwxr-x 4 scxi690 scxi690  4096 Sep 13 06:36 ..
+-rw-rw-r-- 1 scxi690 scxi690  4915 Sep 13 06:04 g1_core_nextQ.json
+-rw-rw-r-- 1 scxi690 scxi690  4920 Sep 13 06:04 g1_core_stepQ.json
+-rw-rw-r-- 1 scxi690 scxi690 65479 Sep 13 06:49 g1_corpus_nextQ.json
+-rw-rw-r-- 1 scxi690 scxi690 33922 Sep 13 06:04 g1_variants_nextQ.json
+-rw-rw-r-- 1 scxi690 scxi690 53532 Sep 13 06:23 g2_nextQ_ctol0_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 56742 Sep 13 06:17 g2_nextQ_ctolinp_cuda_both.json
+-rw-rw-r-- 1 scxi690 scxi690  5970 Sep 13 06:36 g3_bench_cpu.json
+-rw-rw-r-- 1 scxi690 scxi690 11396 Sep 13 06:33 g3_bench_cuda.json
+=== done Sun Sep 13 06:49:24 AM CST 2026

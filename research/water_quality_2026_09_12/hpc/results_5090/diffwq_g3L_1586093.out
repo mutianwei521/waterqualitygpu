@@ -1,0 +1,47 @@
+=== job 1586093 on wqd10nah10g5  Sun Sep 13 06:36:49 AM CST 2026
+name, driver_version, memory.total [MiB], compute_cap
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB, 12.0
+
+=== Net1 B=8192,16384,32768,65536  Sun Sep 13 06:36:52 AM CST 2026
+Net1 [cuda]
+  B= 8192 fwd=0.167s (0.02 ms/sample) fwd+bwd=0.420s (0.05 ms/sample) graph fwd+bwd=0.135s mem=2450MB
+  B=16384 fwd=0.173s (0.01 ms/sample) fwd+bwd=0.432s (0.03 ms/sample) graph fwd+bwd=0.178s mem=4936MB
+  B=32768 fwd=0.183s (0.01 ms/sample) fwd+bwd=0.459s (0.01 ms/sample) graph fwd+bwd=0.271s mem=9866MB
+  B=65536 fwd=0.226s (0.00 ms/sample) fwd+bwd=0.602s (0.01 ms/sample) graph fwd+bwd=0.505s mem=19736MB
+  DLL quality run=0.59 ms, N_theta=36, FD gradient=0.022s, record=0.19s build=0.30s ops=1897 versions=3950
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g3L_1586093/g3_Net1.json
+=== exit=0 elapsed=173s
+
+=== Net2_react B=6144,8192  Sun Sep 13 06:39:45 AM CST 2026
+Net2_react [cuda]
+  B= 6144 fwd=1.484s (0.24 ms/sample) fwd+bwd=3.692s (0.60 ms/sample) graph fwd+bwd=1.117s mem=11583MB
+  B= 8192 fwd=1.488s (0.18 ms/sample) fwd+bwd=3.728s (0.46 ms/sample) graph fwd+bwd=1.176s mem=15638MB
+  DLL quality run=2.38 ms, N_theta=118, FD gradient=0.284s, record=0.92s build=0.55s ops=16382 versions=27101
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g3L_1586093/g3_Net2_react.json
+=== exit=0 elapsed=122s
+
+=== Jilin_kw B=6144,8192  Sun Sep 13 06:41:47 AM CST 2026
+Jilin_kw [cuda]
+  B= 6144 fwd=0.319s (0.05 ms/sample) fwd+bwd=0.778s (0.13 ms/sample) graph fwd+bwd=0.395s mem=17264MB
+  B= 8192 fwd=0.373s (0.05 ms/sample) fwd+bwd=0.897s (0.11 ms/sample) mem=23015MB
+  DLL quality run=3.65 ms, N_theta=96, FD gradient=0.354s, record=1.18s build=0.23s ops=4632 versions=39202
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g3L_1586093/g3_Jilin_kw.json
+=== exit=0 elapsed=31s
+
+=== Net3_CHEM_kw_mixed_tanks B=6144,8192  Sun Sep 13 06:42:18 AM CST 2026
+Net3_CHEM_kw_mixed_tanks [cuda]
+  B= 6144 fwd=0.927s (0.15 ms/sample) fwd+bwd=2.347s (0.38 ms/sample) graph fwd+bwd=0.827s mem=15066MB
+  B= 8192 fwd=1.084s (0.13 ms/sample) fwd+bwd=2.664s (0.33 ms/sample) mem=20083MB
+  DLL quality run=2.45 ms, N_theta=334, FD gradient=0.821s, record=0.85s build=0.38s ops=10000 versions=34662
+report: /data/home/scxi690/wdn_quantum/results/diffwq_g3L_1586093/g3_Net3_CHEM_kw_mixed_tanks.json
+=== exit=0 elapsed=78s
+
+=== results in /data/home/scxi690/wdn_quantum/results/diffwq_g3L_1586093
+total 17
+drwxrwxr-x 2 scxi690 scxi690 4096 Sep 13 06:43 .
+drwxrwxr-x 4 scxi690 scxi690 4096 Sep 13 06:36 ..
+-rw-rw-r-- 1 scxi690 scxi690 1827 Sep 13 06:42 g3_Jilin_kw.json
+-rw-rw-r-- 1 scxi690 scxi690 2690 Sep 13 06:39 g3_Net1.json
+-rw-rw-r-- 1 scxi690 scxi690 1749 Sep 13 06:41 g3_Net2_react.json
+-rw-rw-r-- 1 scxi690 scxi690 1843 Sep 13 06:43 g3_Net3_CHEM_kw_mixed_tanks.json
+=== done Sun Sep 13 06:43:36 AM CST 2026

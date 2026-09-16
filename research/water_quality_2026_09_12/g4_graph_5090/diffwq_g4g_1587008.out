@@ -1,0 +1,125 @@
+=== job 1587008 on wqd10naf02g3  Sun Sep 13 05:06:39 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+name, driver_version, memory.total [MiB], compute_cap
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB, 12.0
+CPU(s):                             128
+Model name:                         INTEL(R) XEON(R) GOLD 6530
+Thread(s) per core:                 2
+               total        used        free      shared  buff/cache   available
+Mem:            1007          75         104           0         827         925
+python 3.10.21 torch 2.8.0+cu128 cuda 12.8
+device NVIDIA GeForce RTX 5090 capability 12.0 mem_GB 31.4
+
+=== G4 graph Fairfield free Kb (fd, adj, adjg x3)  Sun Sep 13 05:08:56 PM CST 2026
+[Fairfield] nodes=112 links=126 pipes=126 tanks=1 obs=140 sites=15 dropped=1 qstep=360s dur=24h groups={'<=6in': 11, '8in': 57, '10-12in': 51, '>=16in': 7} record=1.0s build=0.18s versions=30607 ops=4233 graph=45.5s
+  consistency: loss rel diff 1.0e-15, grad vs DLL FD 6.5e-10; timing {'dll_ctol0_s': 0.0058207672089338304, 'dll_ctol0.01_s': 0.003249099478125572, 'fd_grad_equiv_s': 0.034924603253602984, 'adjoint_grad_B1_s': 0.4463181246072054, 'adjoint_grad_B1_graph_s': 0.11755170524120331}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.2178 sse=6.64379 n_eval=210 wall=1.7s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=16.5s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=4.1s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.2178 sse=6.64379 n_eval=210 wall=1.6s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=16.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=4.1s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.2178 sse=6.64379 n_eval=210 wall=1.6s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=16.2s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.2178 sse=6.64379 n_eval=35 wall=4.1s theta=[0.0, -5.0, -0.1562, -0.5734, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.2185 sse=6.68471 n_eval=660 wall=2.2s theta=[0.0, -0.0928, -0.1618, -0.6246, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.2301 sse=7.41009 n_eval=348 wall=1.2s theta=[-1.1699, -0.0013, -0.0082, -0.0651, 0.0]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_g4g_1587008/g4_graph_Fairfield_cuda.json
+=== exit=0 elapsed=168s
+
+=== G4 graph Fairfield Kb fixed at the INP value (fd, adj, adjg x3)  Sun Sep 13 05:11:45 PM CST 2026
+[Fairfield] nodes=112 links=126 pipes=126 tanks=1 obs=140 sites=15 dropped=1 qstep=360s dur=24h groups={'<=6in': 11, '8in': 57, '10-12in': 51, '>=16in': 7} record=1.0s build=0.19s versions=30607 ops=4233 graph=3.8s
+  consistency: loss rel diff 1.9e-15, grad vs DLL FD 5.1e-10; timing {'dll_ctol0_s': 0.0057970300316810604, 'dll_ctol0.01_s': 0.0032597679644823076, 'fd_grad_equiv_s': 0.028985150158405304, 'adjoint_grad_B1_s': 0.44661206714808943, 'adjoint_grad_B1_graph_s': 0.1151762705296278}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.2280 sse=7.27758 n_eval=100 wall=0.8s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=9.4s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=2.3s theta=[-5.0, 0.0, -0.0336, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.2280 sse=7.27758 n_eval=100 wall=0.7s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=9.3s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=2.3s theta=[-5.0, 0.0, -0.0336, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.2280 sse=7.27758 n_eval=100 wall=0.7s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=9.3s theta=[-5.0, 0.0, -0.0336, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.2280 sse=7.27758 n_eval=20 wall=2.3s theta=[-5.0, 0.0, -0.0336, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.2296 sse=7.38268 n_eval=265 wall=0.9s theta=[-0.0019, 0.0, -0.0723, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.2296 sse=7.38338 n_eval=180 wall=0.6s theta=[-0.0014, -0.0001, -0.0634, 0.0]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_g4g_1587008/g4_graph_Fairfield_fixkb_cuda.json
+=== exit=0 elapsed=65s
+
+=== G4 graph Bellingham free Kb (fd, adj, adjg x3)  Sun Sep 13 05:12:50 PM CST 2026
+[Bellingham] nodes=123 links=169 pipes=168 tanks=2 obs=120 sites=12 dropped=0 qstep=360s dur=35h groups={'<=6in': 52, '8in': 62, '10-12in': 50, '>=16in': 4} record=1.6s build=0.23s versions=60020 ops=6903 graph=5.5s
+  consistency: loss rel diff 1.1e-15, grad vs DLL FD 4.8e-10; timing {'dll_ctol0_s': 0.008542470261454582, 'dll_ctol0.01_s': 0.004744510352611542, 'fd_grad_equiv_s': 0.05125482156872749, 'adjoint_grad_B1_s': 0.7325014133006335, 'adjoint_grad_B1_graph_s': 0.2049665968865156}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1323 sse=2.10085 n_eval=324 wall=3.3s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1323 sse=2.10085 n_eval=26 wall=19.6s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1323 sse=2.10085 n_eval=26 wall=5.3s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1323 sse=2.10085 n_eval=324 wall=3.2s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1323 sse=2.10085 n_eval=26 wall=19.6s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1323 sse=2.10085 n_eval=26 wall=5.3s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1323 sse=2.10085 n_eval=324 wall=3.2s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1323 sse=2.10085 n_eval=26 wall=19.6s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1323 sse=2.10085 n_eval=26 wall=5.3s theta=[0.0, -0.1759, 0.0, -5.0, -5.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1323 sse=2.10094 n_eval=1020 wall=6.3s theta=[0.0, -0.1784, -0.0016, -5.0, -5.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.1377 sse=2.27573 n_eval=762 wall=5.1s theta=[0.0, -0.2536, -0.4884, -5.0, -1.5542]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_g4g_1587008/g4_graph_Bellingham_cuda.json
+=== exit=0 elapsed=134s
+
+=== G4 graph Bellingham Kb fixed at the INP value (fd, adj, adjg x3)  Sun Sep 13 05:15:04 PM CST 2026
+[Bellingham] nodes=123 links=169 pipes=168 tanks=2 obs=120 sites=12 dropped=0 qstep=360s dur=35h groups={'<=6in': 52, '8in': 62, '10-12in': 50, '>=16in': 4} record=1.6s build=0.24s versions=60020 ops=6903 graph=5.2s
+  consistency: loss rel diff 1.4e-15, grad vs DLL FD 1.1e-09; timing {'dll_ctol0_s': 0.008575454354286194, 'dll_ctol0.01_s': 0.004798990488052368, 'fd_grad_equiv_s': 0.04287727177143097, 'adjoint_grad_B1_s': 0.7359356366097927, 'adjoint_grad_B1_graph_s': 0.204599791765213}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1419 sse=2.41618 n_eval=230 wall=2.5s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=34.8s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=9.4s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1419 sse=2.41618 n_eval=230 wall=2.5s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=34.7s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=9.4s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1419 sse=2.41618 n_eval=230 wall=2.5s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=34.7s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1419 sse=2.41618 n_eval=46 wall=9.4s theta=[-0.0167, 0.0, -4.8122, -5.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1419 sse=2.41773 n_eval=680 wall=4.0s theta=[-0.0161, 0.0, -4.4697, -5.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.1572 sse=2.96423 n_eval=355 wall=2.1s theta=[-0.316, -0.0002, -1.6992, -0.4053]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_g4g_1587008/g4_graph_Bellingham_fixkb_cuda.json
+=== exit=0 elapsed=182s
+
+=== G4 graph NorthPenn free Kb (fd, adj, adjg x3)  Sun Sep 13 05:18:06 PM CST 2026
+[NorthPenn] nodes=339 links=399 pipes=399 tanks=2 obs=42 sites=6 dropped=0 qstep=360s dur=36h groups={'<=6in': 68, '8in': 139, '10-12in': 123, '>=16in': 69} record=6.3s build=0.17s versions=144761 ops=4163 graph=3.9s
+  consistency: loss rel diff 1.4e-15, grad vs DLL FD 7.7e-10; timing {'dll_ctol0_s': 0.035099166259169576, 'dll_ctol0.01_s': 0.011837237700819968, 'fd_grad_equiv_s': 0.21059499755501745, 'adjoint_grad_B1_s': 0.47801097854971886, 'adjoint_grad_B1_graph_s': 0.1395589482039213}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1823 sse=1.39511 n_eval=228 wall=9.2s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=18.7s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=5.1s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1823 sse=1.39511 n_eval=228 wall=9.1s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=18.5s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=5.1s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1823 sse=1.39511 n_eval=228 wall=9.1s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=18.5s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1823 sse=1.39511 n_eval=37 wall=5.2s theta=[-0.0889, -5.0, -2.3428, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1830 sse=1.40593 n_eval=1248 wall=20.5s theta=[-0.1237, -0.503, -2.3396, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.1839 sse=1.41974 n_eval=414 wall=6.5s theta=[-0.1777, -0.0206, -1.9173, 0.0, 0.0]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_g4g_1587008/g4_graph_NorthPenn_cuda.json
+=== exit=0 elapsed=160s
+
+=== G4 graph NorthPenn Kb fixed at the INP value (fd, adj, adjg x3)  Sun Sep 13 05:20:46 PM CST 2026
+[NorthPenn] nodes=339 links=399 pipes=399 tanks=2 obs=42 sites=6 dropped=0 qstep=360s dur=36h groups={'<=6in': 68, '8in': 139, '10-12in': 123, '>=16in': 69} record=6.2s build=0.19s versions=144761 ops=4163 graph=4.1s
+  consistency: loss rel diff 1.8e-15, grad vs DLL FD 1.1e-09; timing {'dll_ctol0_s': 0.03554945662617683, 'dll_ctol0.01_s': 0.011994975432753564, 'fd_grad_equiv_s': 0.17774728313088417, 'adjoint_grad_B1_s': 0.4738758444786072, 'adjoint_grad_B1_graph_s': 0.13960036374628543}
+  FD-LBFGSB                    rep=0 seed=None rmse=0.1858 sse=1.45033 n_eval=165 wall=6.7s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=0 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=16.0s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=0 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=4.5s theta=[-5.0, -0.9391, 0.0, 0.0]
+  FD-LBFGSB                    rep=1 seed=None rmse=0.1858 sse=1.45033 n_eval=165 wall=6.8s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=1 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=16.0s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=1 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=4.5s theta=[-5.0, -0.9391, 0.0, 0.0]
+  FD-LBFGSB                    rep=2 seed=None rmse=0.1858 sse=1.45033 n_eval=165 wall=6.8s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB                   rep=2 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=16.0s theta=[-5.0, -0.9391, 0.0, 0.0]
+  ADJ-LBFGSB-graph             rep=2 seed=None rmse=0.1858 sse=1.45033 n_eval=32 wall=4.5s theta=[-5.0, -0.9391, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01           rep=0 seed=None rmse=0.1868 sse=1.46573 n_eval=635 wall=10.3s theta=[-0.1476, -1.1329, 0.0, 0.0]
+  FD-LBFGSB@ctol0.01,eps1e-3   rep=0 seed=None rmse=0.2041 sse=1.75032 n_eval=570 wall=8.2s theta=[-0.0186, -0.0901, -0.1707, -0.0076]
+wrote /data/home/scxi690/wdn_quantum/results/diffwq_g4g_1587008/g4_graph_NorthPenn_fixkb_cuda.json
+=== exit=0 elapsed=133s
+
+=== results in /data/home/scxi690/wdn_quantum/results/diffwq_g4g_1587008
+total 216
+drwxrwxr-x 2 scxi690 scxi690  4096 Sep 13 17:22 .
+drwxrwxr-x 6 scxi690 scxi690  4096 Sep 13 17:06 ..
+-rw-rw-r-- 1 scxi690 scxi690 38763 Sep 13 17:15 g4_graph_Bellingham_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 35457 Sep 13 17:18 g4_graph_Bellingham_fixkb_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 38589 Sep 13 17:11 g4_graph_Fairfield_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 30177 Sep 13 17:12 g4_graph_Fairfield_fixkb_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 37248 Sep 13 17:20 g4_graph_NorthPenn_cuda.json
+-rw-rw-r-- 1 scxi690 scxi690 30753 Sep 13 17:22 g4_graph_NorthPenn_fixkb_cuda.json
+=== done Sun Sep 13 05:23:00 PM CST 2026

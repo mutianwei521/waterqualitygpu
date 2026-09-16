@@ -1,0 +1,192 @@
+{
+  "engine_version": 20306,
+  "platform": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+  "torch": "2.8.0+cu128",
+  "device": "cpu",
+  "device_name": "x86_64",
+  "mode": "nextQ",
+  "ctol_override": null,
+  "repeat": 3,
+  "results": [
+    {
+      "network": "Net1",
+      "device": "cpu",
+      "nodes": 11,
+      "links": 13,
+      "pipes": 12,
+      "steps": 290,
+      "versions": 3950,
+      "ops": 1897,
+      "n_theta": 36,
+      "dll_quality_run_s": 0.0006068302318453789,
+      "fd_gradient_cost_s": 0.02245271857827902,
+      "record_s": 0.17493982706218958,
+      "build_s": 0.028608364053070545,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 0.064565010368824,
+          "forward_backward_s": 0.16437264252454042,
+          "forward_per_sample_s": 0.064565010368824,
+          "forward_backward_per_sample_s": 0.16437264252454042
+        },
+        {
+          "B": 16,
+          "forward_s": 0.06959373317658901,
+          "forward_backward_s": 0.17994746658951044,
+          "forward_per_sample_s": 0.004349608323536813,
+          "forward_backward_per_sample_s": 0.011246716661844403
+        },
+        {
+          "B": 128,
+          "forward_s": 0.11819030437618494,
+          "forward_backward_s": 0.3061917098239064,
+          "forward_per_sample_s": 0.0009233617529389448,
+          "forward_backward_per_sample_s": 0.002392122732999269
+        },
+        {
+          "B": 1024,
+          "forward_s": 0.3016452267765999,
+          "forward_backward_s": 0.9206319376826286,
+          "forward_per_sample_s": 0.0002945754167740233,
+          "forward_backward_per_sample_s": 0.000899054626643192
+        }
+      ]
+    },
+    {
+      "network": "Net2_react",
+      "device": "cpu",
+      "nodes": 36,
+      "links": 40,
+      "pipes": 40,
+      "steps": 660,
+      "versions": 27101,
+      "ops": 16382,
+      "n_theta": 118,
+      "dll_quality_run_s": 0.0024233367294073105,
+      "fd_gradient_cost_s": 0.28837707079946995,
+      "record_s": 0.8969476968050003,
+      "build_s": 0.40758157428354025,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 0.5670806542038918,
+          "forward_backward_s": 1.4682299057021737,
+          "forward_per_sample_s": 0.5670806542038918,
+          "forward_backward_per_sample_s": 1.4682299057021737
+        },
+        {
+          "B": 16,
+          "forward_s": 0.6018973952159286,
+          "forward_backward_s": 1.5664647491648793,
+          "forward_per_sample_s": 0.037618587200995535,
+          "forward_backward_per_sample_s": 0.09790404682280496
+        },
+        {
+          "B": 128,
+          "forward_s": 1.0761642139405012,
+          "forward_backward_s": 2.858848774805665,
+          "forward_per_sample_s": 0.008407532921410166,
+          "forward_backward_per_sample_s": 0.022334756053169258
+        },
+        {
+          "B": 1024,
+          "forward_s": 2.898315006867051,
+          "forward_backward_s": 7.989215395413339,
+          "forward_per_sample_s": 0.0028303857488936046,
+          "forward_backward_per_sample_s": 0.007801968159583339
+        }
+      ]
+    },
+    {
+      "network": "Jilin_kw",
+      "device": "cpu",
+      "nodes": 28,
+      "links": 34,
+      "pipes": 34,
+      "steps": 1152,
+      "versions": 39202,
+      "ops": 4632,
+      "n_theta": 96,
+      "dll_quality_run_s": 0.0036848122254014015,
+      "fd_gradient_cost_s": 0.35742678586393595,
+      "record_s": 1.1155686127021909,
+      "build_s": 0.08338827639818192,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 0.11197873670607805,
+          "forward_backward_s": 0.2846945561468601,
+          "forward_per_sample_s": 0.11197873670607805,
+          "forward_backward_per_sample_s": 0.2846945561468601
+        },
+        {
+          "B": 16,
+          "forward_s": 0.1358720175921917,
+          "forward_backward_s": 0.35263119265437126,
+          "forward_per_sample_s": 0.008492001099511981,
+          "forward_backward_per_sample_s": 0.022039449540898204
+        },
+        {
+          "B": 128,
+          "forward_s": 0.40030863136053085,
+          "forward_backward_s": 1.1313002752140164,
+          "forward_per_sample_s": 0.0031274111825041473,
+          "forward_backward_per_sample_s": 0.008838283400109503
+        },
+        {
+          "B": 1024,
+          "forward_s": 1.7664298983290792,
+          "forward_backward_s": 4.417216854169965,
+          "forward_per_sample_s": 0.0017250291975869914,
+          "forward_backward_per_sample_s": 0.004313688334150356
+        }
+      ]
+    },
+    {
+      "network": "Net3_CHEM_kw_mixed_tanks",
+      "device": "cpu",
+      "nodes": 97,
+      "links": 119,
+      "pipes": 117,
+      "steps": 290,
+      "versions": 34662,
+      "ops": 10000,
+      "n_theta": 334,
+      "dll_quality_run_s": 0.002583724446594715,
+      "fd_gradient_cost_s": 0.8655476896092296,
+      "record_s": 0.8422738565132022,
+      "build_s": 0.19921537768095732,
+      "batches": [
+        {
+          "B": 1,
+          "forward_s": 0.35750459413975477,
+          "forward_backward_s": 0.9258426483720541,
+          "forward_per_sample_s": 0.35750459413975477,
+          "forward_backward_per_sample_s": 0.9258426483720541
+        },
+        {
+          "B": 16,
+          "forward_s": 0.3933093110099435,
+          "forward_backward_s": 1.0283374981954694,
+          "forward_per_sample_s": 0.024581831938121468,
+          "forward_backward_per_sample_s": 0.06427109363721684
+        },
+        {
+          "B": 128,
+          "forward_s": 0.8406178122386336,
+          "forward_backward_s": 2.243491303175688,
+          "forward_per_sample_s": 0.006567326658114325,
+          "forward_backward_per_sample_s": 0.01752727580606006
+        },
+        {
+          "B": 1024,
+          "forward_s": 2.874783960171044,
+          "forward_backward_s": 7.87712727021426,
+          "forward_per_sample_s": 0.002807406211104535,
+          "forward_backward_per_sample_s": 0.007692507099818613
+        }
+      ]
+    }
+  ]
+}
