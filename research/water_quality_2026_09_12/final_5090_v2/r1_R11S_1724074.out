@@ -1,0 +1,48 @@
+=== job 1724074 step R11S on wqd10nah10g5  Thu Oct 22 11:54:18 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                                  128
+Model name:                              INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R2-11 smoke: robust  Thu Oct 22 11:56:52 PM CST 2026
+  constant rate on lasso support     B=1 iters=1163 conv=1/1 L_bumps=0 wall=39.7s stations=[20] cover=[0.9931]
+  nominal: refit greedy 3 stations   B=1 iters=5 conv=1/1 L_bumps=0 wall=0.2s stations=[3] cover=[0.9937]
+  nominal: refit lasso 0.1 refit     B=1 iters=1955 conv=1/1 L_bumps=0 wall=66.6s stations=[21] cover=[0.9937]
+  nominal: refit constant rate on lasso 0.1 support B=1 iters=5 conv=1/1 L_bumps=0 wall=0.9s stations=[20] cover=[0.9931]
+  nominal: lasso 0.1                 B=1 iters=352 conv=1/1 L_bumps=0 wall=11.9s stations=[21] cover=[0.9646]
+  nominal: lasso refit               B=1 iters=5000 conv=0/1 L_bumps=0 wall=168.6s stations=[21] cover=[0.9937]
+[Net3] nominal: plant 0.9534 | fixed {'greedy 3 stations': 0.9937, 'lasso 0.1 refit': 0.9937, 'constant rate on lasso 0.1 support': 0.9931} | lasso re-solved 21 stations cov 0.9937 J=1.00 | 389s
+  demand x1.2: refit greedy 3 stations B=1 iters=2389 conv=1/1 L_bumps=0 wall=82.5s stations=[3] cover=[0.9952]
+  demand x1.2: refit lasso 0.1 refit B=1 iters=3468 conv=1/1 L_bumps=0 wall=120.4s stations=[19] cover=[0.9976]
+  demand x1.2: refit constant rate on lasso 0.1 support B=1 iters=3379 conv=1/1 L_bumps=0 wall=117.3s stations=[16] cover=[0.9969]
+  demand x1.2: lasso 0.1             B=1 iters=272 conv=1/1 L_bumps=0 wall=9.4s stations=[16] cover=[0.9823]
+  demand x1.2: lasso refit           B=1 iters=3877 conv=1/1 L_bumps=0 wall=133.8s stations=[16] cover=[0.9982]
+[Net3] demand x1.2: plant 0.9722 | fixed {'greedy 3 stations': 0.9859, 'lasso 0.1 refit': 0.9857, 'constant rate on lasso 0.1 support': 0.995} | lasso re-solved 16 stations cov 0.9982 J=0.68 | 499s
+=== exit=0 elapsed=946s
+
+=== R2-11 smoke: GA  Fri Oct 23 12:12:39 AM CST 2026
+  gen   0 best 2.413827e-04 median 3.184306e-04 sets evaluated 8 9s
+  gen   1 best 1.847375e-04 median 2.414012e-04 sets evaluated 11 12s
+  GA best m=3 full refit             B=1 iters=3867 conv=1/1 L_bumps=0 wall=129.6s stations=[3] cover=[0.9834]
+[Net3] GA m=3 seed=0: obj 1.572201e-04 coverage 0.9834 mass 4.478 kg/d stations ['131', '143', '187'] (14 sets, 15s)
+=== exit=0 elapsed=184s
+
+=== R2-11 smoke: MILP  Fri Oct 23 12:15:43 AM CST 2026
+[Net3] MILP: 95 binaries, 5308 continuous, 5309 rows, 676777 nonzeros; A built in 0.6s; U = 1.31e+05 mg/min; mu1 = 9.345e-05
+  LP relaxation 8.127313202029286e-05; MILP 0.001202265028715914 (Optimization terminated successfully. (HiGHS Status 7: Optimal), 59s, gap 0.0)
+  squared refit on MILP support      B=1 iters=2901 conv=1/1 L_bumps=0 wall=98.1s stations=[3] cover=[0.9923]
+  MILP         ['127', '213', '255']: L1 9.199358e-04 (gap -0.2348310762832111) | squared 5.672736e-05 coverage 0.9923 mass 4.178
+  squared refit on greedy 3 support  B=1 iters=3804 conv=1/1 L_bumps=0 wall=130.2s stations=[3] cover=[0.9937]
+  greedy 3     ['127', '131', '211']: L1 8.424133e-04 (gap -0.2993114547379358) | squared 4.887170e-05 coverage 0.9937 mass 4.399
+=== exit=0 elapsed=332s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_R11S_1724074
+total 67
+drwxrwxr-x  2 scxi690 scxi690  4096 Oct 23 00:21 .
+drwxrwxr-x 26 scxi690 scxi690  4096 Oct 22 23:54 ..
+-rw-rw-r--  1 scxi690 scxi690 13259 Oct 23 00:15 ga_smoke.json
+-rw-rw-r--  1 scxi690 scxi690  1052 Oct 23 00:21 milp_smoke.json
+-rw-rw-r--  1 scxi690 scxi690 45470 Oct 23 00:12 robust_smoke.json
+=== done Fri Oct 23 12:21:16 AM CST 2026

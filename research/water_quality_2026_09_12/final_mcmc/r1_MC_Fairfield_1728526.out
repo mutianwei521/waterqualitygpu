@@ -1,0 +1,40 @@
+=== job 1728526 step MC on wqd10nbk05g1  Sat Oct 24 02:39:58 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                             128
+Model name:                         INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R2-8 MCMC Fairfield  Sat Oct 24 02:44:05 PM CST 2026
+[Fairfield] nodes=112 links=126 pipes=126 tanks=1 obs=140 sites=15 dropped=1 qstep=360s dur=24h groups={'<=6in': 11, '8in': 57, '10-12in': 51, '>=16in': 7} record=1.0s build=0.09s versions=30607 ops=4233
+[Fairfield] 16 groups x 16 chains: 19778 batched grads in 3335s (0.169 s each, graph=True)
+  full: rhat max 1.003 ess min 4646 accept 0.80 step 0.292
+  q50 [-0.12, -2.777, -0.143, -0.504, -1.377] q025 [-0.537, -4.898, -0.364, -0.742, -4.741] q975 [-0.005, -0.157, -0.019, -0.263, -0.041] theta* [0.0, -5.0, -0.156, -0.573, 0.0]
+  near lower [0.0, 0.0, 0.0, 0.0, 0.0] near upper [0.05, 0.0, 0.01, 0.0, 0.01] sd_laplace [0.0, 0.0, 0.082, 0.093, 0.0]
+  in-sample cov95 0.950 hw95 0.4423 param share 0.017
+  LOSO      134 ( 10): cov95 1.000 rhat max 1.002 ess min 4723 accept 0.82
+  LOSO      106 ( 10): cov95 0.900 rhat max 1.001 ess min 6239 accept 0.81
+  LOSO     1821 (  8): cov95 1.000 rhat max 1.002 ess min 4990 accept 0.81
+  LOSO      178 ( 15): cov95 0.667 rhat max 1.002 ess min 5064 accept 0.81
+  LOSO      168 (  9): cov95 0.889 rhat max 1.003 ess min 4565 accept 0.81
+  LOSO      158 (  9): cov95 1.000 rhat max 1.002 ess min 4364 accept 0.81
+  LOSO      144 (  7): cov95 1.000 rhat max 1.003 ess min 4278 accept 0.81
+  LOSO     1521 (  9): cov95 0.889 rhat max 1.004 ess min 4710 accept 0.82
+  LOSO      153 (  9): cov95 1.000 rhat max 1.001 ess min 4624 accept 0.82
+  LOSO      141 (  9): cov95 1.000 rhat max 1.004 ess min 4577 accept 0.80
+  LOSO      184 (  9): cov95 1.000 rhat max 1.003 ess min 4638 accept 0.81
+  LOSO      172 (  9): cov95 1.000 rhat max 1.003 ess min 4644 accept 0.81
+  LOSO      162 (  9): cov95 1.000 rhat max 1.002 ess min 4555 accept 0.82
+  LOSO      214 (  9): cov95 1.000 rhat max 1.003 ess min 4668 accept 0.81
+  LOSO      219 (  9): cov95 1.000 rhat max 1.002 ess min 4593 accept 0.80
+  LOSO pooled coverage {'0.5': 0.7571428571428571, '0.8': 0.8714285714285714, '0.9': 0.9, '0.95': 0.9428571428571428}
+wrote /data/home/scxi690/wdn_quantum/results/r1_MC_1728526/mcmc_Fairfield.json
+=== exit=0 elapsed=3746s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_MC_1728526
+total 22
+drwxrwxr-x  2 scxi690 scxi690  4096 Oct 24 15:46 .
+drwxrwxr-x 61 scxi690 scxi690  4096 Oct 24 14:40 ..
+-rw-rw-r--  1 scxi690 scxi690 13577 Oct 24 15:46 mcmc_Fairfield.json
+=== done Sat Oct 24 03:46:31 PM CST 2026

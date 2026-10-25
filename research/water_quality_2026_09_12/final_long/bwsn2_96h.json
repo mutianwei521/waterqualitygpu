@@ -1,0 +1,32 @@
+{
+ "hours": 96,
+ "setup_s": 917.5730166819412,
+ "record_s": 606.047889742069,
+ "build_s": 249.02892668405548,
+ "library_run_s": 12.359516089083627,
+ "gpu": "Tesla PG503-216",
+ "torch": "2.7.1+cu118",
+ "versions": 17625800,
+ "steps": 1188,
+ "fused_ops": 1189,
+ "fused_terms": 119697606,
+ "virtual_terms": 14356004,
+ "snapshots": 422,
+ "hydraulic_periods": 422,
+ "K_slots": 384,
+ "junctions": 12523,
+ "state_slots_M": 22474137,
+ "host_peak_rss_GB_after_setup": 27.183372497558594,
+ "fwd_adj_B1_s": 0.34237732202745974,
+ "gpu_resident_after_build_GB": 6.6687912940979,
+ "gpu_peak_fwd_adj_B1_GB": 7.117778778076172,
+ "adjoint_row_pass_s": 1.603741517988965,
+ "gpu_peak_row_pass_GB": 23.320672512054443,
+ "sized_not_allocated": {
+  "normal_equations_all_junctions_GB": 13.7581787109375,
+  "adjoint_state_and_cotangent_chunk_GB": 10.716503620147705,
+  "one_row_block_GB": 1.14697265625
+ },
+ "host_peak_rss_GB": 27.183372497558594,
+ "gpu_total_GB": 31.7325439453125
+}

@@ -1,0 +1,32 @@
+=== job 1724175 step R11G on wqd10nbj05g5  Fri Oct 23 12:52:51 AM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                             128
+Model name:                         INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R2-11 GA NorthPenn m=8 seed=0  Fri Oct 23 12:53:16 AM CST 2026
+  gen   0 best 6.786361e-04 median 1.480976e-03 sets evaluated 64 40s
+  gen   5 best 3.933390e-04 median 6.314109e-04 sets evaluated 352 79s
+  gen  10 best 3.221489e-04 median 3.604912e-04 sets evaluated 618 117s
+  gen  15 best 3.169805e-04 median 3.268372e-04 sets evaluated 821 156s
+  gen  20 best 3.169805e-04 median 3.169805e-04 sets evaluated 900 194s
+  gen  25 best 3.169805e-04 median 3.169805e-04 sets evaluated 989 233s
+  gen  30 best 3.001424e-04 median 3.169805e-04 sets evaluated 1073 271s
+  gen  35 best 2.880679e-04 median 3.105880e-04 sets evaluated 1185 310s
+  gen  40 best 2.849454e-04 median 2.880679e-04 sets evaluated 1295 348s
+  gen  45 best 2.756141e-04 median 2.849454e-04 sets evaluated 1398 387s
+  gen  50 best 2.756141e-04 median 2.756141e-04 sets evaluated 1493 425s
+  gen  55 best 2.756141e-04 median 2.756141e-04 sets evaluated 1576 464s
+  gen  59 best 2.756141e-04 median 2.756141e-04 sets evaluated 1643 494s
+  GA best m=8 full refit             B=1 iters=4695 conv=1/1 L_bumps=0 wall=29.4s stations=[8] cover=[0.9697]
+[NorthPenn] GA m=8 seed=0: obj 2.755639e-04 coverage 0.9697 mass 1.343 kg/d stations ['245', '266', '280', '292', '296', '313', '317', '616'] (1657 sets, 502s)
+=== exit=0 elapsed=582s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_R11G_1724175
+total 77
+drwxrwxr-x  2 scxi690 scxi690  4096 Oct 23 01:02 .
+drwxrwxr-x 33 scxi690 scxi690  4096 Oct 23 00:52 ..
+-rw-rw-r--  1 scxi690 scxi690 69732 Oct 23 01:02 ga_NorthPenn_m8_s0.json
+=== done Fri Oct 23 01:02:58 AM CST 2026

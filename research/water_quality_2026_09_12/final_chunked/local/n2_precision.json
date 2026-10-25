@@ -1,0 +1,52 @@
+[
+ {
+  "tau_slots": 1,
+  "sweep_box_vs_direct": 9.543753108813502e-14,
+  "prefix_vs_direct": 3.749058853642467e-07
+ },
+ {
+  "tau_slots": 6,
+  "sweep_box_vs_direct": 9.543753108813502e-14,
+  "prefix_vs_direct": 3.749058853642467e-07
+ },
+ {
+  "tau_slots": 11,
+  "sweep_box_vs_direct": 9.543753108813502e-14,
+  "prefix_vs_direct": 3.749058853642467e-07
+ },
+ {
+  "tau_slots": 16,
+  "sweep_box_vs_direct": 9.543753108813502e-14,
+  "prefix_vs_direct": 3.749058853642467e-07
+ },
+ {
+  "tau_slots": 21,
+  "sweep_box_vs_direct": 9.543753108813502e-14,
+  "prefix_vs_direct": 3.749058853642467e-07
+ },
+ {
+  "tau_slots": 26,
+  "sweep_box_vs_direct": 9.543753108813502e-14,
+  "prefix_vs_direct": 3.749058853642467e-07
+ },
+ {
+  "tau_slots": 31,
+  "sweep_box_vs_direct": 9.543753108813502e-14,
+  "prefix_vs_direct": 3.749058853642467e-07
+ },
+ {
+  "tau_slots": 36,
+  "sweep_box_vs_direct": 2.4319646020090486e-15,
+  "prefix_vs_direct": 4.593321402590283e-08
+ },
+ {
+  "tau_slots": 41,
+  "sweep_box_vs_direct": 2.0838981174143567e-15,
+  "prefix_vs_direct": 4.593321402590283e-08
+ },
+ {
+  "tau_slots": 46,
+  "sweep_box_vs_direct": 2.6069558073322318e-15,
+  "prefix_vs_direct": 4.5933214141191916e-08
+ }
+]

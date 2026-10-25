@@ -1,0 +1,23 @@
+=== job 1726872 step L168 on wqd10nah04g5  Fri Oct 23 10:00:45 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                               128
+Model name:                           INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R1-5 chunked replay BWSN2 168 h  Fri Oct 23 10:01:00 PM CST 2026
+[BWSN2 168 h] record 724s build 318s | {'versions': 30922977, 'steps': 2085, 'fused_ops': 2086, 'fused_terms': 212431253, 'virtual_terms': 25195170, 'snapshots': 743, 'hydraulic_periods': 743} | {'n_chunks': 15, 'version_slots_max': 2802697, 'state_slots': 11259098, 'state_slots_unchunked': 39379378, 'live_in_max': 638586, 'terms': 212431253, 'ops': 2086} | GPU resident 11.9 GB
+  validation: forward 1.1e-17 grad 1.4e-19 rows ['4.8e-18', '3.9e-17', '6.5e-17'] | B=1 chunked 0.11s 12.6 GB, unchunked 0.11s 12.8 GB
+  scenarios: 129/200 detected, identifying 16; DLL check max rel err 4.8e-16
+  8/16 events | level 1 1342s (4644 passes, peak 24.5 GB) level 2 586s (4644 passes, 381 candidates, peak 19.9 GB) | glrt top1 [1.0, 1.0, 1.0] nnls top1 [0.25, 0.625, 0.75] | elapsed 1946s
+  16/16 events | level 1 1346s (4644 passes, peak 26.8 GB) level 2 581s (4644 passes, 331 candidates, peak 21.0 GB) | glrt top1 [1.0, 1.0, 1.0] nnls top1 [0.375, 0.625, 0.75] | elapsed 3889s
+wrote /data/home/scxi690/wdn_quantum/results/r1_L168_1726872/exp2_long_168h.json | glrt top1 [1.0, 1.0, 1.0] | nnls top1 [0.375, 0.625, 0.75]
+=== exit=0 elapsed=5421s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_L168_1726872
+total 118
+drwxrwxr-x  2 scxi690 scxi690   4096 Oct 23 22:24 .
+drwxrwxr-x 58 scxi690 scxi690   4096 Oct 23 22:00 ..
+-rw-rw-r--  1 scxi690 scxi690 112569 Oct 23 23:31 exp2_long_168h.json
+=== done Fri Oct 23 11:31:21 PM CST 2026

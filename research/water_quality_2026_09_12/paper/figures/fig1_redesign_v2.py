@@ -323,9 +323,9 @@ nodes = {0: (13, 25), 1: (24, 30), 2: (36, 29), 3: (21, 18), 4: (35, 16), 5: (11
 for u, v in [(0, 1), (1, 2), (0, 3), (1, 3), (2, 4), (3, 4), (3, 5), (5, 4)]:
     p, q = nodes[u], nodes[v]
     a.plot([p[0], q[0]], [p[1], q[1]], color="#66737C", linewidth=1.45, zorder=1)
-a.plot([8, 13], [25, 25], color="#66737C", linewidth=1.45)
+a.plot([10.4, 13], [25, 25], color="#66737C", linewidth=1.45)
 a.plot([36, 41], [29, 29], color="#66737C", linewidth=1.45)
-reservoir(0, 21)
+reservoir(2.4, 21)
 tank(40, 27)
 for x, y in nodes.values():
     a.add_patch(Circle((x, y), 0.9, facecolor=WHITE, edgecolor="#56656F", linewidth=0.8, zorder=3))
@@ -373,8 +373,8 @@ atext(79, 9.3, "operations → schedule", 6.8, GREY)
 
 atext(139, 40.2, "Replay + differentiate", 8, PURPLE, weight="bold")
 atext(139, 36.3, "batched first-order factors", 6.9, GREY)
-a.plot([102.5, 108, 108, 132], [24, 24, 30.5, 30.5], color=GOLD, linewidth=0.9)
-arrow((132, 30.5), (136, 28.7), GOLD, 0.9, scale=6)
+a.plot([102.5, 108, 108, 132], [24, 24, 31.4, 31.4], color=GOLD, linewidth=0.9)
+arrow((132, 31.4), (136, 28.7), GOLD, 0.9, scale=6)
 box(112.2, 12.2, 15.8, 17.6, WHITE, PURPLE, 0.65, 0.8)
 for j, (label, colour, pale_face) in enumerate([
     (r"$K_b$", TEAL, PALE_TEAL),
@@ -383,7 +383,7 @@ for j, (label, colour, pale_face) in enumerate([
     (r"$c_0$", CYAN, PALE_CYAN),
 ]):
     box(113.4, 13.4 + j * 3.65, 13.4, 3.15, pale_face, colour, 0.5, 0.4)
-    atext(120.1, 14.98 + j * 3.65, label, 7.2, colour, weight="bold")
+    atext(120.1, 14.98 + j * 3.65 - (0.12 if label.startswith("$") else 0.0), label, 6.5 if label.startswith("$") else 7.2, colour, weight="bold")
 atext(120.1, 33.4, r"$\theta_1\ldots\theta_B$", 7.1, PURPLE)
 arrow((128.2, 21.3), (132.4, 22.5), PURPLE, 0.95)
 chip(134, 17.4, 12, 11)
@@ -400,9 +400,10 @@ for jj, colour in enumerate([CYAN, GOLD, TEAL]):
     )
 atext(159.5, 32.8, r"$c(t;\theta_b)$", 7.2, PURPLE)
 atext(159.5, 14.0, "loss L", 6.9, INK)
-arrow((166.2, 16.8), (166.2, 8.0), VERM, 1.0, DASH)
-arrow((166.2, 7.2), (119.8, 7.2), VERM, 1.0, DASH)
-arrow((118.8, 7.4), (118.8, 12.6), VERM, 1.0, DASH)
+# one dashed path with a single head (three separate arrows left kinks at the corners)
+a.plot([166.2, 166.2, 118.8, 118.8], [16.8, 7.2, 7.2, 10.6], color=VERM, linewidth=1.0, linestyle=DASH,
+       solid_joinstyle="miter", dash_joinstyle="miter")
+arrow((118.8, 10.4), (118.8, 12.4), VERM, 1.0)
 atext(143.5, 9.6, r"reverse  $\partial L/\partial\theta$", 7.1, VERM)
 
 

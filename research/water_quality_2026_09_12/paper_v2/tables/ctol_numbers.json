@@ -1,0 +1,23 @@
+{
+ "networks": 53,
+ "cases": 1425,
+ "rmse_rel_median_cl": 0.0021754095267263037,
+ "rmse_rel_max_all": 0.008158887310034326,
+ "max_rel_max_all": 0.3070633593679512,
+ "p99_rel_max_all": 0.019318993330265127,
+ "max_rel_median_cl": 0.016225232680348686,
+ "closer_share_cl": 0.8784067085953878,
+ "tol_over_step_median": 0.15880283814006832,
+ "tol_over_step_p90": 0.6214876146484362,
+ "bwsn2_lib_ratio": 7.967114754249912,
+ "bwsn2_live_ratio": 12.62301044563012,
+ "bwsn2_terms_ratio": 11.33181671295668,
+ "bwsn2_replay_ratio": 3.643269211786546,
+ "bwsn2_mem_ratio": 5.766657207914899,
+ "bwsn2_record_ratio": 4.155161738777608,
+ "calib_rmse_change_max": 0.00033552657077881576,
+ "booster_cov_pp_max": 0.03774370134600469,
+ "source_alarm_changes": 1,
+ "source_detect_changes": 0,
+ "source_n": 400
+}

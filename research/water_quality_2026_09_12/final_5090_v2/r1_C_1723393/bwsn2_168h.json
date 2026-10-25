@@ -1,0 +1,31 @@
+{
+ "hours": 168,
+ "setup_s": 1084.949365094304,
+ "record_s": 714.4877278264612,
+ "build_s": 243.2307441951707,
+ "library_run_s": 26.095995208248496,
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "torch": "2.8.0+cu128",
+ "versions": 30922977,
+ "steps": 2085,
+ "fused_ops": 2086,
+ "fused_terms": 212431253,
+ "virtual_terms": 25195170,
+ "snapshots": 743,
+ "hydraulic_periods": 743,
+ "K_slots": 672,
+ "junctions": 12523,
+ "state_slots_M": 39379378,
+ "host_peak_rss_GB_after_setup": 47.50861358642578,
+ "fwd_adj_B1_s": 0.2259653201326728,
+ "gpu_resident_after_build_GB": 11.81593942642212,
+ "gpu_peak_fwd_adj_B1_GB": 12.600555896759033,
+ "row_pass_error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 31.36 GiB of which 27.06 MiB is free. Including non-PyTorch memory, this process has 31.32 GiB memory in use. Of the allo",
+ "sized_not_allocated": {
+  "normal_equations_all_junctions_GB": 42.134422302246094,
+  "adjoint_state_and_cotangent_chunk_GB": 18.77755069732666,
+  "one_row_block_GB": 2.0072021484375
+ },
+ "host_peak_rss_GB": 47.50861358642578,
+ "gpu_total_GB": 31.356689453125
+}

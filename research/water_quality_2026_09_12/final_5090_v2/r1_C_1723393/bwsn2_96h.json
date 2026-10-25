@@ -1,0 +1,32 @@
+{
+ "hours": 96,
+ "setup_s": 590.8691001795232,
+ "record_s": 399.65475550014526,
+ "build_s": 130.44803606159985,
+ "library_run_s": 10.78170254919678,
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "torch": "2.8.0+cu128",
+ "versions": 17625800,
+ "steps": 1188,
+ "fused_ops": 1189,
+ "fused_terms": 119697606,
+ "virtual_terms": 14356004,
+ "snapshots": 422,
+ "hydraulic_periods": 422,
+ "K_slots": 384,
+ "junctions": 12523,
+ "state_slots_M": 22474137,
+ "host_peak_rss_GB_after_setup": 27.315540313720703,
+ "fwd_adj_B1_s": 0.43622853327542543,
+ "gpu_resident_after_build_GB": 6.6687912940979,
+ "gpu_peak_fwd_adj_B1_GB": 7.117778778076172,
+ "adjoint_row_pass_s": 5.952937853522599,
+ "gpu_peak_row_pass_GB": 23.320672512054443,
+ "sized_not_allocated": {
+  "normal_equations_all_junctions_GB": 13.7581787109375,
+  "adjoint_state_and_cotangent_chunk_GB": 10.716503620147705,
+  "one_row_block_GB": 1.14697265625
+ },
+ "host_peak_rss_GB": 27.315540313720703,
+ "gpu_total_GB": 31.356689453125
+}

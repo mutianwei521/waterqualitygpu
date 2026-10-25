@@ -1,0 +1,31 @@
+=== job 1728528 step MC on wqd10nbl09g4  Sat Oct 24 02:40:22 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                             128
+Model name:                         INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R2-8 MCMC NorthPenn  Sat Oct 24 02:44:05 PM CST 2026
+[NorthPenn] nodes=339 links=399 pipes=399 tanks=2 obs=42 sites=6 dropped=0 qstep=360s dur=36h groups={'<=6in': 68, '8in': 139, '10-12in': 123, '>=16in': 69} record=5.9s build=0.04s versions=144761 ops=4163
+[NorthPenn] 7 groups x 16 chains: 20208 batched grads in 3755s (0.186 s each, graph=True)
+  full: rhat max 1.003 ess min 4080 accept 0.81 step 0.253
+  q50 [-0.081, -2.583, -1.535, -0.038, -0.042] q025 [-0.324, -4.884, -4.313, -0.187, -0.173] q975 [-0.003, -0.163, -0.267, -0.001, -0.002] theta* [-0.089, -5.0, -2.343, 0.0, 0.0]
+  near lower [0.0, 0.0, 0.0, 0.0, 0.0] near upper [0.07, 0.0, 0.0, 0.16, 0.14] sd_laplace [0.171, 0.0, 2.061, 0.0, 0.0]
+  in-sample cov95 0.952 hw95 0.3899 param share 0.035
+  LOSO        8 (  7): cov95 1.000 rhat max 1.004 ess min 3517 accept 0.80
+  LOSO       29 (  7): cov95 0.857 rhat max 1.009 ess min 1536 accept 0.80
+  LOSO      243 (  7): cov95 0.857 rhat max 1.004 ess min 4266 accept 0.79
+  LOSO      192 (  7): cov95 0.857 rhat max 1.003 ess min 5189 accept 0.81
+  LOSO      700 (  7): cov95 1.000 rhat max 1.005 ess min 3677 accept 0.79
+  LOSO      197 (  7): cov95 1.000 rhat max 1.005 ess min 3863 accept 0.80
+  LOSO pooled coverage {'0.5': 0.5238095238095238, '0.8': 0.7857142857142857, '0.9': 0.9047619047619048, '0.95': 0.9285714285714286}
+wrote /data/home/scxi690/wdn_quantum/results/r1_MC_1728528/mcmc_NorthPenn.json
+=== exit=0 elapsed=4103s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_MC_1728528
+total 17
+drwxrwxr-x  2 scxi690 scxi690 4096 Oct 24 15:52 .
+drwxrwxr-x 61 scxi690 scxi690 4096 Oct 24 14:40 ..
+-rw-rw-r--  1 scxi690 scxi690 8868 Oct 24 15:52 mcmc_NorthPenn.json
+=== done Sat Oct 24 03:52:29 PM CST 2026

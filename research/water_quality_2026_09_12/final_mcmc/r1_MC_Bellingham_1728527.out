@@ -1,0 +1,37 @@
+=== job 1728527 step MC on wqd10nbl09g4  Sat Oct 24 02:39:58 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                             128
+Model name:                         INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R2-8 MCMC Bellingham  Sat Oct 24 02:44:05 PM CST 2026
+[Bellingham] nodes=123 links=169 pipes=168 tanks=2 obs=120 sites=12 dropped=0 qstep=360s dur=35h groups={'<=6in': 52, '8in': 62, '10-12in': 50, '>=16in': 4} record=1.6s build=0.08s versions=60020 ops=6903
+[Bellingham] 13 groups x 16 chains: 19956 batched grads in 5877s (0.294 s each, graph=True)
+  full: rhat max 1.003 ess min 4313 accept 0.80 step 0.394
+  q50 [-0.082, -0.166, -0.147, -4.583, -3.658] q025 [-0.388, -0.428, -0.588, -4.983, -4.946] q975 [-0.003, -0.049, -0.007, -3.361, -0.714] theta* [0.0, -0.176, 0.0, -5.0, -5.0]
+  near lower [0.0, 0.0, 0.0, 0.02, 0.01] near upper [0.08, 0.0, 0.04, 0.0, 0.0] sd_laplace [0.0, 0.066, 0.0, 0.0, 0.0]
+  in-sample cov95 0.950 hw95 0.2717 param share 0.017
+  LOSO      112 ( 10): cov95 0.900 rhat max 1.003 ess min 4164 accept 0.81
+  LOSO        2 ( 10): cov95 1.000 rhat max 1.002 ess min 4020 accept 0.80
+  LOSO        4 ( 10): cov95 0.900 rhat max 1.004 ess min 4005 accept 0.80
+  LOSO       23 ( 10): cov95 1.000 rhat max 1.004 ess min 4024 accept 0.81
+  LOSO       28 ( 10): cov95 0.900 rhat max 1.004 ess min 3941 accept 0.80
+  LOSO       34 ( 10): cov95 0.800 rhat max 1.003 ess min 4090 accept 0.80
+  LOSO       58 ( 10): cov95 0.900 rhat max 1.003 ess min 4729 accept 0.81
+  LOSO       46 ( 10): cov95 1.000 rhat max 1.004 ess min 3854 accept 0.82
+  LOSO       64 ( 10): cov95 1.000 rhat max 1.005 ess min 4265 accept 0.81
+  LOSO       90 ( 10): cov95 1.000 rhat max 1.002 ess min 4549 accept 0.82
+  LOSO      150 ( 10): cov95 0.300 rhat max 1.004 ess min 3472 accept 0.81
+  LOSO      160 ( 10): cov95 0.900 rhat max 1.004 ess min 4163 accept 0.79
+  LOSO pooled coverage {'0.5': 0.4666666666666667, '0.8': 0.6666666666666666, '0.9': 0.825, '0.95': 0.8833333333333333}
+wrote /data/home/scxi690/wdn_quantum/results/r1_MC_1728527/mcmc_Bellingham.json
+=== exit=0 elapsed=6269s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_MC_1728527
+total 20
+drwxrwxr-x  2 scxi690 scxi690  4096 Oct 24 16:28 .
+drwxrwxr-x 61 scxi690 scxi690  4096 Oct 24 14:40 ..
+-rw-rw-r--  1 scxi690 scxi690 11764 Oct 24 16:28 mcmc_Bellingham.json
+=== done Sat Oct 24 04:28:35 PM CST 2026

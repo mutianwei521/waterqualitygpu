@@ -1,0 +1,30 @@
+=== job 1724176 step R11M on wqd10nah04g5  Fri Oct 23 01:31:28 AM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                               128
+Model name:                           INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R2-11 MILP Net3 m=3  Fri Oct 23 01:33:34 AM CST 2026
+[Net3] MILP: 95 binaries, 5308 continuous, 5309 rows, 676775 nonzeros; A built in 0.5s; U = 1.313e+05 mg/min (10 x 1.313e+04); V0_L1 = 5.5800e-03; mu1 = 9.3445e-05
+  LP relaxation 8.127017e-05; MILP 8.375188e-04 (exact 8.375188e-04) dual bound 0.0008375188090564045 gap 0.0 nodes 2424 (Optimization terminated successfully. (HiGHS Status 7: Optimal), 182s); rates at bound 0
+  squared refit on MILP support      B=1 iters=3803 conv=1/1 L_bumps=0 wall=129.9s stations=[3] cover=[0.9934]
+  MILP         ['131', '211', '3']: L1 8.375188e-04 (exact 8.375188e-04, gap to MILP 6.472703423264172e-16) | squared 4.871150e-05 coverage 0.9934 mass 4.411
+  squared refit on greedy 3 support  B=1 iters=3804 conv=1/1 L_bumps=0 wall=131.2s stations=[3] cover=[0.9937]
+  greedy 3     ['127', '131', '211']: L1 8.423900e-04 (exact 8.423900e-04, gap to MILP 0.005816273596404738) | squared 4.887170e-05 coverage 0.9937 mass 4.399
+  squared refit on GA seed 0 support B=1 iters=3804 conv=1/1 L_bumps=0 wall=131.1s stations=[3] cover=[0.9937]
+  GA seed 0    ['127', '131', '211']: L1 8.423900e-04 (exact 8.423900e-04, gap to MILP 0.005816273596404738) | squared 4.887170e-05 coverage 0.9937 mass 4.399
+  squared refit on GA seed 1 support B=1 iters=3803 conv=1/1 L_bumps=0 wall=131.1s stations=[3] cover=[0.9934]
+  GA seed 1    ['131', '211', '3']: L1 8.375188e-04 (exact 8.375188e-04, gap to MILP 6.472703423264172e-16) | squared 4.871150e-05 coverage 0.9934 mass 4.411
+  squared refit on GA seed 2 support B=1 iters=3803 conv=1/1 L_bumps=0 wall=131.1s stations=[3] cover=[0.9934]
+  GA seed 2    ['131', '211', '3']: L1 8.375188e-04 (exact 8.375188e-04, gap to MILP 6.472703423264172e-16) | squared 4.871150e-05 coverage 0.9934 mass 4.411
+  certificate consistent (every support >= dual bound): True
+=== exit=0 elapsed=963s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_R11M_1724176
+total 23
+drwxrwxr-x  2 scxi690 scxi690  4096 Oct 23 01:49 .
+drwxrwxr-x 34 scxi690 scxi690  4096 Oct 23 01:31 ..
+-rw-rw-r--  1 scxi690 scxi690 15136 Oct 23 01:49 milp_Net3_m3.json
+=== done Fri Oct 23 01:49:38 AM CST 2026

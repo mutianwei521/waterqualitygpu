@@ -22,6 +22,9 @@ The code covers everything reported in the paper:
 | Exp 2 | `diffwq.exp2_source` | contamination-source ranking |
 | Exp 3 | `diffwq.exp3_pipe_kw` | pipe-level wall-decay identifiability |
 
+The revision (October 2026) added the analyses requested by the reviewers; they are listed in
+[Revision analyses](#revision-analyses-october-2026) below.
+
 ## Repository layout
 
 The scripts resolve every path relative to their own location, so the directory nesting below
@@ -38,10 +41,17 @@ download yourself.
     │   └── results_5090/                   G1-G3 result JSONs from those jobs
     ├── final_5090/                         final-engine result JSONs (G2 sweeps, G3 shared, Exp 1-3)
     ├── v2_5090/, g4_graph_5090/, h2_5090/   calibration, per-pipe and uncertainty result JSONs
+    ├── final_5090_v2/                      revision runs on the RTX 5090 (one directory per Slurm job)
+    ├── final_v2/, final_ctol/, final_long/, final_chunked/, final_mcmc/
+    │                                        further revision results (see the table below)
     ├── paper/
-    │   ├── build_tables.py                 rebuilds every table and every number quoted in the paper
+    │   ├── build_tables.py                 rebuilds every table and every number of the first submission
     │   ├── tables/                          T1-T6 plus numbers.json (141 numbers)
     │   └── figures/                         figure scripts and the shared style module paperfig.py
+    ├── paper_v2/                            the same for the revised manuscript, plus the new SI tables
+    │   ├── build_tables.py, *_tables.py, ident_scan.py, perf_ledger.py, resid_diagnostics.py
+    │   ├── tables/                          T1-T6, T_S_*.md and their numbers JSONs
+    │   └── figures/                         revised figure scripts (Fig. 4, Fig. S4, S6, S8, S9, ...)
     ├── audit_inputs.py, pilot_quality.py    input inventory and the step/tolerance sensitivity audit
     ├── cvpipe_probe/                        13-case check-valve pipe probe of the released engine
     └── REPRODUCE.md                         notes for the audit stage (in Chinese)
@@ -112,10 +122,71 @@ python paper/figures/fig4_exp2.py     # each figure script writes pdf/svg/png/ti
 `build_tables.py` regenerates all seven table files and all 141 numbers byte for byte from the
 shipped JSONs. Figure scripts that draw network maps additionally need `networks/`.
 
+## Revision analyses (October 2026)
+
+Every revision run used one RTX 5090 of the same Slurm cluster. `hpc/r1_job.sh` is the job script;
+its `STEP` variable selects the run, and the result directories in `final_5090_v2/` are named
+`r1_<STEP>_<jobid>`, each with the job's log next to it (`r1_<STEP>_<jobid>.out`). The script reads
+earlier results from `$WQ/results/...` on our cluster; the same files are in this repository
+(`final_5090/`, `g4_graph_5090/`, `final_5090_v2/`), so adjust those paths before reuse.
+
+| Topic (reviewer comment) | Module | `STEP` | Results | Table / figure code |
+|---|---|---|---|---|
+| Effect of the zero merging tolerance (R1-1, R2-2) | `diffwq.ctol_study` | `B` | `final_ctol/`, `final_5090_v2/r1_B_*` | `paper_v2/ctol_tables.py`, `paper_v2/figures/figS_ctol.py` |
+| Independent finite-difference check of the gradients (R1-3, R2-3) | `diffwq.gradcheck_v2` | `G` | `final_5090_v2/r1_G_1723889` | `paper_v2/gradcheck_tables.py` |
+| Parallel library finite differences, crossover (R1-4, R2-4) | `diffwq.fd_parallel` | `T4` | `final_5090_v2/r1_T4_*` | `paper_v2/perf_ledger.py` |
+| Horizons of 96 h and 168 h (R1-5, R2-6) | `diffwq.bwsn2_long` | `C` | `final_5090_v2/r1_C_*`, `final_long/` | `paper_v2/perf_ledger.py`, `paper_v2/figures/figS_scaling.py` |
+| Time-chunked replay and two-level source identification (R1-5) | `diffwq.chunked`, `diffwq.exp2_long`, `diffwq.verify_chunked` | `L48`, `L48b`, `L168` | `final_chunked/` | — |
+| Residual diagnostics, site-level error term (R1-6, R2-8) | `diffwq.uq_site` | `B2` | `final_5090_v2/r1_B2_*` | `paper_v2/resid_diagnostics.py` |
+| MCMC posterior of the calibration (R2-8) | `diffwq.uq_mcmc` | `MC` | `final_mcmc/` | — |
+| End-to-end source identification, sensor sets (R1-7) | `diffwq.exp2_v2` | `A1`, `A2` | `final_5090_v2/r1_A*`, `final_v2/` | `paper_v2/build_tables.py`, `paper_v2/figures/fig4_exp2.py` |
+| Identifiability vs. threshold and prior (R1-8) | `diffwq.exp3_pipe_kw --field-tau` | `B2` | `final_5090_v2/r1_B2_*` | `paper_v2/ident_scan.py` |
+| Hydraulic events in the recorded trajectories (R2-5) | `diffwq.hyd_events` | `B2` | `final_5090_v2/r1_B2_*` | `paper_v2/events_table.py` |
+| Booster design sensitivity, GA and MILP comparison (R2-11) | `diffwq.exp1_robust`, `diffwq.exp1_ga`, `diffwq.exp1_milp` | `R11R`, `R11G`, `R11M` | `final_5090_v2/r1_R11*` | `paper_v2/r211_tables.py` |
+
+Examples (from `research/water_quality_2026_09_12`; the full set of flags is in `hpc/r1_job.sh`):
+
+```bash
+python -m diffwq.ctol_study --part 3 --nets Net1,Net2,Net3 --out ctol_out
+python -m diffwq.gradcheck_v2 --job A --workers 8 --out gc
+python -m diffwq.verify_chunked --device cuda --out chunked_check.json        # chunked vs unchunked replay
+python -m diffwq.exp2_long --ref final_5090_v2/r1_A1_1723390/exp2_v2_bw200x.json --hours 168        --max-events 16 --chunk 32 --validate --out exp2_long_168h.json
+python -m diffwq.uq_mcmc --datasets NorthPenn --device cuda --chains 16 --warmup 1000 --draws 1000 --out mcmc_NorthPenn.json
+python -m diffwq.exp1_ga --network Net3 --m 3 --seed 0 --out ga_Net3_m3_s0.json
+```
+
+The revised tables are rebuilt from the shipped JSONs without a GPU or an EPANET build:
+
+```bash
+python paper_v2/build_tables.py
+python paper_v2/ctol_tables.py
+python paper_v2/gradcheck_tables.py
+python paper_v2/events_table.py
+python paper_v2/ident_scan.py
+python paper_v2/perf_ledger.py
+python paper_v2/r211_tables.py
+python paper_v2/resid_diagnostics.py
+```
+
+Each writes into `paper_v2/tables/`; on the shipped data all of them reproduce the committed files
+(the last digit of two fitted exponents in `perf_ledger_points.json` can differ between platforms).
+On Windows set `PYTHONIOENCODING=utf-8` first, since the scripts print Unicode.
+
+Notes on the revision results:
+
+* `final_ctol/ctol_part1f_merged.jsonl` (all 2,970 tasks of part 1, computed on an RTX 3090 node)
+  is the file the tables use; `ctol_part1f_3090.jsonl` is the raw log of that run.
+* `final_v2/exp2/` holds the R1-7 source-identification results in the layout of the first
+  submission (see its `README.txt`); `final_v2/exp2_v2_*.json` are the sensor-set study.
+* `final_chunked/local/` are CPU checks of the chunked replay; `final_chunked/c5090/` the GPU runs at
+  48 h and 168 h. The first 168-h attempt (`log_cancelled_after_batch1.txt`) used a different random
+  stream and is kept for reference only.
+
 ## What is and is not here
 
 Included: the engine, the experiment drivers, the cluster job scripts, the table and figure code,
-and the result JSONs behind every published table and number.
+and the result JSONs behind every published table and number, for the first submission and for the
+revision.
 
 Not included: the manuscript text; rendered figure files; the third-party networks and the EPANET
 source (both fetched as above); the compiled EPANET build directory; and earlier superseded runs of
@@ -147,3 +218,10 @@ EPANET 2.3 的拉格朗日水质输运并在关闭浓度合并的条件下**记�
   `python paper/build_tables.py`。图件脚本在 `paper/figures/` 下，绘制管网底图的脚本额外需要
   `networks/`。
 * GPU 实验的完整命令、分区与时限见 `hpc/*.sh`，其中的 `#SBATCH` 路径来自我们的集群，需按自己的环境修改。
+* **返修（2026 年 10 月）新增内容：**
+  - 新模块：零合并容差研究 `ctol_study`、独立梯度验证 `gradcheck_v2`、并行有限差分 `fd_parallel`、
+    长时长 `bwsn2_long`、分段回放 `chunked` / `exp2_long` / `verify_chunked`、站级误差项 `uq_site`、
+    MCMC 后验 `uq_mcmc`、源识别 v2 `exp2_v2`、水力事件 `hyd_events`、加氯设计敏感性与方法对比
+    `exp1_robust` / `exp1_ga` / `exp1_milp`。
+  - 作业脚本 `hpc/r1_job.sh`（用 `STEP` 选择运行内容），结果在 `final_5090_v2/` 等目录，对应关系见上方英文表格。
+  - 返修版表格由 `paper_v2/` 下的脚本从仓库内的 JSON 重建，不需要 GPU；Windows 上请先设 `PYTHONIOENCODING=utf-8`。

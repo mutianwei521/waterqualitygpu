@@ -1,0 +1,14 @@
+=== job 1726797 step L168 on wqd10nbj05g5  Fri Oct 23 09:25:44 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                             128
+Model name:                         INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R1-5 chunked replay BWSN2 168 h  Fri Oct 23 09:25:56 PM CST 2026
+[BWSN2 168 h] record 747s build 262s | {'versions': 30922977, 'steps': 2085, 'fused_ops': 2086, 'fused_terms': 212431253, 'virtual_terms': 25195170, 'snapshots': 743, 'hydraulic_periods': 743} | {'n_chunks': 15, 'version_slots_max': 2802697, 'state_slots': 11259098, 'state_slots_unchunked': 39379378, 'live_in_max': 638586, 'terms': 212431253, 'ops': 2086} | GPU resident 11.9 GB
+  validation: forward 8.0e-18 grad 1.4e-19 rows ['4.8e-18', '3.9e-17', '6.5e-17'] | B=1 chunked 0.20s 12.4 GB, unchunked 0.12s 25.1 GB
+  scenarios: 130/200 detected, identifying 16; DLL check max rel err 4.8e-16
+  8/16 events | level 1 1349s (4644 passes, peak 24.5 GB) level 2 590s (4644 passes, 381 candidates, peak 19.9 GB) | glrt top1 [1.0, 1.0, 1.0] nnls top1 [0.25, 0.625, 0.75] | elapsed 1956s
+slurmstepd: error: *** JOB 1726797 ON wqd10nbj05g5 CANCELLED AT 2026-10-23T22:24:14 ***

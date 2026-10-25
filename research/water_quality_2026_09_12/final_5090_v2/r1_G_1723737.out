@@ -1,0 +1,123 @@
+=== job 1723737 step G on wqd10nah09g4  Thu Oct 22 09:19:13 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                               128
+Model name:                           INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== gradcheck A  Thu Oct 22 09:19:22 PM CST 2026
+[A] A_Net1_P0: 42/42 pass, fwd 1.5e-14
+[A] A_Net1_P1: 39/42 pass, fwd 1.1e-14
+[A] A_Net1_P2: 41/42 pass, fwd 1.1e-14
+[A] A_Net2_P0: 10/10 pass, fwd 1.5e-15
+[A] A_Net2_P1: 48/51 pass, fwd 1.6e-14
+[A] A_Net2_P2: 49/51 pass, fwd 3.6e-15
+[A] A_Jilin_P0: 7/10 pass, fwd 6.0e-15
+[A] A_Jilin_P1: 39/39 pass, fwd 5.3e-15
+[A] A_Jilin_P2: 38/39 pass, fwd 2.6e-14
+[A] A_Net1_MIX2_P0: 42/42 pass, fwd 1.5e-14
+[A] A_Net1_MIX2_P1: 38/42 pass, fwd 1.4e-14
+[A] A_Net1_MIX2_P2: 42/42 pass, fwd 1.1e-14
+[A] A_Net1_FIFO_P0: 42/42 pass, fwd 1.5e-14
+[A] A_Net1_FIFO_P1: 39/42 pass, fwd 1.3e-14
+[A] A_Net1_FIFO_P2: 42/42 pass, fwd 1.1e-14
+[A] A_Net1_LIFO_P0: 41/42 pass, fwd 1.5e-14
+[A] A_Net1_LIFO_P1: 38/42 pass, fwd 1.3e-14
+[A] A_Net1_LIFO_P2: 42/42 pass, fwd 1.1e-14
+[A] A_Net1_MIX1_overflow_P0: 42/42 pass, fwd 3.1e-15
+[A] A_Net1_MIX1_overflow_P1: 39/42 pass, fwd 6.2e-15
+[A] A_Net1_MIX1_overflow_P2: 42/42 pass, fwd 3.9e-15
+[A] A_Net1_FIFO_overflow_P0: 41/42 pass, fwd 6.3e-15
+[A] A_Net1_FIFO_overflow_P1: 40/42 pass, fwd 1.5e-14
+[A] A_Net1_FIFO_overflow_P2: 42/42 pass, fwd 3.9e-15
+[A] A_Net1_LIFO_overflow_P0: 41/41 pass, fwd 3.0e-15
+[A] A_Net1_LIFO_overflow_P1: 39/41 pass, fwd 2.9e-15
+[A] A_Net1_LIFO_overflow_P2: 41/41 pass, fwd 3.9e-15
+[A] A_Net1_src_mass_P0: 43/43 pass, fwd 1.6e-14
+[A] A_Net1_src_mass_P1: 41/43 pass, fwd 1.1e-14
+[A] A_Net1_src_mass_P2: 42/43 pass, fwd 1.1e-14
+[A] A_Net1_src_setpoint_P0: 22/22 pass, fwd 1.6e-14
+[A] A_Net1_src_setpoint_P1: 20/22 pass, fwd 1.0e-14
+[A] A_Net1_src_setpoint_P2: 22/22 pass, fwd 1.0e-14
+[A] A_Net1_src_flowpaced_P0: 43/43 pass, fwd 1.6e-14
+[A] A_Net1_src_flowpaced_P1: 41/43 pass, fwd 1.0e-14
+[A] A_Net1_src_flowpaced_P2: 43/43 pass, fwd 1.0e-14
+[A] A_Net1_src_concen_reservoir_pat_P0: 43/43 pass, fwd 9.7e-15
+[A] A_Net1_src_concen_reservoir_pat_P1: 43/43 pass, fwd 6.4e-15
+[A] A_Net1_src_concen_reservoir_pat_P2: 43/43 pass, fwd 6.4e-15
+[A] A_Net1_src_concen_junction_inflow_P0: 43/43 pass, fwd 2.5e-15
+[A] A_Net1_src_concen_junction_inflow_P1: 39/43 pass, fwd 3.3e-15
+[A] A_Net1_src_concen_junction_inflow_P2: 43/43 pass, fwd 2.3e-15
+[A] A_Net1_src_mass_tank_P0: 43/43 pass, fwd 1.5e-14
+[A] A_Net1_src_mass_tank_P1: 41/43 pass, fwd 1.0e-14
+[A] A_Net1_src_mass_tank_P2: 43/43 pass, fwd 1.1e-14
+[A] A_Net1_ctol0_P0: 42/42 pass, fwd 1.5e-14
+[A] A_Net1_ctol0_P1: 40/42 pass, fwd 1.1e-14
+[A] A_Net1_ctol0_P2: 42/42 pass, fwd 1.1e-14
+[A] A_Net2_MIX2_P0: 10/10 pass, fwd 3.4e-15
+[A] A_Net2_MIX2_P1: 49/51 pass, fwd 1.7e-14
+[A] A_Net2_MIX2_P2: 50/51 pass, fwd 3.6e-15
+[A] A_Net2_LIFO_P0: 10/10 pass, fwd 8.5e-16
+[A] A_Net2_LIFO_P1: 50/51 pass, fwd 2.3e-14
+[A] A_Net2_LIFO_P2: 51/51 pass, fwd 3.6e-15
+[A] A_Net3_CHEM_mixed_tanks_P0: 22/23 pass, fwd 1.2e-14
+[A] A_Net3_CHEM_mixed_tanks_P1: 44/53 pass, fwd 7.9e-15
+[A] A_Net3_CHEM_mixed_tanks_P2: 53/53 pass, fwd 1.1e-14
+[A] A_Net3_AGE_mixed_tanks_P0: 0/0 pass, fwd 3.7e-15
+[A] A_Net2_react_P0: 50/51 pass, fwd 6.3e-15
+[A] A_Net2_react_P1: 49/51 pass, fwd 1.6e-14
+[A] A_Net2_react_P2: 49/51 pass, fwd 3.6e-15
+[A] A_Jilin_kw_P0: 38/39 pass, fwd 1.0e-14
+[A] A_Jilin_kw_P1: 39/39 pass, fwd 5.3e-15
+[A] A_Jilin_kw_P2: 38/39 pass, fwd 2.6e-14
+[A] A_Net3_CHEM_kw_mixed_tanks_P0: 53/53 pass, fwd 7.5e-15
+[A] A_Net3_CHEM_kw_mixed_tanks_P1: 49/53 pass, fwd 7.9e-15
+[A] A_Net3_CHEM_kw_mixed_tanks_P2: 53/53 pass, fwd 1.1e-14
+[X] {'label': 'X_Net1_kb10', 'kb': -10.0, 'replicator_clamp_hits': 0, 'min_reaction_factor': 0.9652777777777775, 'loss_rel_diff': 7.984080233860373e-16, 'max_rel_replay_vs_library_base': 4.662936703425657e-15, 'steps': [{'h': 0.001, 'fd': 39.144416028804585, 'rel_err': 4.375339918722181e-07, 'fwd_err': 0.0006996770303590778, 'bwd_err': 0.0006988019623753334}, {'h': 1e-05, 'fd': 39.144398903090405, 'rel_err': 3.3170121790870704e-11, 'fwd_err': 6.9924473916727795e-06, 'bwd_err': 6.992381051429198e-06}]}
+[X] {'label': 'X_Net1_kb100', 'kb': -100.0, 'replicator_clamp_hits': 0, 'min_reaction_factor': 0.6527777777777777, 'loss_rel_diff': 0.0, 'max_rel_replay_vs_library_base': 1.8457457784393224e-15, 'steps': [{'h': 0.001, 'fd': 0.6233742175432155, 'rel_err': 4.689791845015545e-06, 'fwd_err': 0.0024623582645203913, 'bwd_err': 0.00245297868083036}, {'h': 1e-05, 'fd': 0.6233712944947456, 'rel_err': 7.168310327582888e-10, 'fwd_err': 2.4576779381588096e-05, 'bwd_err': 2.457534571952258e-05}]}
+[X] {'label': 'X_Net1_kb250', 'kb': -250.0, 'replicator_clamp_hits': 0, 'min_reaction_factor': 0.13194444444444148, 'loss_rel_diff': 1.4281433044615333e-16, 'max_rel_replay_vs_library_base': 2.2204460492503126e-16, 'steps': [{'h': 0.001, 'fd': 0.000785037673978195, 'rel_err': 9.410314288172063e-05, 'fwd_err': 0.01368060768933824, 'bwd_err': 0.013492401403574798}, {'h': 1e-05, 'fd': 0.0007849639160895093, 'rel_err': 1.4857207296747824e-07, 'fwd_err': 0.00013456952327544665, 'bwd_err': 0.00013427237912951167}]}
+[X] {'label': 'X_Net1_kb280', 'kb': -280.0, 'replicator_clamp_hits': 0, 'min_reaction_factor': 0.027777777777774647, 'loss_rel_diff': 0.0, 'max_rel_replay_vs_library_base': 2.2204460492503126e-16, 'steps': [{'h': 0.001, 'fd': 1.5529124652857718e-06, 'rel_err': 0.0024948225040512984, 'fwd_err': 0.07289879774117913, 'bwd_err': 0.06790915273307654}, {'h': 1e-05, 'fd': 1.5489831639570182e-06, 'rel_err': 3.5544870792967455e-05, 'fwd_err': 0.0008818537118943786, 'bwd_err': 0.0009529434534803135}]}
+[X] {'label': 'X_Net1_kb300', 'kb': -300.0, 'replicator_clamp_hits': 178, 'replay_error': 'ValueError: reaction factor <= 0: step too large for closed-form replay'}
+done A 291s
+=== exit=0 elapsed=299s
+
+=== gradcheck BL  Thu Oct 22 09:24:23 PM CST 2026
+[B] B_Fairfield_grouped_P1: 25/25 pass, loss 4.9e-16
+[B] B_Fairfield_grouped_P2: 25/25 pass, loss 0.0e+00
+[B] B_Fairfield_grouped_Pcal: 2/2 pass, loss 1.3e-16
+[B] B_Fairfield_perpipe_P1: 30/30 pass, loss 4.9e-16
+[B] B_Fairfield_perpipe_P2: 30/30 pass, loss 0.0e+00
+[B] B_Fairfield_perpipe_Pcal: 10/10 pass, loss 0.0e+00
+[B] B_Bellingham_grouped_P1: 25/25 pass, loss 7.4e-16
+[B] B_Bellingham_grouped_P2: 25/25 pass, loss 1.8e-15
+[B] B_Bellingham_grouped_Pcal: 1/1 pass, loss 6.3e-16
+[B] B_Bellingham_perpipe_P1: 30/30 pass, loss 7.4e-16
+[B] B_Bellingham_perpipe_P2: 30/30 pass, loss 1.8e-15
+[B] B_Bellingham_perpipe_Pcal: 3/3 pass, loss 6.3e-16
+[B] B_NorthPenn_grouped_P1: 25/25 pass, loss 2.4e-15
+[B] B_NorthPenn_grouped_P2: 25/25 pass, loss 5.7e-16
+[B] B_NorthPenn_grouped_Pcal: 2/2 pass, loss 4.8e-16
+[B] B_NorthPenn_perpipe_P1: 30/30 pass, loss 2.4e-15
+[B] B_NorthPenn_perpipe_P2: 29/30 pass, loss 5.7e-16
+[B] B_NorthPenn_perpipe_Pcal: 3/3 pass, loss 3.2e-16
+[C] C_LTown: 60/60 pass, loss 3.6e-16, lib 0.13s
+[D] D_Net3: 30/30 pass, loss 5.4e-16
+[D] D_LTown: 28/30 pass, loss 2.1e-16
+done BL 301s
+=== exit=0 elapsed=308s
+
+=== gradcheck BW  Thu Oct 22 09:29:31 PM CST 2026
+[C] C_BWSN2: 23/30 pass, loss 1.0e-15, lib 22.60s
+[D] D_BWSN2: 15/15 pass, loss 0.0e+00
+done BW 1586s
+=== exit=0 elapsed=1593s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_G_1723737
+total 3467
+drwxrwxr-x  2 scxi690 scxi690    4096 Oct 22 21:56 .
+drwxrwxr-x 23 scxi690 scxi690    4096 Oct 22 21:19 ..
+-rw-rw-r--  1 scxi690 scxi690 2923651 Oct 22 21:24 gradcheck_A.json
+-rw-rw-r--  1 scxi690 scxi690  588055 Oct 22 21:29 gradcheck_BL.json
+-rw-rw-r--  1 scxi690 scxi690   29610 Oct 22 21:56 gradcheck_BW.json
+=== done Thu Oct 22 09:56:04 PM CST 2026

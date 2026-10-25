@@ -1,0 +1,48 @@
+=== job 1723401 step T4 on wqd10nah09g4  Thu Oct 22 09:09:34 PM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                               128
+Model name:                           INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== T4 parallel library FD  Thu Oct 22 09:09:45 PM CST 2026
+Net1
+  Net1: P=1 37 runs in 0.016s -> FD gradient 0.016s
+  Net1: P=2 37 runs in 0.008s -> FD gradient 0.008s
+  Net1: P=4 37 runs in 0.005s -> FD gradient 0.005s
+  Net1: P=8 37 runs in 0.004s -> FD gradient 0.004s
+Net2_react
+  Net2_react: P=1 119 runs in 0.199s -> FD gradient 0.199s
+  Net2_react: P=2 119 runs in 0.101s -> FD gradient 0.101s
+  Net2_react: P=4 119 runs in 0.052s -> FD gradient 0.052s
+  Net2_react: P=8 119 runs in 0.046s -> FD gradient 0.046s
+Jilin_kw
+  Jilin_kw: P=1 97 runs in 0.248s -> FD gradient 0.248s
+  Jilin_kw: P=2 97 runs in 0.126s -> FD gradient 0.126s
+  Jilin_kw: P=4 97 runs in 0.082s -> FD gradient 0.082s
+  Jilin_kw: P=8 97 runs in 0.058s -> FD gradient 0.058s
+Net3_CHEM_kw_mixed_tanks
+  Net3_CHEM_kw_mixed_tanks: P=1 335 runs in 0.572s -> FD gradient 0.572s
+  Net3_CHEM_kw_mixed_tanks: P=2 335 runs in 0.289s -> FD gradient 0.289s
+  Net3_CHEM_kw_mixed_tanks: P=4 335 runs in 0.148s -> FD gradient 0.148s
+  Net3_CHEM_kw_mixed_tanks: P=8 335 runs in 0.120s -> FD gradient 0.120s
+LTown_kw
+  LTown_kw: P=1 1631 runs in 120.760s -> FD gradient 192.284s
+  LTown_kw: P=2 1631 runs in 60.458s -> FD gradient 96.265s
+  LTown_kw: P=4 1631 runs in 30.442s -> FD gradient 48.472s
+  LTown_kw: P=8 1631 runs in 25.780s -> FD gradient 41.049s
+BWSN2_kw
+  BWSN2_kw: P=1 11 runs in 108.123s -> FD gradient 414506.030s
+  BWSN2_kw: P=2 11 runs in 59.248s -> FD gradient 227136.816s
+  BWSN2_kw: P=4 11 runs in 29.668s -> FD gradient 113734.677s
+  BWSN2_kw: P=8 11 runs in 24.024s -> FD gradient 92098.720s
+report: /data/home/scxi690/wdn_quantum/results/r1_T4_1723401/fd_parallel.json
+=== exit=0 elapsed=565s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_T4_1723401
+total 17
+drwxrwxr-x  2 scxi690 scxi690 4096 Oct 22 21:10 .
+drwxrwxr-x 22 scxi690 scxi690 4096 Oct 22 21:09 ..
+-rw-rw-r--  1 scxi690 scxi690 8356 Oct 22 21:19 fd_parallel.json
+=== done Thu Oct 22 09:19:10 PM CST 2026

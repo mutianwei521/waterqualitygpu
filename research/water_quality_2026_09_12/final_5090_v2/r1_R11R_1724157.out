@@ -1,0 +1,78 @@
+=== job 1724157 step R11R on wqd10nbj04g1  Fri Oct 23 12:44:44 AM CST 2026
+partition=gpu_5090 cpus=8 CUDA_VISIBLE_DEVICES=0
+CPU(s):                               128
+Model name:                           INTEL(R) XEON(R) GOLD 6530
+name, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 5090, 580.82.07, 32607 MiB
+python 3.10.21 torch 2.8.0+cu128 NVIDIA GeForce RTX 5090
+
+=== R2-11 robust Net3  Fri Oct 23 12:46:58 AM CST 2026
+  constant rate on lasso support     B=1 iters=1163 conv=1/1 L_bumps=0 wall=40.6s stations=[20] cover=[0.9931]
+  nominal: refit greedy 3 stations   B=1 iters=5 conv=1/1 L_bumps=0 wall=0.2s stations=[3] cover=[0.9937]
+  nominal: refit lasso 0.1 refit     B=1 iters=1955 conv=1/1 L_bumps=0 wall=68.2s stations=[21] cover=[0.9937]
+  nominal: refit constant rate on lasso 0.1 support B=1 iters=5 conv=1/1 L_bumps=0 wall=0.9s stations=[20] cover=[0.9931]
+  nominal: lasso 0.1                 B=1 iters=352 conv=1/1 L_bumps=0 wall=12.2s stations=[21] cover=[0.9646]
+  nominal: lasso refit               B=1 iters=5000 conv=0/1 L_bumps=0 wall=172.5s stations=[21] cover=[0.9937]
+[Net3] nominal: plant 0.9534 | fixed {'greedy 3 stations': 0.9937, 'lasso 0.1 refit': 0.9937, 'constant rate on lasso 0.1 support': 0.9931} | lasso re-solved 21 stations cov 0.9937 J=1.00 | 362s
+  demand x0.8: refit greedy 3 stations B=1 iters=4004 conv=1/1 L_bumps=0 wall=138.5s stations=[3] cover=[0.991]
+  demand x0.8: refit lasso 0.1 refit B=1 iters=5000 conv=0/1 L_bumps=0 wall=174.1s stations=[20] cover=[0.9947]
+  demand x0.8: refit constant rate on lasso 0.1 support B=1 iters=1739 conv=1/1 L_bumps=0 wall=60.8s stations=[17] cover=[0.9944]
+  demand x0.8: lasso 0.1             B=1 iters=579 conv=1/1 L_bumps=0 wall=20.1s stations=[20] cover=[0.9605]
+  demand x0.8: lasso refit           B=1 iters=5000 conv=0/1 L_bumps=0 wall=173.3s stations=[20] cover=[0.9954]
+[Net3] demand x0.8: plant 0.9403 | fixed {'greedy 3 stations': 0.9757, 'lasso 0.1 refit': 0.9649, 'constant rate on lasso 0.1 support': 0.9901} | lasso re-solved 20 stations cov 0.9954 J=0.71 | 607s
+  demand x0.9: refit greedy 3 stations B=1 iters=4664 conv=1/1 L_bumps=0 wall=158.8s stations=[3] cover=[0.9924]
+  demand x0.9: refit lasso 0.1 refit B=1 iters=5000 conv=0/1 L_bumps=0 wall=171.0s stations=[21] cover=[0.9936]
+  demand x0.9: refit constant rate on lasso 0.1 support B=1 iters=5000 conv=0/1 L_bumps=0 wall=170.7s stations=[19] cover=[0.9931]
+  demand x0.9: lasso 0.1             B=1 iters=312 conv=1/1 L_bumps=0 wall=10.7s stations=[19] cover=[0.9594]
+  demand x0.9: lasso refit           B=1 iters=5000 conv=0/1 L_bumps=0 wall=170.2s stations=[19] cover=[0.9947]
+[Net3] demand x0.9: plant 0.9438 | fixed {'greedy 3 stations': 0.9748, 'lasso 0.1 refit': 0.9676, 'constant rate on lasso 0.1 support': 0.9862} | lasso re-solved 19 stations cov 0.9947 J=0.74 | 718s
+  demand x1.1: refit greedy 3 stations B=1 iters=4000 conv=1/1 L_bumps=0 wall=140.1s stations=[3] cover=[0.9965]
+  demand x1.1: refit lasso 0.1 refit B=1 iters=5000 conv=0/1 L_bumps=0 wall=176.1s stations=[21] cover=[0.9977]
+  demand x1.1: refit constant rate on lasso 0.1 support B=1 iters=3395 conv=1/1 L_bumps=0 wall=119.9s stations=[19] cover=[0.9974]
+  demand x1.1: lasso 0.1             B=1 iters=232 conv=1/1 L_bumps=0 wall=8.2s stations=[15] cover=[0.9795]
+  demand x1.1: lasso refit           B=1 iters=5000 conv=0/1 L_bumps=0 wall=175.7s stations=[15] cover=[0.9958]
+[Net3] demand x1.1: plant 0.9656 | fixed {'greedy 3 stations': 0.9843, 'lasso 0.1 refit': 0.9833, 'constant rate on lasso 0.1 support': 0.9943} | lasso re-solved 15 stations cov 0.9958 J=0.71 | 657s
+  demand x1.2: refit greedy 3 stations B=1 iters=2389 conv=1/1 L_bumps=0 wall=84.2s stations=[3] cover=[0.9952]
+  demand x1.2: refit lasso 0.1 refit B=1 iters=3468 conv=1/1 L_bumps=0 wall=123.2s stations=[19] cover=[0.9976]
+  demand x1.2: refit constant rate on lasso 0.1 support B=1 iters=3379 conv=1/1 L_bumps=0 wall=119.9s stations=[16] cover=[0.9969]
+  demand x1.2: lasso 0.1             B=1 iters=272 conv=1/1 L_bumps=0 wall=9.6s stations=[16] cover=[0.9823]
+  demand x1.2: lasso refit           B=1 iters=3877 conv=1/1 L_bumps=0 wall=136.9s stations=[16] cover=[0.9982]
+[Net3] demand x1.2: plant 0.9722 | fixed {'greedy 3 stations': 0.9859, 'lasso 0.1 refit': 0.9857, 'constant rate on lasso 0.1 support': 0.995} | lasso re-solved 16 stations cov 0.9982 J=0.68 | 511s
+  pump 10 two hours later: refit greedy 3 stations B=1 iters=3584 conv=1/1 L_bumps=0 wall=125.9s stations=[3] cover=[0.9938]
+  pump 10 two hours later: refit lasso 0.1 refit B=1 iters=5000 conv=0/1 L_bumps=0 wall=176.2s stations=[21] cover=[0.9942]
+  pump 10 two hours later: refit constant rate on lasso 0.1 support B=1 iters=1096 conv=1/1 L_bumps=0 wall=39.2s stations=[18] cover=[0.9933]
+  pump 10 two hours later: lasso 0.1 B=1 iters=487 conv=1/1 L_bumps=0 wall=17.1s stations=[22] cover=[0.9614]
+  pump 10 two hours later: lasso refit B=1 iters=5000 conv=0/1 L_bumps=0 wall=175.5s stations=[22] cover=[0.9949]
+[Net3] pump 10 two hours later: plant 0.9504 | fixed {'greedy 3 stations': 0.9898, 'lasso 0.1 refit': 0.9787, 'constant rate on lasso 0.1 support': 0.9868} | lasso re-solved 22 stations cov 0.9949 J=0.79 | 572s
+  kb x0.5: refit greedy 3 stations   B=1 iters=5000 conv=0/1 L_bumps=0 wall=172.2s stations=[3] cover=[0.9973]
+  kb x0.5: refit lasso 0.1 refit     B=1 iters=4062 conv=1/1 L_bumps=0 wall=140.4s stations=[20] cover=[0.9972]
+  kb x0.5: refit constant rate on lasso 0.1 support B=1 iters=1252 conv=1/1 L_bumps=0 wall=43.9s stations=[17] cover=[0.997]
+  kb x0.5: lasso 0.1                 B=1 iters=277 conv=1/1 L_bumps=0 wall=9.5s stations=[15] cover=[0.9817]
+  kb x0.5: lasso refit               B=1 iters=5000 conv=0/1 L_bumps=0 wall=171.9s stations=[15] cover=[0.9964]
+[Net3] kb x0.5: plant 0.9664 | fixed {'greedy 3 stations': 0.9989, 'lasso 0.1 refit': 0.9971, 'constant rate on lasso 0.1 support': 0.9972} | lasso re-solved 15 stations cov 0.9964 J=0.71 | 575s
+  kb x2.0: refit greedy 3 stations   B=1 iters=1340 conv=1/1 L_bumps=0 wall=46.6s stations=[3] cover=[0.9903]
+  kb x2.0: refit lasso 0.1 refit     B=1 iters=3724 conv=1/1 L_bumps=0 wall=130.3s stations=[21] cover=[0.9887]
+  kb x2.0: refit constant rate on lasso 0.1 support B=1 iters=3625 conv=1/1 L_bumps=0 wall=126.6s stations=[20] cover=[0.9883]
+  kb x2.0: lasso 0.1                 B=1 iters=446 conv=1/1 L_bumps=0 wall=15.5s stations=[24] cover=[0.9518]
+  kb x2.0: lasso refit               B=1 iters=5000 conv=0/1 L_bumps=0 wall=173.6s stations=[24] cover=[0.9931]
+[Net3] kb x2.0: plant 0.9315 | fixed {'greedy 3 stations': 0.9607, 'lasso 0.1 refit': 0.939, 'constant rate on lasso 0.1 support': 0.967} | lasso re-solved 24 stations cov 0.9931 J=0.88 | 532s
+  kw x0.5: refit greedy 3 stations   B=1 iters=3362 conv=1/1 L_bumps=0 wall=116.9s stations=[3] cover=[0.9948]
+  kw x0.5: refit lasso 0.1 refit     B=1 iters=5000 conv=0/1 L_bumps=0 wall=175.0s stations=[21] cover=[0.9966]
+  kw x0.5: refit constant rate on lasso 0.1 support B=1 iters=886 conv=1/1 L_bumps=0 wall=31.5s stations=[17] cover=[0.9963]
+  kw x0.5: lasso 0.1                 B=1 iters=336 conv=1/1 L_bumps=0 wall=11.7s stations=[13] cover=[0.9807]
+  kw x0.5: lasso refit               B=1 iters=2624 conv=1/1 L_bumps=0 wall=91.5s stations=[13] cover=[0.9962]
+[Net3] kw x0.5: plant 0.9660 | fixed {'greedy 3 stations': 0.9972, 'lasso 0.1 refit': 0.9965, 'constant rate on lasso 0.1 support': 0.9966} | lasso re-solved 13 stations cov 0.9962 J=0.62 | 465s
+  kw x2.0: refit greedy 3 stations   B=1 iters=1018 conv=1/1 L_bumps=0 wall=35.2s stations=[3] cover=[0.9904]
+  kw x2.0: refit lasso 0.1 refit     B=1 iters=5000 conv=0/1 L_bumps=0 wall=173.6s stations=[21] cover=[0.9835]
+  kw x2.0: refit constant rate on lasso 0.1 support B=1 iters=2272 conv=1/1 L_bumps=0 wall=79.3s stations=[20] cover=[0.9835]
+  kw x2.0: lasso 0.1                 B=1 iters=329 conv=1/1 L_bumps=0 wall=11.4s stations=[22] cover=[0.9496]
+  kw x2.0: lasso refit               B=1 iters=5000 conv=0/1 L_bumps=0 wall=172.8s stations=[22] cover=[0.9905]
+[Net3] kw x2.0: plant 0.9226 | fixed {'greedy 3 stations': 0.9623, 'lasso 0.1 refit': 0.9312, 'constant rate on lasso 0.1 support': 0.9602} | lasso re-solved 22 stations cov 0.9905 J=0.79 | 510s
+=== exit=0 elapsed=5550s
+
+=== results in /data/home/scxi690/wdn_quantum/results/r1_R11R_1724157
+total 75
+drwxrwxr-x  2 scxi690 scxi690  4096 Oct 23 00:53 .
+drwxrwxr-x 34 scxi690 scxi690  4096 Oct 23 01:31 ..
+-rw-rw-r--  1 scxi690 scxi690 68004 Oct 23 02:19 robust_Net3.json
+=== done Fri Oct 23 02:19:29 AM CST 2026
