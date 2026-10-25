@@ -1,5 +1,19 @@
 # waterqualitygpu
 
+**Update history**
+
+| Date | Release |
+|---|---|
+| 2026-09-16 | First release: code and results of the original submission |
+| 2026-10-25 | Update: revision analyses requested by the reviewers (see [Revision analyses](#revision-analyses-october-2026)) |
+
+**更新记录**
+
+| 日期 | 内容 |
+|---|---|
+| 2026-09-16 | 首次发布：原稿的代码与结果 |
+| 2026-10-25 | 更新：按审稿意见新增的返修分析（见下方 Revision analyses） |
+
 Reproduction code for **"Exact Model Gradients for Chlorine Management and Contamination Source
 Identification in Drinking Water Distribution Networks."**
 
